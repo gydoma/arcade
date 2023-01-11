@@ -1,0 +1,32 @@
+/* Add a transition to the body element */
+body {
+    transition: background-color 0.5s ease;
+  }
+  
+  /* Dark mode colors */
+  .dark-mode {
+    background-color: #333;
+    color: #eee;
+  }
+  
+  /* Light mode colors */
+  .light-mode {
+    background-color: #eee;
+    color: #333;
+  }
+
+
+
+
+
+
+/* Dark mode colors for paragraphs */
+.dark-mode p {
+    color: #eee;
+  }
+  
+  /* Light mode colors for paragraphs */
+  .light-mode p {
+    color: #333;
+  }
+

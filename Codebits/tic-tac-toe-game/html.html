@@ -1,0 +1,242 @@
+<!-- Set up the HTML for the board -->
+<table id="board">
+    <tr>
+      <td id="cell-0-0"></td>
+      <td id="cell-0-1"></td>
+      <td id="cell-0-2"></td>
+    </tr>
+    <tr>
+      <td id="cell-1-0"></td>
+      <td id="cell-1-1"></td>
+      <td id="cell-1-2"></td>
+    </tr>
+    <tr>
+      <td id="cell-2-0"></td>
+      <td id="cell-2-1"></td>
+      <td id="cell-2-2"></td>
+    </tr>
+  </table>
+  
+  <!-- Set up a form to select the player's symbol -->
+  <form id="player-form">
+    <label for="player-select">Select your symbol:</label>
+    <select id="player-select">
+      <option value="X">X</option>
+      <option value="O">O</option>
+    </select>
+    <button type="submit" id="start-button">Start game</button>
+  </form>
+  
+  <!-- Set up some CSS to style the board and form -->
+  <style>
+    body {
+      background-color: #FFF4CC;
+    }
+  
+    #board {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+  
+    #board td {
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      vertical-align: middle;
+      border: 5px solid #000;
+      background-color: #FFF;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  
+    #board td.X {
+      color: #FFBD12;
+    }
+  
+    #board td.O {
+      color: #F95A2C;
+    }
+  
+    #player-form {
+      width: 250px;
+      margin: 20px auto;
+      text-align: center;
+    }
+  
+    #player-form label {
+      display: block;
+      margin-bottom: 10px;
+    }
+  
+    #player-form select {
+      width: 100px;
+      height: 30px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  
+    #player-form button {
+      width: 100px;
+      height: 30px;
+      font-size: 20px;
+      font-weight: bold;
+      background-color: #61E4C5;
+      color: #000;
+      border: none;
+    }
+  
+    #player-form button:hover {
+      background-color: #1947E5;
+      color: #FFF;
+    }
+  </style>
+  
+  <!-- Set up the JavaScript to handle the game logic -->
+  <script>
+    // Set up the board
+    const board = [
+      ['', '', ''],
+      ['', '', ''],
+      ['', '', ''],
+  ];
+  // Set up the players
+let player = 'X';
+let ai = 'O';
+
+// Set up the current player
+let currentPlayer = player;
+
+// Set up the function to check for a win
+function checkForWin() {
+  // Check rows
+  for (let i = 0; i < 3; i++) {
+    if (board[i][0] === currentPlayer && board[i][1] === currentPlayer && board[i][2] === currentPlayer) {
+      return true;
+    }
+  }
+
+  // Check columns
+  for (let i = 0; i < 3; i++) {
+    if (board[0][i] === currentPlayer && board[1][i] === currentPlayer && board[2][i] === currentPlayer) {
+      return true;
+    }
+  }
+
+  // Check diagonals
+  if (board[0][0] === currentPlayer && board[1][1] === currentPlayer && board[2][2] === currentPlayer) {
+    return true;
+  }
+  if (board[0][2] === currentPlayer && board[1][1] === currentPlayer && board[2][0] === currentPlayer) {
+    return true;
+  }
+
+  return false;
+}
+
+// Set up the function to make a move
+function makeMove(row, col) {
+  // Make sure the spot is empty
+  if (board[row][col] !== '') {
+    console.log('This spot is already taken');
+    return;
+  }
+
+  // Place the player's symbol on the board
+  board[row][col] = currentPlayer;
+  document.getElementById(`cell-${row}-${col}`).textContent = currentPlayer;
+  document.getElementById(`cell-${row}-${col}`).classList.add(currentPlayer);
+
+  // Check for a win
+  if (checkForWin()) {
+    console.log(`Player ${currentPlayer} wins!`);
+    return;
+  }
+
+  // Switch players
+  currentPlayer = (currentPlayer === player) ? ai : player;
+
+  // If it's the AI's turn, make a move
+  if (currentPlayer === ai) {
+    makeAIMove();
+  }
+}
+
+// Set up the function to make an AI move
+function makeAIMove() {
+  // Check for a winning move
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      if (board[i][j] === '') {
+        board[i][j] = ai;
+        if (checkForWin()) {
+          console.log(`Player ${ai} wins!`);
+          return;
+        }
+        board[i][j] = '';
+      }
+    }
+  }
+
+  // Check for a blocking move
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      if (board[i][j] === '') {
+        board[i][j] = (ai === 'X') ? 'O' : 'X';
+        if (checkForWin()) {
+          board[i][j] = ai;
+          document.getElementById(`cell-${i}-${j}`).textContent = ai;
+          document.getElementById(`cell-${i}-${j}`).classList.add(ai);
+          return;
+        }
+        board[i][j] = '';
+      }
+    }
+  }
+  // Make a random move
+let row, col;
+do {
+  row = Math.floor(Math.random() * 3);
+  col = Math.floor(Math.random() * 3);
+} while (board[row][col] !== '');
+board[row][col] = ai;
+document.getElementById(`cell-${row}-${col}`).textContent = ai;
+document.getElementById(`cell-${row}-${col}`).classList.add(ai);
+}
+
+// Set up the form to start the game
+document.querySelector('#player-form').addEventListener('submit', event => {
+  event.preventDefault();
+
+  // Set the player's symbol
+  player = document.getElementById('player-select').value;
+  ai = (player === 'X') ? 'O' : 'X';
+
+  // Set the current player
+  currentPlayer = player;
+
+  // Clear the board
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      board[i][j] = '';
+      document.getElementById(`cell-${i}-${j}`).textContent = '';
+      document.getElementById(`cell-${i}-${j}`).classList.remove('X', 'O');
+    }
+  }
+
+  // Hide the form
+  document.querySelector('#player-form').style.display = 'none';
+
+  // Set up the event listeners for the cells
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      document.getElementById(`cell-${i}-${j}`).addEventListener('click', () => {
+        if (currentPlayer === player) {
+          makeMove(i, j);
+        }
+      });
+    }
+  }
+});
+</script>
