@@ -9,7 +9,7 @@
 
 ##DEV NOTES
 
-Elakadtál? Nincs Ötleted? Itt egy pár játékötlet chatgpt-vel generálva: #5
+Elakadtál? Nincs Ötleted? Itt egy pár játékötlet chatgpt-vel generálva: https://github.com/gydoma/arcade/issues/5
 
 ## Készítették:
 
