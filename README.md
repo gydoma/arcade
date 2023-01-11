@@ -7,6 +7,10 @@
 [![forthebadge](https://forthebadge.com/images/badges/built-with-grammas-recipe.svg)](https://forthebadge.com)
 
 
+##DEV NOTES
+
+Elakadtál? Nincs Ötleted? Itt egy pár játékötlet chatgpt-vel generálva: 
+
 ## Készítették:
 
 | Név | |
