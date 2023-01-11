@@ -9,7 +9,7 @@
 
 ##DEV NOTES
 
-Elakadtál? Nincs Ötleted? Itt egy pár játékötlet chatgpt-vel generálva: 
+Elakadtál? Nincs Ötleted? Itt egy pár játékötlet chatgpt-vel generálva: #5
 
 ## Készítették:
 
