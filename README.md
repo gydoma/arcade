@@ -33,19 +33,17 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 
 
 
-
-
 **Projekt lezárásának időpontja: 2023 Közepe**
 
 
 
 ## Játékok Listája
 
-| Játék Neve | Programozási nyelv | Engine - Fájlkiterjesztés | Frissítve | Készítette |
+| Játék Neve | Programozási nyelv | Engine | Frissítve | Készítette |
 | ------ | ------ | ------ | ------ | ------ |
-| Example | Python | PyGame - .exe | 1970/01/01 | Minta Erzsébet |
-| Example(2) | C# | .exe | 1970/01/01 | Minta Lajos |
+| Example | Python | PyGame | 1970/01/01 | Minta Erzsébet |
+| Example(2) | C# | - | 1970/01/01 | Minta Lajos |
 | Example(3) | Javascript | three.js | 1970/01/01 | Minta Gábor |
 | Example(4) | JavaScript | - | 1970/01/01 | Minta László |
-| Example(5) | Python | PyGame - .exe | 1970/01/01 | Minta Erzsébet |
+| Example(5) | Python | PyGame | 1970/01/01 | Minta Erzsébet |
 
