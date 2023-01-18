@@ -6,7 +6,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/gluten-free.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-grammas-recipe.svg)](https://forthebadge.com)
 
-Ki ne szeretne játszani? Ez az oldal a Verebély László Technikumának a 2022/23. évi 11. szoftverfejlesztő és tesztelő évfolyamának I. sávú csoportjának a projektmunkája. Mi úgy terveztük és készítettuk ezt a projektmunkát, hogy az unalmas óráidban csak böngéssz a játékok közül és nyugalmasan játszhass velük, esetleg tudj tanulni is a nyílt kódforrásunknak köszönhetően.
+Ki ne szeretne játszani? Ez az oldal a Verebély László Technikumának a 2022/23. évi 11. szoftverfejlesztő és tesztelő évfolyamának I. sávú csoportjának a második projektmunkája. Mi úgy terveztük és készítettuk ezt a projektmunkát, hogy az unalmas óráidban csak böngéssz a játékok közül és nyugalmasan játszhass velük, esetleg tudj tanulni is a nyílt kódforrásunknak köszönhetően.
 
 <img width="1041" alt="Screenshot 2023-01-12 at 23 18 20" src="https://user-images.githubusercontent.com/65687471/212193250-f856dca0-9d3a-4905-8eb4-8353e412f619.png">
 
