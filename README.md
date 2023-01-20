@@ -8,7 +8,10 @@
 
 Ki ne szeretne játszani? Ez az oldal a Verebély László Technikumának a 2022/23. évi 11. szoftverfejlesztő és tesztelő évfolyamának I. sávú csoportjának a második projektmunkája. Mi úgy terveztük és készítettuk ezt a projektmunkát, hogy az unalmas óráidban csak böngéssz a játékok közül és nyugalmasan játszhass velük, esetleg tudj tanulni is a nyílt kódforrásunknak köszönhetően.
 
-<img width="1041" alt="Screenshot 2023-01-12 at 23 18 20" src="https://user-images.githubusercontent.com/65687471/212193250-f856dca0-9d3a-4905-8eb4-8353e412f619.png">
+<p float="left">
+  <img width="49%" alt="Deisgn of light mode" src="https://user-images.githubusercontent.com/65687471/212193250-f856dca0-9d3a-4905-8eb4-8353e412f619.png">
+  <img width="49%" alt="Deisgn of dark mode" src="https://user-images.githubusercontent.com/65687471/213806773-14e58e2d-a402-43c2-a5e3-9a9c68bb7de6.png">
+</p>
 
 ## DEV NOTES
 
