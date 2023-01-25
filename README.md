@@ -15,6 +15,8 @@ Ki ne szeretne játszani? Ez az oldal a Verebély László Technikumának a 2022
 
 ## DEV NOTES
 
+Drótváz front-endes css-html kombója a [codepen](https://codepen.io/harsh-vardhan/full/RwWRqKE)-en megtalálható 
+
 **Drótvázat - dizájntervet [ITT](https://www.sketch.com/s/be49d22c-e4f3-4380-bbfe-fca234c20055) tudod megnézni**
 
 Elakadtál? Nincs Ötleted? Itt egy pár játékötlet chatgpt-vel generálva: https://github.com/gydoma/arcade/issues/5
