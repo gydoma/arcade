@@ -1,1 +1,1 @@
-sass --watch config.scss style.css
+sass --watch scss/config.scss style.css
