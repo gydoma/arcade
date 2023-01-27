@@ -1,0 +1,10 @@
+Kezdés időpontja:
+2023.01.27 13:30
+
+Cél:
+-Kártya osztás funkció megvalósítása
+-Ellenfél alapalgoritmusának kidolgozása
+-Hit,Stay funkció kidolgozása
+
+Befejezés időpontja: 2023.01.27 14:20
+Minden cél teljesítve
