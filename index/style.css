@@ -1,6 +1,26 @@
+/*@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url(fonts/Montserrat-Medium.ttf) format(truetype);
+}*/
+/* Regular Weight */
 @font-face {
-  font-family: "Monstserrat";
-  src: url(fonts/Monstserrat-Medium.ttf) format(truetype);
+  font-family: Montserrat;
+  src: url("fonts/Montserrat-Medium.ttf");
+}
+/* SemiBold (600) Weight */
+@font-face {
+  font-family: Montserrat;
+  src: url("fonts/Montserrat-ExtraBold.ttf");
+  font-weight: 800;
+}
+/* Bold Weight */
+@font-face {
+  font-family: Montserrat;
+  src: url("fonts/Montserrat-Bold.ttf");
+  font-weight: bold;
+}
+body {
+  font-family: "Monsterrat-Medium", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */
