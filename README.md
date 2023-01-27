@@ -30,15 +30,15 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 
 | Név | |
 | ------ | ------ |
-| Minta Erzsébet | [Projektvezető] js (2)|
-| Minta Attila | [Segítő - Tanár] |
-| Minta Lajos | c# (1) |
-| Minta Gábor | js (1) |
-| Minta László | js (1) |
+| Gyurkovics Dominik | [Projektvezető]|
+| Katona Roland | [Projektvezető-helyettes]|
+| Andrási Szilvia | [Segítő - Tanár] |
+| Bencso | js (1) |
+| Esztii | C# (1) |
 
 
 
-**Projekt lezárásának időpontja: 2023 Közepe**
+**Projekt várható lezárásának időpontja: 2023 Közepe**
 
 
 
@@ -46,9 +46,6 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 
 | Játék Neve | Programozási nyelv | Engine | Frissítve | Készítette |
 | ------ | ------ | ------ | ------ | ------ |
-| Example | Python | PyGame | 1970/01/01 | Minta Erzsébet |
-| Example(2) | C# | - | 1970/01/01 | Minta Lajos |
-| Example(3) | Javascript | three.js | 1970/01/01 | Minta Gábor |
-| Example(4) | JavaScript | - | 1970/01/01 | Minta László |
-| Example(5) | Python | PyGame | 1970/01/01 | Minta Erzsébet |
+| InRun1.1 | JavaScript | - | 2023/01/25 | Bencso |
+| snakegame1.0 | C# | - | 2023/01/27 | Esztii |
 

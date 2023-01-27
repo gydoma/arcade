@@ -1,0 +1,32 @@
+@use 'variables';
+/*@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url(fonts/Montserrat-Medium.ttf) format(truetype);
+}*/
+/* Regular Weight */
+@font-face {
+    font-family: Montserrat;
+    src: url("fonts/Montserrat-Medium.ttf");
+}
+
+/* SemiBold (600) Weight */
+@font-face {
+    font-family: Montserrat;
+    src: url("fonts/Montserrat-ExtraBold.ttf");
+    font-weight: 800;
+}
+
+/* Bold Weight */
+@font-face {
+    font-family: Montserrat;
+    src: url("fonts/Montserrat-Bold.ttf");
+    font-weight: bold;
+}
+// Path: index/scss/config.scss
+
+
+
+body {
+    font-family: 'Monsterrat-Medium', sans-serif;
+}
+

@@ -1,6 +1,6 @@
 Terms of Service
 
-Last Updated: [insert date]
+Last Updated: [insert_date]
 
 Please read these Terms of Service ("Terms", "Terms of Service") carefully before accessing the [websitename] website (the "Service").
 
