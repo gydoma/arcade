@@ -1,32 +1,18 @@
-@use 'variables';
-/*@font-face {
-    font-family: 'Montserrat-Medium';
-    src: url(fonts/Montserrat-Medium.ttf) format(truetype);
-}*/
-/* Regular Weight */
-@font-face {
-    font-family: Montserrat;
-    src: url("fonts/Montserrat-Medium.ttf");
-}
+// Edit this variable to switch between light and dark theme
+$dark-theme: true !default;
 
-/* SemiBold (600) Weight */
-@font-face {
-    font-family: Montserrat;
-    src: url("fonts/Montserrat-ExtraBold.ttf");
-    font-weight: 800;
-}
-
-/* Bold Weight */
-@font-face {
-    font-family: Montserrat;
-    src: url("fonts/Montserrat-Bold.ttf");
-    font-weight: bold;
-}
-// Path: index/scss/config.scss
-
-
+@import "_variables";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
 
 body {
-    font-family: 'Monsterrat-Medium', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    background-color: $primary-bg;
+    background-image: $bgtile;
+    background-repeat: repeat;
 }
 
+h1 {
+    color: $primary-text;
+    font-size: 36;
+    font-weight: 800;
+}

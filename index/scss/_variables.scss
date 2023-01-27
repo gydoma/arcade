@@ -1,9 +1,6 @@
 // Path: index/scss/variables.scss
 
 
-// Edit this variable to switch between light and dark theme
-$dark-theme: false !default;
-
 // Base Colors
 $primary-bg: #FFF4CC !default;
 $secondary-bg: #F9E9BF !default;
@@ -23,8 +20,7 @@ $red: #F95A2C !default;
 $red800: #FF9692 !default;
 $pink100: #FFF3F8 !default;
 $pink800: #FFE8E8 !default;
-
-
+$bgtile: url('/index/Resources/bg-tile/light_small.svg') !default;
 // Dark Colors
 @if $dark-theme {
   $primary-bg: #202020 !default;
@@ -35,4 +31,5 @@ $pink800: #FFE8E8 !default;
   $primary-text: #FFFFFF !default;
   $secondary-text: #D1D1D1 !default;
   $tertiary-text: #cccccc !default;
+  $bgtile: url('/index/Resources/bg-tile/dark_small.svg') !default;
 }
