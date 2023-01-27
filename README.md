@@ -34,6 +34,7 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 | Katona Roland | [Projektvezető-helyettes]|
 | Andrási Szilvia | [Segítő - Tanár] |
 | Bencso | js (1) |
+| Esztii | C# (1) |
 
 
 
@@ -46,4 +47,5 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 | Játék Neve | Programozási nyelv | Engine | Frissítve | Készítette |
 | ------ | ------ | ------ | ------ | ------ |
 | InRun1.1 | JavaScript | - | 2023/01/25 | Bencso |
+| snakegame1.0 | C# | - | 2023/01/27 | Esztii |
 
