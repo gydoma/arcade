@@ -34,7 +34,7 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 
 | Név | |
 | ------ | ------ |
-| Gyurkovics Dominik | [Projektvezető]|
+| Gyurkovics Dominik | [Projektvezető] py (1)|
 | Katona Roland | [Projektvezető-helyettes] js (1)|
 | Andrási Szilvia | [Segítő - Tanár] |
 | Bábolnai Bence | js (1) |
@@ -49,7 +49,7 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 | Bárczi Bence | |
 
 
-**Projekt várható lezárásának időpontja: 2023 Közepe**
+**Projekt várható befejezésének időpontja: 2023 Közepe**
 
 
 ## Játékok Listája
@@ -59,3 +59,4 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 | InRun1.1 | JavaScript | - | 2023/01/25 | Bencso |
 | snakegame1.0 | C# | - | 2023/01/27 | Esztii |
 | Blackjack | JavaScript | - | 2023/01/27 | Roland |
+| quiz | Python | - | 2023/01/30 | gydoma |
