@@ -25,18 +25,17 @@ Elakadtál? Nincs Ötleted? Itt egy pár játékötlet chatgpt-vel generálva: h
 Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint a kitűzött (nem konzolos JavaScript, Python, C#) akkor ügyelj arra, hogy lehessen futtatni a weben vagy könnyen letölthető egy fájlos (pl.: .exe) a programod/játékod.
 
 
-
 ## Készítették:
 
 | Név | |
 | ------ | ------ |
 | Gyurkovics Dominik | [Projektvezető]|
-| Katona Roland | [Projektvezető-helyettes]|
+| Katona Roland | [Projektvezető-helyettes] js (1)|
 | Andrási Szilvia | [Segítő - Tanár] |
 | Bábolnai Bence | js (1) |
 | Orosz Eszter | C# (1) |
 | Horváth Péter Ákos | |
-| Suhajda Zsolt | |
+| Suhajda Zsolt Péter | |
 | Rostás András Péter | |
 | Dávid Benedek | |
 | Molnár-Horgos Kristóf |  |
@@ -45,9 +44,7 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 | Bárczi Bence | |
 
 
-
 **Projekt várható lezárásának időpontja: 2023 Közepe**
-
 
 
 ## Játékok Listája
@@ -57,4 +54,3 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 | InRun1.1 | JavaScript | - | 2023/01/25 | Bencso |
 | snakegame1.0 | C# | - | 2023/01/27 | Esztii |
 | Blackjack | JavaScript | - | 2023/01/27 | Roland |
-
