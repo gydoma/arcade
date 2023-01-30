@@ -24,6 +24,9 @@ Elakadtál? Nincs Ötleted? Itt egy pár játékötlet chatgpt-vel generálva: h
 
 Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint a kitűzött (nem konzolos JavaScript, Python, C#) akkor ügyelj arra, hogy lehessen futtatni a weben vagy könnyen letölthető egy fájlos (pl.: .exe) a programod/játékod.
 
+### Hexadecimális kódok a színekhez
+
+<img width="35%" alt="scss" src="https://user-images.githubusercontent.com/65687471/215570711-0d048625-121e-40f7-a973-408382938760.png">
 
 ## Készítették:
 
