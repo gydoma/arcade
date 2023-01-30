@@ -32,7 +32,7 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 
 ## Készítették:
 
-| Név | |
+| Név | 2 JS - 1 PY - 1 C#|
 | ------ | ------ |
 | Gyurkovics Dominik | [Projektvezető] py (1)|
 | Katona Roland | [Projektvezető-helyettes] js (1)|
