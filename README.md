@@ -33,8 +33,16 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 | Gyurkovics Dominik | [Projektvezető]|
 | Katona Roland | [Projektvezető-helyettes]|
 | Andrási Szilvia | [Segítő - Tanár] |
-| Bencso | js (1) |
-| Esztii | C# (1) |
+| Bábolnai Bence | js (1) |
+| Orosz Eszter | C# (1) |
+| Horváth Péter Ákos | |
+| Suhajda Zsolt | |
+| Rostás András Péter | |
+| Dávid Benedek | |
+| Molnár-Horgos Kristóf |  |
+| Vajda Dániél | |
+| Bán Gergő | |
+| Bárczi Bence | |
 
 
 
@@ -48,4 +56,5 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 | ------ | ------ | ------ | ------ | ------ |
 | InRun1.1 | JavaScript | - | 2023/01/25 | Bencso |
 | snakegame1.0 | C# | - | 2023/01/27 | Esztii |
+| Blackjack | JavaScript | - | 2023/01/27 | Roland |
 
