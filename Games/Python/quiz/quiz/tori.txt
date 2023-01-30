@@ -1,0 +1,15 @@
+1/Melyik vár kapitánya volt Zrínyi Miklós?/A: Szigetvár/B: Drégely/C: Egri vár/A
+2/Mikor volt Magyarországon a legnagyobb parasztháború?/A: 1989/B: 1514/C: 1848/B
+3/Melyik USA támaszpontot támadta meg Japán 1941.12.07-én?/A: Nevada/B: Maldív-szigetek/C: Pearl Harbor/C
+4/Melyik birodalom tartománya volt Poroszország?/A: Római/B: Német/C: Bizánci/B
+5/Melyik kor következett az újkőkor után?/A: Bronzkor/B: Vaskor/C: Rézkor/C
+6/Melyik állat terjesztette el a pestist?/A: Bolha/B: Ló/C: Sertés/A
+7/Melyik városban halt meg „Mohamed”?/A: Medina/B: Jeruzsálem/C: Mekka/A
+8/Mikor kezdődött az „iszlám” időszámítás?/A: Kr.e. 432/B: 622/C: 432/B
+9/Melyik magyar király négyelte fel a testvérét?/A: Szent István/B: VI. Béla/C: I. András/A
+10/Melyik magyar fejedelem keresztelkedett meg először?/A: István/B: Árpád/C: Géza/C
+11/Ki volt az utolsó kínai császár?/A: BU LI/B: PU BI/C: PU JI/C
+12/Melyik német királyt nevezték „rőtszakállúnak”?/A: I. Frigyes/B: III. Henrik/C: I. Richárd/A
+13/Kit neveztek „sivatagi rókának”?/A: Göring-et/B: Rommel-t/C: Montgomery-t/B
+14/Melyik országnak van a legnagyobb kereskedelmi flottája?/A: USA/B: Japán/C: Kína/B
+15/Hogy hívták Augustus császár fogadott fiát?/A: Caesario/B: Octavianus/C: Nero/C

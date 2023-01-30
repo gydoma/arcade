@@ -1,0 +1,15 @@
+1/Mennyi 3-nak és 12-nek a számtani közepe?/A: 2,5/B: 6/C: 7,5/C
+2/Mennyi 5-nek és 7-nek a mértani közepe?/A: 5,92/B: 13/C: 2/A
+3/Hogyan számolod ki a téglalap területét?/A: a*m/B: a*b/C: a^2/B
+4/Két háromszög egybevágó ha.../A: Oldalaik egyenlőek/B: Szögeik megegyeznek/C: Oldalaik aránya páronként megegyezik/A
+5/Mi a Pitagorasz-tétel?/A: a^2+b^2=c^2/B: a+b=c/C: befogó^2+befogó^2=átfogó^2/C
+6/Melyik háromszögre érvényes a Pitagorasz-tétel?/A: Általános háromszögre/B: Derékszögű háromszögre/C: Egyikre sem/B
+7/Mi a gyakoriság?/A: Megmutatja, hogy egy adat az adatsokaság hány százalékában szerepel/B: Megmutatja, hogy egy adat hányszor szerepel az adatsokaságban/C: A leggyakoribb adat/B
+8/Mennyi 5! (faktoriális)?/A: 24/B: 720/C: 120/C
+9/Mennyi (2x-4)*(x-2)=12x+8/A: x^2-10/B: x^2-2/C: x^+16/A
+10/Mi az a diszkrimináns?/A: A háromszög oldalát felezi, merőlegesre/B: Egy másodfokú kifejezés szorzatalakja/C: Megmutatja, hogy az egyenletnek hány megoldása lesz/C
+11/Mi a trapéz?/A: Két-két szomszédos oldala egyenlő/B: Van párhuzamos oldalpárja/C: Minden oldala egyenlő/B
+12/Mi a magasság-vonal?/A: egyik csúcsból a szemköztes oldalra állított merőleges egyenes/B: Egyik csúcsból a szemköztes oldal felező pontjába húzott szakasz/C: Az adott szögtartomány felező félegyenese/A
+13/Mik azok a racionális számok?/A: bármilyen természetes szám a 10-es számrendszerben/B: Egyesítésükkel a valós számok halmazát kapjuk/C: Két egész szám hányadosaként felírható számok/C
+14/Mik azok a prímszámok?/A: Csak önmagukkal lehet osztani/B: Pontosan két osztójuk van/C: Csak 1-es számmal lehet osztani/B
+15/Mennyi 0! (faktoriális)?/A: Nincs faktoriálisa/B: 0/C: 1/C

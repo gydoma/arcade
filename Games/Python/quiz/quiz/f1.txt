@@ -1,0 +1,15 @@
+1/Mikor rendezték az első Formula 1-es világbajnokságot?/A: 1960/B: 1950/C: 1951/B
+2/Melyik pályán rendezték meg eddig a legtöbb versenyt?/A: Monza/B: Silverstone/C: Hungaroring/A
+3/Összesen hány konstruktőri világbajnoki címet nyert eddig a Ferrari?/A: 13/B: 12/C: 16/C
+4/Ki lett az első F1-es világbajnok?/A: Juan Manuel Fangio/B: Alberto Ascari/C: Guiseppe Farina/C
+5/1981-ben ki maradt le egyetlen ponttal a bajnoki címről? /A: Alan Jones/B: Carlos Reutemann/C: Alain Prost/B
+6/1958-ban avattak először konstruktőri bajnokot is. Ki szerezte meg ezt a bajnoki címet?/A: Vanwall/B: Ferrari/C: Cooper-Climax/A
+7/F1-es karrierje során hányszor végzett dobogón Jos Verstappen?/A: 5/B: 10/C: 2/C
+8/Hány futamból állt az első, 1950-es Forma-1-es szezon?/A: 5/B: 7/C: 10/B
+9/Mikor született Ayrton Senna?/A: 1961. április 21/B: 1960. március 21/C: 1962. május 1/B
+10/Mely csapatnál debütált az F1-ben Michael Schumacher?/A: Jordan/B: Benetton/C: Minardi/A
+11/Mely csapat épített hat kerekű F1-es autót amely versenyen is indult?/A: Williams/B: Lotus/C: Tyrrell/C
+12/Ki minden idők legfiatalabb világbajnoka?/A: Sebastian Vettel/B: Fernando Alonso/C: Lewis Hamilton/A
+13/Hány vb-címet nyert sorozatban Sebastian Vettel?/A: 3/B: 4/C: 2/B
+14/Hány dobogós helyezése volt Alonsonak?/A: 97/B: 94/C: 98/A
+15/Mikor rendezték az első Magyar Nagydíjat Mogyoródon?/A: 1988/B: 1982/C: 1986/C
