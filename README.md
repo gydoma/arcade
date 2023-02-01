@@ -32,17 +32,17 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 
 ## Készítették:
 
-| Név | 2 JS - 1 PY - 1 C#|
+| Név | 2 JS - 2 PY - 3 cs|
 | ------ | ------ |
 | Gyurkovics Dominik | [Projektvezető] py (1)|
-| Katona Roland | [Projektvezető-helyettes] js (1)|
+| Katona Roland | [Pv.-helyettes] js (1)|
 | Andrási Szilvia | [Segítő - Tanár] |
 | Bábolnai Bence | js (1) |
-| Orosz Eszter | C# (1) |
+| Orosz Eszter | cs (1) |
 | Dávid Benedek | py (1) |
+| Vajda Dániel | cs (1)|
 | Suhajda Zsolt Péter | |
 | Rostás András Péter | |
-| Vajda Dániél | |
 | Bán Gergő | |
 | Bárczi Bence | |
 | Molnár-Horgos Kristóf | [TankTrouble](https://github.com/Trixep/TankTrouble-Multiplayer) |
@@ -63,3 +63,4 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 | quiz | Python | - | 2023/01/30 | gydoma |
 | [TankTrouble](https://github.com/Trixep/TankTrouble-Multiplayer)| C# | Unity | 2023/01/27 | [készítette](https://github.com/Trixep/TankTrouble-Multiplayer#a-projekt-tagjai) |
 | Catan | Python | PyGame | 2023/02/01 | Benedek |
+| Keeper Of The Hates 1.6 | C# | Unity | 2023/02/01 | Vajda |
