@@ -39,14 +39,15 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 | Andrási Szilvia | [Segítő - Tanár] |
 | Bábolnai Bence | js (1) |
 | Orosz Eszter | C# (1) |
-| Horváth Péter Ákos | |
 | Suhajda Zsolt Péter | |
 | Rostás András Péter | |
 | Dávid Benedek | |
-| Molnár-Horgos Kristóf |  |
 | Vajda Dániél | |
 | Bán Gergő | |
 | Bárczi Bence | |
+| Molnár-Horgos Kristóf | [TankTrouble](https://github.com/Trixep/TankTrouble-Multiplayer) |
+| Vígh Noel | [TankTrouble](https://github.com/Trixep/TankTrouble-Multiplayer) |
+| Horváth Péter Ákos | [TankTrouble](https://github.com/Trixep/TankTrouble-Multiplayer) |
 
 
 **Projekt várható befejezésének időpontja: 2023 Közepe**
@@ -60,3 +61,4 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 | snakegame1.0 | C# | - | 2023/01/27 | Esztii |
 | Blackjack | JavaScript | - | 2023/01/27 | Roland |
 | quiz | Python | - | 2023/01/30 | gydoma |
+| [TankTrouble](https://github.com/Trixep/TankTrouble-Multiplayer)| C# | Unity | 2023/01/27 | [készítette](https://github.com/Trixep/TankTrouble-Multiplayer#a-projekt-tagjai) |
