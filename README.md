@@ -39,9 +39,9 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 | Andrási Szilvia | [Segítő - Tanár] |
 | Bábolnai Bence | js (1) |
 | Orosz Eszter | C# (1) |
+| Dávid Benedek | py (1) |
 | Suhajda Zsolt Péter | |
 | Rostás András Péter | |
-| Dávid Benedek | |
 | Vajda Dániél | |
 | Bán Gergő | |
 | Bárczi Bence | |
@@ -62,3 +62,4 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 | Blackjack | JavaScript | - | 2023/01/27 | Roland |
 | quiz | Python | - | 2023/01/30 | gydoma |
 | [TankTrouble](https://github.com/Trixep/TankTrouble-Multiplayer)| C# | Unity | 2023/01/27 | [készítette](https://github.com/Trixep/TankTrouble-Multiplayer#a-projekt-tagjai) |
+| Catan | Python | PyGame | 2023/02/01 | Benedek |
