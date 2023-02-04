@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="52px" viewBox="0 0 48 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>button / medium / fill - icon-only</title>
+    <defs>
+        <circle id="path-1" cx="24" cy="24" r="24"></circle>
+        <filter x="-4.2%" y="-4.2%" width="108.3%" height="116.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="SourceAlpha" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.0941176471   0 0 0 0 0.0980392157   0 0 0 0 0.121568627  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+        <path d="M16.7916667,15.5 C20.3585057,15.5 23.25,18.3914943 23.25,21.9583333 L23.25,24.5416667 C23.25,25.2550345 22.6717011,25.8333333 21.9583333,25.8333333 C21.2449655,25.8333333 20.6666667,25.2550345 20.6666667,24.5416667 L20.6666667,21.9583333 C20.6666667,19.8182299 18.9317701,18.0833333 16.7916667,18.0833333 L6.45833333,18.0833333 C4.31822993,18.0833333 2.58333333,19.8182299 2.58333333,21.9583333 L2.58333333,24.5416667 C2.58333333,25.2550345 2.00503447,25.8333333 1.29166667,25.8333333 C0.578298865,25.8333333 0,25.2550345 0,24.5416667 L0,21.9583333 C0,18.3914943 2.89149432,15.5 6.45833333,15.5 Z M11.625,1.77635684e-15 C15.191839,1.77635684e-15 18.0833333,2.89149432 18.0833333,6.45833333 C18.0833333,10.0251723 15.191839,12.9166667 11.625,12.9166667 C8.05816099,12.9166667 5.16666667,10.0251723 5.16666667,6.45833333 C5.16666667,2.89149432 8.05816099,1.77635684e-15 11.625,1.77635684e-15 Z M11.625,2.58333333 C9.48489659,2.58333333 7.75,4.31822993 7.75,6.45833333 C7.75,8.59843674 9.48489659,10.3333333 11.625,10.3333333 C13.7651034,10.3333333 15.5,8.59843674 15.5,6.45833333 C15.5,4.31822993 13.7651034,2.58333333 11.625,2.58333333 Z" id="path-3"></path>
+    </defs>
+    <g id="button-/-medium-/-fill---icon-only" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="shadow">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <circle stroke="#18191F" stroke-width="2" stroke-linejoin="square" fill="#18191F" fill-rule="evenodd" cx="24" cy="24" r="23"></circle>
+        </g>
+        <circle id="bg" stroke="#18191F" stroke-width="2" fill="#FFFFFF" cx="24" cy="24" r="23"></circle>
+        <g id="feather-/-heart-fill" transform="translate(12.875000, 11.583333)">
+            <mask id="mask-4" fill="white">
+                <use xlink:href="#path-3"></use>
+            </mask>
+            <use id="Combined-Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-3"></use>
+            <g id="COLOR/-black" mask="url(#mask-4)" fill="#18191F">
+                <g transform="translate(-3.875000, -2.583333)" id="Rectangle">
+                    <rect x="0" y="0" width="31" height="31"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
