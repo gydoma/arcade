@@ -1,14 +1,26 @@
 # Chromium Arcade
+<div align="center">
 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Sketch](https://img.shields.io/badge/Sketch-FFB387?style=for-the-badge&logo=sketch&logoColor=black)
+![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 [![forthebadge](https://forthebadge.com/images/badges/gluten-free.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-grammas-recipe.svg)](https://forthebadge.com)
 
-<img src="https://progress-bar.dev/15/?scale=100&title=progress&width=220&color=000&suffix=/100">
+![progress](https://progress-bar.dev/15/?scale=100&title=progress&width=220&color=333&suffix=/100)
+![codeql workflow](https://github.com/gydoma/arcade/actions/workflows/codeql.yml/badge.svg)
+![last commit](https://img.shields.io/github/last-commit/gydoma/arcade?style=plastic)
+![Contributors](https://img.shields.io/github/contributors-anon/gydoma/arcade?style=plastic)
+![commit activity](https://img.shields.io/github/commit-activity/m/gydoma/arcade?style=plastic)
+</div>
 
+____
 Ki ne szeretne játszani? Ez az oldal a Verebély László Technikumának a 2022/23. évi 11. szoftverfejlesztő és tesztelő évfolyamának I. sávú csoportjának a második projektmunkája. Mi úgy terveztük és készítettuk ezt a projektmunkát, hogy az unalmas óráidban csak böngéssz a játékok közül és nyugalmasan játszhass velük, esetleg tudj tanulni is a nyílt kódforrásunknak köszönhetően.
+____
 
 <p float="left">
   <img width="49%" alt="Deisgn of light mode" src="https://user-images.githubusercontent.com/65687471/212193250-f856dca0-9d3a-4905-8eb4-8353e412f619.png">
