@@ -34,8 +34,17 @@ $debug: true !default;
 
 // Debug mode
 @if $debug {
-    body::before{
-        content: "Debug mode is enabled";  
+        body::before {
+            font-family: Monaco;
+            display: block;
+            padding: 1em;
+            background: #000;
+            color: #fff;
+            border-bottom: 2px solid black;
+            content: 'You have currently enabled debug mode in scss/config.scss on line 10';
+          }
+    body {
+          background-image: url('/index/Resources/bg-tile/debug/Light_debug.svg') !important
     }
     footer {
         border-top: 6px solid green;

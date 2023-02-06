@@ -29,10 +29,6 @@
             <h2>meowmeow card!</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, sunt eum perferendis consequuntur id beatae laboriosam libero itaque blanditiis debitis sequi ad nobis, doloremque quas rerum. Labore provident beatae repellat facilis harum magni error ullam corrupti. Quia repellat sit in optio sequi aperiam nostrum rem provident beatae. Quidem provident odio quo repellat, officiis animi consequatur dolor distinctio. Sint a voluptates repudiandae exercitationem, assumenda deleniti eveniet, asperiores provident libero amet maxime.</p>
         </div>
-        <div class="roundedcornes shadow card">
-            <h2>meowmeow card!</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, iure deserunt aliquam tempore, repudiandae quasi autem explicabo repellat consectetur veritatis rem quis ratione numquam a nostrum eveniet officia in minima eos quia, consequuntur consequatur alias quae quidem. Modi, illum. Blanditiis error non reiciendis ipsa voluptas itaque atque impedit iure quae consequuntur ipsam incidunt voluptatibus quaerat, necessitatibus tenetur dolores numquam minima sapiente. Reiciendis, quia officia, accusamus quis neque delectus alias deleniti laboriosam soluta non voluptates eaque beatae sed aut quos quo nobis dolore eveniet voluptate qui pariatur dolorem? Quis aut quisquam qui, fugit dolorum mollitia expedita, adipisci tempora totam perferendis labore reiciendis officiis aspernatur illo, quas facere sit hic. Maiores, mollitia! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut cum ullam sed fugiat labore velit magnam optio deleniti. Dolorem, ea.</p>
-        </div>
     </div>
     <?php include 'search.php'; ?>
     <div class="roundedcornes shadow card"><h2>meowmeow card!</h2></div>

@@ -178,41 +178,16 @@ footer .grade-row {
 }
 
 @media only screen and (max-width: 740px) {
-  #filter {
+  .device-m, #filter, #cat, #filterimg {
+    display: none;
+  }
+
+  .device-s {
+    display: unset;
     display: flex;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #FFFFFF;
-    gap: 10px;
-    width: auto;
-    height: auto;
-    padding: 10px;
-    z-index: 0;
-    border-radius: 20px;
-  }
-  #filter p {
-    all: unset;
-    font-weight: 800;
-    color: #18191F;
-    margin: 5px;
-  }
-  #filter #filterimg {
-    min-width: 10%;
-    min-height: 10%;
-  }
-  #filter #cat {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-41%, -89%);
-    -ms-transform: translate(-50%, -50%);
-    height: 700%;
-    z-index: 1;
-  }
-
-  .device-m {
-    display: none;
   }
 }
 * {
@@ -226,7 +201,17 @@ footer .grade-row {
 }
 
 body::before {
-  content: "Debug mode is enabled";
+  font-family: Monaco;
+  display: block;
+  padding: 1em;
+  background: #000;
+  color: #fff;
+  border-bottom: 2px solid black;
+  content: "You have currently enabled debug mode in scss/config.scss on line 10";
+}
+
+body {
+  background-image: url("/index/Resources/bg-tile/debug/Light_debug.svg") !important;
 }
 
 footer {
