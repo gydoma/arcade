@@ -8,25 +8,13 @@
     <link rel="stylesheet" href="/index/style.css">
 </head>
 <body>
-    <nav class="nav flex">
-        <img src="Resources/logo/logo.svg" class="navimg">
-        <div class="button r" id="button-1">
-          <input type="checkbox" class="checkbox" />
-          <div class="knobs"></div>
-          <div class="layer"></div>
-        </div>
-        <div class="userdiv">
-            <img class="userimg" src="Resources/feather/user.svg">
-            <img class="usernotif" src="Resources/feather/notification.svg">
-          </div>
-        <img src="Resources/feather/menu.svg" class="">
 
-        
-    </nav>
+    <?php include 'header.php'; ?>
 
     <h1>This is a Header (1)</h1>
     <h2>But, thiiis... this is too (2)</h2>
     <p>paralelogramma, nah, just paragraph</p>
+    <a href="alma.html">Casual link tag</a>
     <div class="roundedcornes shadow card"><h2>meowmeow card!</h2></div>
 
     
@@ -55,5 +43,38 @@
             <img src="Resources/cat.svg" id="cat">
         </div>
     </a>
+    <div class="roundedcornes shadow card"><h2>meowmeow card!</h2></div>
+
+    <footer class="horizontal">
+        <div>
+            <h2>Thank You For Using Our Games & Services</h2>
+            <p>By Visiting This Site You Agree Our Terms Of Services.</p>
+            <br>
+            <p>Copyright ©  <a style="" href="https://github.com/gydoma">GyDoma</a> - 2022 - <?php echo date("Y"); ?></p>
+        </div>
+        <div>
+            <h2>Made With <!-- Unicode: U+2764 U+FE0F, UTF-8: E2 9D A4 EF B8 8F-->❤️ By:</h2>
+            <div>
+                <div class="horizontal">
+                    <img src="Resources/footer/5.svg">
+                    <p> Chinaza Akachi</p>
+                </div>
+                <div class="horizontal">
+                    <img src="Resources/footer/2.svg">
+                    <p> Rustem Tolstobrov</p>
+                </div>
+            </div>
+            <div>
+                <div class="horizontal">
+                    <img src="Resources/footer/4.svg">
+                    <p> Balveer Bhadiar</p>
+                </div>
+                <div class="horizontal">
+                    <img src="Resources/footer/3.svg">
+                    <p> Ored Sjögren</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

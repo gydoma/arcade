@@ -9,7 +9,7 @@
 
 .button {
   position: relative;
-  width: 200px;
+  min-width: 200px;
   height: 57px;
   margin: auto 0 auto 0;
   box-shadow: 0px 0px 0px 3px #474A57 inset, 0px 6px 0px 0px #000000, 0px 6px 6px 0px rgba(0, 0, 0, 0.2);
@@ -65,10 +65,31 @@
   background-color: #F95A2C;
 }
 
+/*
+#button-1 .checkbox:checked ~ .layer {
+}
+*/
 #button-1 .knobs,
 #button-1 .knobs:before,
 #button-1 .layer {
   transition: 0.4s ease all;
+}
+
+footer {
+  border-top: 6px solid #000000;
+  background-color: #FFFFFF;
+  padding: 100px;
+  z-index: 10000;
+}
+footer a {
+  text-decoration-line: underline !important;
+  text-decoration-style: "solid";
+  text-decoration-color: rgb(0, 0, 0);
+  text-decoration-thickness: 2px;
+}
+footer .horizontal {
+  display: flex;
+  flex-direction: row;
 }
 
 .userdiv {
@@ -99,7 +120,7 @@
 }
 
 body {
-  background-color: #FFF4CC;
+  background-color: #FFFFFF;
   background-image: url("/index/Resources/bg-tile/light_small.svg");
   background-repeat: repeat;
   margin: 0px;

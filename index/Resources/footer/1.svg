@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="23px" viewBox="0 0 22 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>footer / grade 1</title>
+    <g id="footer-/-grade-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="shadow" x="0" y="0" width="22" height="23" rx="11"></rect>
+        <rect id="bg" fill="#F95A2C" x="0" y="0" width="22" height="23" rx="4"></rect>
+        <text id="1" font-family="Montserrat-ExtraBold, Montserrat" font-size="17" font-weight="700" line-spacing="24" fill="#18191F">
+            <tspan x="7.5575" y="16">1</tspan>
+        </text>
+    </g>
+</svg>

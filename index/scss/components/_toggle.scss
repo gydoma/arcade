@@ -6,7 +6,7 @@
 }
 .button {
   position: relative;
-  width: 200px;
+  min-width: 200px;
   height: 57px;
   margin: auto 0 auto 0;
   box-shadow: 
@@ -65,8 +65,10 @@
   background-color: #F95A2C;
 }
 
+/*
 #button-1 .checkbox:checked ~ .layer {
 }
+*/
 
 #button-1 .knobs,
 #button-1 .knobs:before,

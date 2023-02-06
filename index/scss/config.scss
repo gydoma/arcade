@@ -3,6 +3,7 @@ $dark-theme: false !default;
 
 @import "variables";
 @import "components/toggle";
+@import "components/footer";
 @import "components/notification";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
 
@@ -10,7 +11,7 @@ $dark-theme: false !default;
 *:focus { outline: none }
 
 body {
-    background-color: $primary-bg;
+    background-color: $primary-color;
     background-image: $bgtile;
     background-repeat: repeat;
     margin: 0px;

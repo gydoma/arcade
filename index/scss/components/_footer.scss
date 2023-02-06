@@ -1,0 +1,16 @@
+footer {
+    border-top: 6px solid #000000;
+    background-color: #FFFFFF;
+    padding: 100px;
+    z-index: 10000;
+    a {
+        text-decoration-line: underline !important;
+        text-decoration-style: "solid";
+        text-decoration-color: rgba(0,0,0,1);
+        text-decoration-thickness: 2px;
+    }
+    .horizontal {
+        display: flex;
+        flex-direction: row;
+    }
+}
