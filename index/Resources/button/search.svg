@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="62px" viewBox="0 0 60 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>button / large / outline - icon-only</title>
+    <defs>
+        <circle id="path-1" cx="30" cy="30" r="30"></circle>
+        <filter x="-1.7%" y="-1.7%" width="103.3%" height="106.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="SourceAlpha" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.0941176471   0 0 0 0 0.0980392157   0 0 0 0 0.121568627  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+        <path d="M10.5,0 C16.2989899,0 21,4.70101013 21,10.5 C21,12.9791203 20.1408249,15.2575696 18.703991,17.0538313 L22.9916246,21.3417088 C23.4472363,21.7973204 23.4472363,22.5360129 22.9916246,22.9916246 C22.5360129,23.4472363 21.7973204,23.4472363 21.3417088,22.9916246 L17.0538313,18.703991 C15.2575696,20.1408249 12.9791203,21 10.5,21 C4.70101013,21 0,16.2989899 0,10.5 C0,4.70101013 4.70101013,0 10.5,0 Z M10.5,2.33333333 C5.98967454,2.33333333 2.33333333,5.98967454 2.33333333,10.5 C2.33333333,15.0103255 5.98967454,18.6666667 10.5,18.6666667 C15.0103255,18.6666667 18.6666667,15.0103255 18.6666667,10.5 C18.6666667,5.98967454 15.0103255,2.33333333 10.5,2.33333333 Z" id="path-3"></path>
+    </defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="INDEX---Mobile" transform="translate(-284.000000, -565.000000)">
+            <g id="button-/-large-/-outline---icon-only" transform="translate(284.000000, 565.000000)">
+                <g id="shadow">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <circle stroke="#18191F" stroke-width="2" stroke-linejoin="square" fill="#18191F" fill-rule="evenodd" cx="30" cy="30" r="29"></circle>
+                </g>
+                <circle id="bg" stroke="#18191F" stroke-width="2" fill="#FFFFFF" cx="30" cy="30" r="29"></circle>
+                <g id="feather-/-heart-fill" transform="translate(18.333333, 18.333333)">
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <use id="Combined-Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-3"></use>
+                    <g id="COLOR/-black" mask="url(#mask-4)" fill="#18191F">
+                        <g transform="translate(-2.333333, -2.333333)" id="Rectangle">
+                            <rect x="0" y="0" width="28" height="28"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

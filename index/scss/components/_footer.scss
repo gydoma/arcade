@@ -1,8 +1,7 @@
 footer {
     border-top: 6px solid #000000;
     background-color: #FFFFFF;
-    padding: 100px;
-    z-index: 10000;
+    padding: 5px 200px 5px 75px;
     a {
         text-decoration-line: underline !important;
         text-decoration-style: "solid";
@@ -12,5 +11,37 @@ footer {
     .horizontal {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+        margin:10px;
+    }
+    .grade-row {
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+        white-space: nowrap;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    footer {
+        padding: 5px 100px 5px 100px;
+        text-align: center;
+        a {
+            text-decoration-line: underline !important;
+            text-decoration-style: "solid";
+            text-decoration-color: rgba(0,0,0,1);
+            text-decoration-thickness: 2px;
+        }
+        .horizontal {
+            display: flex;
+            flex-direction:column;
+            justify-content:start;
+        }
+        .grade-row {
+            display: flex;
+            flex-direction: row;
+        }
+        br {
+            display: none;
+        }
     }
 }

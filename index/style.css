@@ -78,8 +78,7 @@
 footer {
   border-top: 6px solid #000000;
   background-color: #FFFFFF;
-  padding: 100px;
-  z-index: 10000;
+  padding: 5px 200px 5px 75px;
 }
 footer a {
   text-decoration-line: underline !important;
@@ -90,8 +89,40 @@ footer a {
 footer .horizontal {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  margin: 10px;
+}
+footer .grade-row {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  white-space: nowrap;
 }
 
+@media only screen and (max-width: 1100px) {
+  footer {
+    padding: 5px 100px 5px 100px;
+    text-align: center;
+  }
+  footer a {
+    text-decoration-line: underline !important;
+    text-decoration-style: "solid";
+    text-decoration-color: rgb(0, 0, 0);
+    text-decoration-thickness: 2px;
+  }
+  footer .horizontal {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  footer .grade-row {
+    display: flex;
+    flex-direction: row;
+  }
+  footer br {
+    display: none;
+  }
+}
 .userdiv {
   position: relative;
   top: 1rem;
@@ -109,6 +140,81 @@ footer .horizontal {
   left: 35px;
 }
 
+#filter {
+  display: flex;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #FFFFFF;
+  gap: 10px;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  z-index: 0;
+  border-radius: 20px;
+}
+#filter p {
+  all: unset;
+  font-weight: 800;
+  color: #18191F;
+  margin: 5px;
+}
+#filter #filterimg {
+  min-width: 10%;
+  min-height: 10%;
+}
+#filter #cat {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-41%, -89%);
+  -ms-transform: translate(-50%, -50%);
+  height: 700%;
+  z-index: 1;
+}
+
+.device-s {
+  display: none;
+}
+
+@media only screen and (max-width: 740px) {
+  #filter {
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #FFFFFF;
+    gap: 10px;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    z-index: 0;
+    border-radius: 20px;
+  }
+  #filter p {
+    all: unset;
+    font-weight: 800;
+    color: #18191F;
+    margin: 5px;
+  }
+  #filter #filterimg {
+    min-width: 10%;
+    min-height: 10%;
+  }
+  #filter #cat {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-41%, -89%);
+    -ms-transform: translate(-50%, -50%);
+    height: 700%;
+    z-index: 1;
+  }
+
+  .device-m {
+    display: none;
+  }
+}
 * {
   font-family: "Montserrat", sans-serif;
   user-select: none;
@@ -119,6 +225,36 @@ footer .horizontal {
   outline: none;
 }
 
+body::before {
+  content: "Debug mode is enabled";
+}
+
+footer {
+  border-top: 6px solid green;
+}
+
+.nav {
+  border-bottom: 6px solid green !important;
+}
+
+@media only screen and (max-width: 1100px) {
+  footer {
+    border-top: 6px solid red;
+  }
+
+  .nav {
+    border-bottom: 6px solid red !important;
+  }
+}
+@media only screen and (max-width: 740px) {
+  footer {
+    border-top: 6px solid blue;
+  }
+
+  .nav {
+    border-bottom: 6px solid blue !important;
+  }
+}
 body {
   background-color: #FFFFFF;
   background-image: url("/index/Resources/bg-tile/light_small.svg");
@@ -182,39 +318,6 @@ p a {
 
 .shadow {
   box-shadow: 0px 0px 0px 3px #474A57 inset, 0px 6px 0px 0px #000000, 0px 6px 6px 0px rgba(0, 0, 0, 0.2);
-}
-
-#filter {
-  display: flex;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #FFFFFF;
-  gap: 10px;
-  width: auto;
-  height: auto;
-  padding: 10px;
-  z-index: 0;
-  border-radius: 20px;
-}
-#filter p {
-  all: unset;
-  font-weight: 800;
-  color: #18191F;
-  margin: 5px;
-}
-#filter #filterimg {
-  min-width: 10%;
-  min-height: 10%;
-}
-#filter #cat {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-41%, -89%);
-  -ms-transform: translate(-50%, -50%);
-  height: 700%;
-  z-index: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

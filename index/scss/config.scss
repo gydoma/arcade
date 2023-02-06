@@ -1,14 +1,66 @@
+//? The bellow code is used to compile the scss files into css
+//? sass --watch scss/config.scss style.css
+
+
 // Edit this variable to switch between light and dark theme
 $dark-theme: false !default;
+// Edit this variable to enable debug-all mode - Creates a red outline around all elements
+$debug-all: false !default;
+// Edit this variable to enable debug mode - Creates a colored outline based on screen size
+$debug: true !default;
 
+// Import variables
 @import "variables";
+
+// Import components
 @import "components/toggle";
 @import "components/footer";
 @import "components/notification";
+@import "components/search";
+
+// Import Montserrat font
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
 
+// Global styles
 *{font-family:'Montserrat',sans-serif;user-select:none;-webkit-tap-highlight-color:transparent}
 *:focus { outline: none }
+
+// Debug-all mode
+@if $debug-all {
+    * {
+        outline: 1px solid red;
+    }
+}
+
+// Debug mode
+@if $debug {
+    body::before{
+        content: "Debug mode is enabled";  
+    }
+    footer {
+        border-top: 6px solid green;
+    }
+    .nav {   
+        border-bottom: 6px solid green !important;
+    }
+    @media only screen and (max-width: 1100px) {
+        footer {
+            border-top: 6px solid red;
+        }
+        .nav {   
+            border-bottom: 6px solid red !important;
+        }
+    }
+    @media only screen and (max-width: 740px) {
+        footer {
+            border-top: 6px solid blue;
+        }
+        .nav {   
+            border-bottom: 6px solid blue !important;
+        }
+    }
+}
+
 
 body {
     background-color: $primary-color;
@@ -78,37 +130,4 @@ p a {
     0px 6px 0px 0px $secondary-color, 
     0px 6px 6px 0px rgba(0, 0, 0, 0.2);
     
-}
-
-#filter {
-    display:flex;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: $primary-color;
-    gap: 10px;
-    width: auto;
-    height: auto;
-    padding: 10px;
-    z-index:0;
-    border-radius: 20px;
-    p{
-        all: unset;
-        font-weight: 800;
-        color: $secondary-text;
-        margin: 5px;
-    }
-    #filterimg {
-        min-width: 10%;
-        min-height: 10%;
-    }
-    #cat {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-41%, -89%);
-        -ms-transform: translate(-50%, -50%);
-        height: 700%;
-        z-index: 1
-    }
 }
