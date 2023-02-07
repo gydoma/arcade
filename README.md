@@ -13,9 +13,9 @@
 
 ![progress](https://progress-bar.dev/15/?scale=100&title=progress&width=220&color=333&suffix=/100)
 ![codeql workflow](https://github.com/gydoma/arcade/actions/workflows/codeql.yml/badge.svg)
-![last commit](https://img.shields.io/github/last-commit/gydoma/arcade?style=plastic)
-![Contributors](https://img.shields.io/github/contributors-anon/gydoma/arcade?style=plastic)
-![commit activity](https://img.shields.io/github/commit-activity/m/gydoma/arcade?style=plastic)
+![last commit](https://img.shields.io/github/last-commit/gydoma/arcade)
+![Contributors](https://img.shields.io/github/contributors-anon/gydoma/arcade)
+![commit activity](https://img.shields.io/github/commit-activity/m/gydoma/arcade)
 </div>
 
 ____
