@@ -44,12 +44,12 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 
 ## Készítették:
 
-| Név | 2 JS - 2 PY - 4 CS|
+| Név | 3 JS - 2 PY - 4 CS|
 | ------ | ------ |
 | Gyurkovics Dominik | [Projektvezető] py (1)|
 | Katona Roland | [Pv.-helyettes] js (1)|
 | Andrási Szilvia | [Segítő - Tanár] |
-| Bábolnai Bence | js (1) |
+| Bábolnai Bence | js (2) |
 | Orosz Eszter | cs (1) |
 | Dávid Benedek | py (1) |
 | Vajda Dániel | cs (1)|
@@ -77,3 +77,4 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 | Catan | Python | PyGame | 2023/02/01 | Benedek |
 | Keeper Of The Hates 1.6 | C# | Unity | 2023/02/01 | Vajda |
 | Minesweeper | C# | - | 2023/02/04 | BanGergo |
+| RepülösProjektMunka | Javascript | - | 2023/02/07 | Bencso |
