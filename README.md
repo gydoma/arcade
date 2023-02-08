@@ -13,9 +13,9 @@
 
 ![progress](https://progress-bar.dev/15/?scale=100&title=progress&width=220&color=333&suffix=/100)
 ![codeql workflow](https://github.com/gydoma/arcade/actions/workflows/codeql.yml/badge.svg)
-![last commit](https://img.shields.io/github/last-commit/gydoma/arcade?style=plastic)
-![Contributors](https://img.shields.io/github/contributors-anon/gydoma/arcade?style=plastic)
-![commit activity](https://img.shields.io/github/commit-activity/m/gydoma/arcade?style=plastic)
+![last commit](https://img.shields.io/github/last-commit/gydoma/arcade)
+![Contributors](https://img.shields.io/github/contributors-anon/gydoma/arcade)
+![commit activity](https://img.shields.io/github/commit-activity/m/gydoma/arcade)
 </div>
 
 ____
@@ -44,7 +44,7 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 
 ## Készítették:
 
-| Név | 2 JS - 2 PY - 4 CS|
+| Név | 3 JS - 2 PY - 4 CS|
 | ------ | ------ |
 | Gyurkovics Dominik | [Projektvezető] py (1)|
 | Katona Roland | [Pv.-helyettes] js (1)|
@@ -69,7 +69,6 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 
 | Játék Neve | Programozási nyelv | Engine | Frissítve | Készítette |
 | ------ | ------ | ------ | ------ | ------ |
-| InRun1.1 | JavaScript | - | 2023/01/25 | Bencso |
 | snakegame1.0 | C# | - | 2023/01/27 | Esztii |
 | Blackjack | JavaScript | - | 2023/01/27 | Roland |
 | quiz | Python | - | 2023/01/30 | gydoma |
@@ -77,3 +76,4 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 | Catan | Python | PyGame | 2023/02/01 | Benedek |
 | Keeper Of The Hates 1.6 | C# | Unity | 2023/02/01 | Vajda |
 | Minesweeper | C# | - | 2023/02/04 | BanGergo |
+| RepülösProjektMunka | Javascript | - | 2023/02/07 | Bencso |
