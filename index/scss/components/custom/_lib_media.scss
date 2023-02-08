@@ -1,0 +1,88 @@
+//   
+// Add to external scss file   
+//   
+$_current_breakpoint_key:'';
+@mixin media($breakpointkeys...){
+  @each $key, $value in $breakpointkeys {
+    $_current_breakpoint_key:$key !global;
+    @media #{map-get($breakpoints,$key)}{ @content; }
+    $_current_breakpoint_key:'' !global;
+  }
+};
+
+// Function for getting media context
+@function media-context(){
+    @return $_current_breakpoint_key;
+}
+
+@mixin extends(){ 
+  @content; 
+  @each $key, $value in $breakpoints { 
+    @include media($key){ @content; } 
+  } 
+}
+
+@mixin new-extend($name){ 
+  %#{ media-context() + $name}{ @content; } 
+}
+
+@mixin extend($name){ 
+  & { 
+    @extend %#{ media-context() + $name };    
+  }
+}
+
+
+//
+// Local SCSS
+//
+// @import '_stuffabove.scss';  
+
+  
+// Define breakpoints   
+$breakpoints:(
+  'mobile' : '(max-width:480px)',
+  'tablet' : '(min-width:481px) and (max-width:960px)',  
+  'desktop': '(min-width:961px)'    
+);  
+
+// Create extends
+@include extends(){
+  @include new-extend(foo){ content:'foo extend'; context:media-context(); }
+  @include new-extend(bar){ content:'bar extend'; context:media-context(); }
+  @include new-extend(doh){ content:'doh extend'; context:media-context(); }  
+} 
+
+// Extend 
+.a {
+  @extend %foo;
+  @include extend(foo);  
+}
+  
+.b {
+  @include media(mobile){
+    @include extend(foo);  
+    @include extend(bar);  
+    @include extend(doh);    
+  }
+  @include media(tablet, desktop){
+    @include extend(foo);  
+    @include extend(bar);  
+    @include extend(doh);    
+  }  
+}
+  
+@include media(mobile){  
+  .c {
+    @include extend(foo);  
+    @include extend(bar);  
+    @include extend(doh);
+  }
+}
+@include media(tablet, desktop){  
+  .c {
+    @include extend(foo);  
+    @include extend(bar);  
+    @include extend(doh);
+  }
+}

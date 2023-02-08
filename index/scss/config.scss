@@ -1,6 +1,16 @@
 //? The bellow code is used to compile the scss files into css
 //? sass --watch scss/config.scss style.css
 
+//!Don't use "components/libraries" - experimental
+
+//@import "components/libraries/arrow"; //TODO Deprecation warning
+//@import "components/libraries/christmas";
+//@import "components/libraries/arrow"; //TODO Deprecation warning
+//@import "components/libraries/ios_spinner";
+//@import "components/libraries/lib_colors";
+//@import "components/libraries/lib_media";
+//@import "components/libraries/lib_conversion";
+
 
 // Edit this variable to switch between light and dark theme
 $dark-theme: false !default;
@@ -70,7 +80,6 @@ $debug: true !default;
     }
 }
 
-
 body {
     background-color: $primary-color;
     background-image: $bgtile;
@@ -138,5 +147,4 @@ p a {
     0px 0px 0px 3px $outline-color inset, 
     0px 6px 0px 0px $secondary-color, 
     0px 6px 6px 0px rgba(0, 0, 0, 0.2);
-    
 }

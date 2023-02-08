@@ -1,35 +1,35 @@
 // Path: index/scss/variables.scss
 
 // Base Colors
-  $primary-bg: #FFF4CC !default;
-  $secondary-bg: #F9E9BF !default;
-  $primary-color: #FFFFFF !default;
-  $secondary-color: #000000 !default;
-  $outline-color: #474A57 !default;
-  $accent-color: #FFBD12 !default;
-  $primary-text: #000000 !default;
-  $secondary-text: #18191F !default;
-  $tertiary-text: #474A57 !default;
-  $blue800: #5C7CFF !default;
-  $darkblue: #080339 !default;
-  $blue100: #E9E7FC !default;
-  $green100: #D6FCF7 !default;
-  $yellow: #FFBD12 !default;
-  $yellow800: #FFD465 !default;
-  $red: #F95A2C !default;
-  $red800: #FF9692 !default;
-  $pink100: #FFF3F8 !default;
-  $pink800: #FFE8E8 !default;
-  $bgtile: url('/index/Resources/bg-tile/light_small.svg') !default;
+$primary-bg: #FFF4CC !default;
+$secondary-bg: #F9E9BF !default;
+$primary-color: #FFFFFF !default;
+$secondary-color: #000000 !default;
+$outline-color: #474A57 !default;
+$accent-color: #FFBD12 !default;
+$primary-text: #000000 !default;
+$secondary-text: #18191F !default;
+$tertiary-text: #474A57 !default;
+$blue800: #5C7CFF !default;
+$darkblue: #080339 !default;
+$blue100: #E9E7FC !default;
+$green100: #D6FCF7 !default;
+$yellow: #FFBD12 !default;
+$yellow800: #FFD465 !default;
+$red: #F95A2C !default;
+$red800: #FF9692 !default;
+$pink100: #FFF3F8 !default;
+$pink800: #FFE8E8 !default;
+$bgtile: url('/index/Resources/bg-tile/light_small.svg') !default;
 // Dark Colors
-  @if $dark-theme {
-    $primary-bg: #202020 !default;
-    $secondary-bg: #2B2B2B !default;
-    $primary-color: #18191F !default;
-    $secondary-color: #FFFFFF !default;
-    $accent-color: #F95A2C !default;
-    $primary-text: #FFFFFF !default;
-    $secondary-text: #D1D1D1 !default;
-    $tertiary-text: #cccccc !default;
-    $bgtile: url('/index/Resources/bg-tile/dark_small.svg') !default;
-  }
+@if $dark-theme {
+  $primary-bg: #202020 !default;
+  $secondary-bg: #2B2B2B !default;
+  $primary-color: #18191F !default;
+  $secondary-color: #FFFFFF !default;
+  $accent-color: #F95A2C !default;
+  $primary-text: #FFFFFF !default;
+  $secondary-text: #D1D1D1 !default;
+  $tertiary-text: #cccccc !default;
+  $bgtile: url('/index/Resources/bg-tile/dark_small.svg') !default;
+}

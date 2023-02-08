@@ -1,0 +1,94 @@
+/*
+<section>
+	<div class="r5_spinner">
+		<div class="r5_spinner_bar"></div>
+		<div class="r5_spinner_bar"></div>
+		<div class="r5_spinner_bar"></div>
+		<div class="r5_spinner_bar"></div>
+		<div class="r5_spinner_bar"></div>
+		<div class="r5_spinner_bar"></div>
+		<div class="r5_spinner_bar"></div>
+		<div class="r5_spinner_bar"></div>
+		<div class="r5_spinner_bar"></div>
+		<div class="r5_spinner_bar"></div>
+		<div class="r5_spinner_bar"></div>
+		<div class="r5_spinner_bar"></div>
+	</div>
+</section>
+<section class="dark">
+	<div class="r5_spinner">
+		<div class="r5_spinner_bar"></div>
+		<div class="r5_spinner_bar"></div>
+		<div class="r5_spinner_bar"></div>
+		<div class="r5_spinner_bar"></div>
+		<div class="r5_spinner_bar"></div>
+		<div class="r5_spinner_bar"></div>
+		<div class="r5_spinner_bar"></div>
+		<div class="r5_spinner_bar"></div>
+		<div class="r5_spinner_bar"></div>
+		<div class="r5_spinner_bar"></div>
+		<div class="r5_spinner_bar"></div>
+		<div class="r5_spinner_bar"></div>
+	</div>
+</section>
+*/
+
+body, section {
+	display: flex;
+}
+
+body {
+	font: 1em/1.5 sans-serif;
+	height: 100vh;
+	margin: 0;
+}
+
+section {
+	width: 100%;
+}
+
+.r5_spinner {
+	margin: auto;
+	position: relative;
+	width: 40px;
+	height: 40px;
+
+	&_bar {
+		$spinDur: 1s;
+		$bars: 12;
+		animation: bar-fade-out $spinDur linear infinite;
+		background: #000;
+		border-radius: 2px;
+		position: absolute;
+		bottom: calc(50% - 2px);
+		left: calc(50% - 2px);
+		width: 4px;
+		height: 11px;
+		transform-origin: 50% 9px;
+
+		@for $b from 1 through $bars {
+			&:nth-child(#{$b}) {
+				animation-delay: -$spinDur * (calc($b / $bars));
+				transform: rotate(calc(-360deg / $bars)) translateY(-11px);
+			}
+		}
+	}
+}
+
+.dark {
+	background: #1c1c1e;
+
+	.r5_spinner_bar {
+		background: #fff;
+	}
+}
+
+@keyframes bar-fade-out {
+ 	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0.1;
+	}
+}
