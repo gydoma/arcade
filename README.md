@@ -49,7 +49,7 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 | Gyurkovics Dominik | [Projektvezető] py (1)|
 | Katona Roland | [Pv.-helyettes] js (1)|
 | Andrási Szilvia | [Segítő - Tanár] |
-| Bábolnai Bence | js (2) |
+| Bábolnai Bence | js (1) |
 | Orosz Eszter | cs (1) |
 | Dávid Benedek | py (1) |
 | Vajda Dániel | cs (1)|
@@ -69,7 +69,6 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 
 | Játék Neve | Programozási nyelv | Engine | Frissítve | Készítette |
 | ------ | ------ | ------ | ------ | ------ |
-| InRun1.1 | JavaScript | - | 2023/01/25 | Bencso |
 | snakegame1.0 | C# | - | 2023/01/27 | Esztii |
 | Blackjack | JavaScript | - | 2023/01/27 | Roland |
 | quiz | Python | - | 2023/01/30 | gydoma |
