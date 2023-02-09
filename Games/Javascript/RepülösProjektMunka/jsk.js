@@ -6,7 +6,12 @@ window.onkeydown = function (e) {
 
 let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext('2d');
+let started = false;
 let random = Math.floor(Math.random() * (1000 - 4000)) + 4000;
+let lastbest =  document.cookie.split('; ').find((row) => row.startsWith('score='))?.split('=')[1];
+let score = 0; 
+let bullet = 3;
+let oilnu =20;
 
 /*Játékos rajzolása, ugrás*/
 const img = new Image();
@@ -92,17 +97,18 @@ class Baloons {
     constructor(size, speed) {
         this.x = canvas.width + size;
         this.y = Math.floor(Math.random() * (0 - 250)) + 250;;
-        this.size = size;
+        this.height = 80;
+        this.width = 100;
         this.Sp = speed;
     }
     draw() {
         balon.src = "./src/balonred.png"
-        ctx.drawImage(balon, this.x, this.y, this.size, this.size);
+        ctx.drawImage(balon, this.x, this.y, this.height, this.width);
     }
     slide() {
         this.draw();
         this.x -= this.Sp;
-        ctx.rect(this.x, this.y, this.size, this.size);
+        ctx.rect(this.x, this.y, this.height, this.width);
         ctx.stroke();
     }
 }
@@ -127,6 +133,7 @@ class Bullet {
 }
 
 let randomgen = Math.floor(Math.random() * (0 - 500)) + 500;
+
 function general(){
 if(randomgen%30<0){
     randomgen = Math.floor(Math.random() * (0 - 500)) + 500;
@@ -146,14 +153,8 @@ class Oils {
         ctx.rect(this.x, this.y, this.size, this.size);
         ctx.stroke();
     }
-    collision(){
-        if(this.x == player.x|| 
-            this.y == player.y){
-            console.log("ÉRINT");
-        }
-
-    }
 }
+
 
 class BossOne {
     constructor(size){
@@ -197,7 +198,7 @@ function cloudg() {
 }
 
 function balong() {
-    ballons.push(new Baloons(250, 0.5))
+    ballons.push(new Baloons(100, 0.5))
     setTimeout(balong, baloonrandom);
 }
 
@@ -216,13 +217,10 @@ function bossg() {
 }
 
 /*Eredmény szöveg*/
-let score = 0; 
-let bullet = 3;
-let oilnu = 40;
-
 function text() {
     ctx.font = "15px serif";
     ctx.fillText("Pontszám :" + score / 10000 + " km", 10, 30);
+    ctx.fillText("Best pontszám :" + lastbest + " km", 10, 50);
     ctx.fillText("Lőszer :" + bullet + " lőszer", 480, 30);
     ctx.fillText("Benzin :" + oilnu + " liter", 150, 30);
     score += 1;
@@ -240,6 +238,8 @@ function start() {
     text()
     enemys.forEach(RndBlokk => {
         RndBlokk.slide();
+        console.log(player.x , RndBlokk.x , player.y , RndBlokk.y);
+        
     })
     clouds.forEach(Clouds => {
         Clouds.slide();
@@ -252,10 +252,8 @@ function start() {
     })
     oils.forEach(Oils => {
         Oils.draw();
-        Oils.collision();
         oils.splice(3);
     })
-    
     /*boss.forEach(BossOne => {
         BossOne.draw();
     })
@@ -280,7 +278,6 @@ function start() {
 }
 
 /*Ugrás*/
-
 addEventListener("keydown", e => {
     switch (e.code) {
         case ('ArrowDown'):
@@ -347,11 +344,6 @@ shoot();
 
 /*Érintkezés*/
 
-function Collision(){
-
-}
-
-Collision()
 
 /*COOKIES*/
 function setCookie(cname, cvalue, exdays) {
@@ -389,6 +381,14 @@ function setCookie(cname, cvalue, exdays) {
     }
   }
 
+  /*leaderboard*/
+  function leaderboard(){
+    document.getElementById('scorewrite').innerText = lastbest;
+}
+leaderboard()
+
+/*---------------*/
+
   function playmenu(){
     checkCookie();
     const path = new Path2D()
@@ -398,6 +398,9 @@ function setCookie(cname, cvalue, exdays) {
     ctx.fill(path)
     ctx.lineWidth = 1
     ctx.stroke(path)
+    score = 0; 
+    bullet = 3;
+    oilnu =Infinity;
 
 
     function startbtn(){
@@ -407,6 +410,7 @@ function setCookie(cname, cvalue, exdays) {
         ctx.fillStyle = "black";
     }
     startbtn();
+
     function coord(canvas, event){
       const rect = canvas.getBoundingClientRect()
       const y = event.clientY - rect.top
@@ -417,7 +421,8 @@ function setCookie(cname, cvalue, exdays) {
     document.addEventListener("click",  function (e) {
       const XY = coord(canvas, e)
       if(ctx.isPointInPath(path, XY.x, XY.y)) {
-        start()
+        start();
+        started = true;
         generate();
         cloudg();
         balong();
@@ -430,5 +435,8 @@ function setCookie(cname, cvalue, exdays) {
 
 function end(){
     setCookie("score", score/ 10000 , 365);
-    document.getElementById('scorewrite').innerText = score/10000;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    leaderboard();
+    playmenu();
 }
+
