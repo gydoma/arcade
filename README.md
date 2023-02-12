@@ -54,13 +54,14 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 | Dávid Benedek | py (1) |
 | Vajda Dániel | cs (1)|
 | Bán Gergő | cs (1) |
-| Suhajda Zsolt Péter | |
+| Suhajda Zsolt Péter | cs(1) |
 | Rostás András Péter | |
 | Bárczi Bence | |
 | Molnár-Horgos Kristóf | [TankTrouble](https://github.com/Trixep/TankTrouble-Multiplayer) |
 | Vígh Noel | [TankTrouble](https://github.com/Trixep/TankTrouble-Multiplayer) |
 | Horváth Péter Ákos | [TankTrouble](https://github.com/Trixep/TankTrouble-Multiplayer) |
 
+A projekt weboldalának a kinézeti tervét, PHP és SCSS részét készítette és fenntartja: gydoma
 
 **Projekt várható befejezésének időpontja: 2023 Közepe**
 
@@ -77,4 +78,4 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 | Keeper Of The Hates 1.6 | C# | Unity | 2023/02/01 | Vajda |
 | Minesweeper | C# | - | 2023/02/04 | BanGergo |
 | RepülösProjektMunka | Javascript | - | 2023/02/07 | Bencso |
-| [Pong](https://github.com/rewerze/Pong) | C# | Unity | 2023/02/07 | [Készítette](https://github.com/rewerze/) |
+| [Pong](https://github.com/rewerze/Pong) | C# | Unity | 2023/02/07 | [rewerze](https://github.com/rewerze/) |
