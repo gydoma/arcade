@@ -2,7 +2,7 @@ $globe-width:   12px;
 $globe-height:  28px;
 $globe-spacing: 40px;
 $globe-spread: 3px;
-$light-off-opacity: 0.4;
+$light-off-opacity: 0.5;
 
 .lightrope {
   text-align: center;
@@ -10,7 +10,7 @@ $light-off-opacity: 0.4;
   overflow: hidden;
   position: absolute;
   z-index: 1;
-  margin: -15px 0 0 0;
+  margin: -36px 0 0 0;
   padding: 0;
   pointer-events: none;
   width: 100%;

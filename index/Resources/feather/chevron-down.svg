@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>feather / chevron-down</title>
+    <defs>
+        <path d="M7.93933983,6.43933983 C8.48851461,5.89016504 9.35757702,5.85584162 9.94673776,6.33636956 L10.0606602,6.43933983 L16.0606602,12.4393398 C16.609835,12.9885146 16.6441584,13.857577 16.1636304,14.4467378 L16.0606602,14.5606602 L10.0606602,20.5606602 C9.47487373,21.1464466 8.52512627,21.1464466 7.93933983,20.5606602 C7.39016504,20.0114854 7.35584162,19.142423 7.83636956,18.5532622 L7.93933983,18.4393398 L12.879,13.5 L7.93933983,8.56066017 C7.39016504,8.01148539 7.35584162,7.14242298 7.83636956,6.55326224 L7.93933983,6.43933983 Z" id="path-1"></path>
+    </defs>
+    <g id="feather-/-chevron-down" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Path" fill="#18191F" fill-rule="nonzero" transform="translate(12.000000, 13.500000) scale(-1, 1) rotate(90.000000) translate(-12.000000, -13.500000) " xlink:href="#path-1"></use>
+        <g id="COLOR/-black" mask="url(#mask-2)" fill="#18191F">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+        </g>
+    </g>
+</svg>

@@ -1,4 +1,4 @@
-<!--Print it between nav and body - christmas lights -->
+<!-- Christmas lights under the navbar between November 1st - January 5th -->
 <?php
 $xmasStart = new DateTime('11/1 00:00:00');
 $xmasEnd = new DateTime('1/5 23:59:59');

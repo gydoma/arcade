@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="/index/style.css">
 </head>
 <body>
-    <?php include 'header.php'?>
+    <?php include 'navbar.php'?>
+    <?php include 'php/christmas.php'?>
     <h1>This is a Header (1)</h1>
     <h2>But, thiiis... this is too (2)</h2>
     <p>paralelogramma, nah, just paragraph</p>
     <a href="alma.html">Casual link tag</a>
     <div class="roundedcornes shadow card"><h2>meowmeow card!</h2></div>
 
-    
     <div class="flex">
         <div class="roundedcornes shadow card">
             <h2>meowmeow card!</h2>
@@ -30,40 +30,12 @@
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, sunt eum perferendis consequuntur id beatae laboriosam libero itaque blanditiis debitis sequi ad nobis, doloremque quas rerum. Labore provident beatae repellat facilis harum magni error ullam corrupti. Quia repellat sit in optio sequi aperiam nostrum rem provident beatae. Quidem provident odio quo repellat, officiis animi consequatur dolor distinctio. Sint a voluptates repudiandae exercitationem, assumenda deleniti eveniet, asperiores provident libero amet maxime.</p>
         </div>
     </div>
-    <?php include 'search.php'; ?>
-    <div class="roundedcornes shadow card"><h2>meowmeow card!</h2></div>
 
-    <footer><div class="horizontal">
-        <div>
-            <h2>Thank You For Using Our Games & Services</h2>
-            <p>By Visiting This Site You Agree Our Terms Of Services.</p>
-            <br>
-            <p>Copyright ©  <a style="" href="https://github.com/gydoma">GyDoma</a> - 2022 - <?php echo date("Y"); ?></p>
-        </div>
-        <div>
-            <h2>Made With <!-- Unicode: U+2764 U+FE0F, UTF-8: E2 9D A4 EF B8 8F-->❤️ By:</h2>
-            <div class="grade-row">
-                <div class="grade-row">
-                    <img src="Resources/footer/5.svg">
-                    <p> Chinaza Akachi</p>
-                </div>
-                <div class="grade-row">
-                    <img src="Resources/footer/2.svg">
-                    <p> Rustem Tolstobrov</p>
-                </div>
-            </div>
-            <div class="grade-row">
-                <div class="grade-row">
-                    <img src="Resources/footer/4.svg">
-                    <p> Balveer Bhadiar</p>
-                </div>
-                <div class="grade-row">
-                    <img src="Resources/footer/3.svg">
-                    <p> Ored Sjögren</p>
-                </div>
-            </div>
-        </div>
-        </div>
-    </footer>
+    <?php include 'filter.php'; ?>
+    <?php include 'search.php'; ?>
+
+
+    <?php include 'footer.php'; ?>
+    
 </body>
 </html>

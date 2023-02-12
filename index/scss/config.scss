@@ -1,15 +1,15 @@
 //? The bellow code is used to compile the scss files into css
 //? sass --watch scss/config.scss style.css
 
-//!Don't use "components/libraries" - experimental
+//! Don't use "components/libraries" - experimental
 
-//@import "components/libraries/arrow"; //TODO Deprecation warning
-//@import "components/libraries/christmas";
-//@import "components/libraries/arrow"; //TODO Deprecation warning
-//@import "components/libraries/ios_spinner";
-//@import "components/libraries/lib_colors";
-//@import "components/libraries/lib_media";
-//@import "components/libraries/lib_conversion";
+//@import "components/custom/arrow"; // TODO Deprecation warning
+//@import "components/custom/christmas"; // * can be implemented in the future *
+//@import "components/custom/arrow"; // TODO Deprecation warning
+//@import "components/custom/ios_spinner";
+//@import "components/custom/lib_colors";
+//@import "components/custom/lib_media";
+//@import "components/custom/lib_conversion";
 
 
 // Edit this variable to switch between light and dark theme
@@ -27,6 +27,8 @@ $debug: true !default;
 @import "components/footer";
 @import "components/notification";
 @import "components/search";
+@import "components/navbar";
+@import "components/filter";
 
 // Import Montserrat font
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
@@ -34,6 +36,8 @@ $debug: true !default;
 // Global styles
 *{font-family:'Montserrat',sans-serif;user-select:none;-webkit-tap-highlight-color:transparent}
 *:focus { outline: none }
+
+.notice { display:none }
 
 // Debug-all mode
 @if $debug-all {
@@ -51,7 +55,10 @@ $debug: true !default;
             background: #000;
             color: #fff;
             border-bottom: 2px solid black;
-            content: 'You have currently enabled debug mode in scss/config.scss on line 10';
+            content: 'You have currently enabled debug mode in scss/config.scss on line 20';
+            position: sticky;
+            top: 0;
+            z-index: 9999;
           }
     body {
           background-image: url('/index/Resources/bg-tile/debug/Light_debug.svg') !important
@@ -77,6 +84,13 @@ $debug: true !default;
         .nav {   
             border-bottom: 6px solid blue !important;
         }
+    }
+    .notice {
+        font-family: Monaco;
+        display: block;
+        padding: 1em;
+        background: #000;
+        color: #fff;
     }
 }
 
@@ -105,21 +119,6 @@ p a {
     text-decoration: none;
 }
 
-.nav {    
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    background-color: $primary-color;
-    border-bottom-width: 6px;
-    border-bottom-style: solid;
-    border-bottom-color: $secondary-color;
-    padding: 5px;
-    .navimg {
-        height: 90px
-    }
-}
-
-
 
 .roundedcorners {
     border-radius: 25px;
@@ -133,7 +132,7 @@ p a {
     padding: 20px;
     margin: 20px;
     height: auto;
-    width: 25%;
+    width: 100% - padding;
 }
 
 .flex {

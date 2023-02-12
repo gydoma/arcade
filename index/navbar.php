@@ -7,8 +7,10 @@
     </div>
     <div class="userdiv">
         <img class="userimg" src="Resources/feather/user.svg">
-        <!--? Can be deleted, to hide the notification - ID [notification] is only a placeholder, not used in css -->
+        <!-- ? Can be deleted, to hide the notification - ID [notification] is only a placeholder, not used in css -->
         <img id="notification" class="usernotif" src="Resources/feather/notification.svg">
     </div>
-    <img src="Resources/feather/menu.svg" class="">  
+    <a href="menu.html">
+        <img src="Resources/feather/menu.svg" class="burgermenu">  
+    </a>
 </nav>

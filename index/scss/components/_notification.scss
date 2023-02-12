@@ -1,8 +1,9 @@
-.userdiv {
+  .userdiv {
     position: relative;
-    top: 1rem;
     left: 0;
+    height: 100%;
   }
+
   .userimg {
     position: relative;
     top: 0;
@@ -10,6 +11,6 @@
   }
   .usernotif {
     position: absolute;
-    left: 35px;
+    left: 34px;
   }
 
