@@ -6,12 +6,7 @@ window.onkeydown = function (e) {
 
 let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext('2d');
-let started = false;
 let random = Math.floor(Math.random() * (1000 - 4000)) + 4000;
-let lastbest =  document.cookie.split('; ').find((row) => row.startsWith('score='))?.split('=')[1];
-let score = 0; 
-let bullet = 3;
-let oilnu =20;
 
 /*Játékos rajzolása, ugrás*/
 const img = new Image();
@@ -35,16 +30,42 @@ class Plr {
     constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.size = 100;
+        this.height = 33;
+        this.width = 91;
     }
     draw() {
-        img.height = 20;
+        img.height = 50;
         setInterval(skinchange, 400);
-        ctx.drawImage(img, this.x, this.y, this.size, this.size);
+        ctx.drawImage(img, this.x, this.y, this.width, this.height);
     }
 }
 
 let player = new Plr(0, 30);
+
+
+function Collison(enx,enw,eny,enh){
+    if( player.x>enx+enw        ||
+        player.x + player.width < enx   ||
+        player.y>eny+enh       ||
+        player.y + player.height < eny
+        ){}
+    else{
+        console.log("dadada");
+        cancelAnimationFrame(req);
+    }
+}
+
+function Oilcol(enx,enw,eny,enh){
+    if( player.x>enx+enw        ||
+        player.x + player.width < enx   ||
+        player.y>eny+enh       ||
+        player.y + player.height < eny
+        ){}
+    else{
+        oilnu+=100;
+    }
+}
+
 
 /*A random blokkok , felhők*/
 let enemys = [];
@@ -54,61 +75,65 @@ let bullets = [];
 let oils = [];
 let boss = [];
 ctx.strokeStyle = "red";
-class RndBlokk {
-    constructor(size, speed) {
-        this.x = canvas.width + size;
+class Birds {
+    constructor(width , height, speed) {
+        this.height = height;
+        this.width = width;
+        this.x = canvas.width + this.width;
         this.y = Math.floor(Math.random() * (50 - 580)) + 580;;
-        this.size = size;
         this.Sp = speed;
     }
     draw() {
         bird.src = "./src/bird.png";
-        ctx.drawImage(bird, this.x, this.y, this.size, this.size);
+        ctx.drawImage(bird, this.x, this.y, this.width, this.height);
     }
     slide() {
         this.draw();
         this.x -= this.Sp;
-        ctx.rect(this.x, this.y, this.size, this.size);
+        Collison(this.x,this.width,this.y,this.height);
+        ctx.rect(this.x, this.y, this.width, this.height);
         ctx.stroke();
     }
 }
 
 class Clouds {
-    constructor(size, speed) {
-        this.x = canvas.width + size;
+    constructor(width , height, speed) {
+        this.width = width;
+        this.height = height;
+        this.x = canvas.width + this.width;
         this.y = Math.floor(Math.random() * (50 - 580)) + 580;;
-        this.size = size;
         this.Sp = speed;
     }
     draw() {
 
         cloud.src = "./src/cloud.png";
-        ctx.drawImage(cloud, this.x, this.y, this.size, this.size);
+        ctx.drawImage(cloud, this.x, this.y, this.width, this.height);
     }
     slide() {
         this.draw();
         this.x -= this.Sp;
-        ctx.rect(this.x, this.y, this.size, this.size);
+        ctx.rect(this.x, this.y, this.width, this.height);
         ctx.stroke();
     }
 }
 
 class Baloons {
-    constructor(size, speed) {
-        this.x = canvas.width + size;
+    constructor(width , height, speed) {
+        this.height = height;
+        this.width = width;
+        this.x = canvas.width + this.width;
         this.y = Math.floor(Math.random() * (0 - 250)) + 250;;
-        this.height = 80;
-        this.width = 100;
         this.Sp = speed;
     }
     draw() {
         balon.src = "./src/balonred.png"
-        ctx.drawImage(balon, this.x, this.y, this.height, this.width);
+        ctx.drawImage(balon, this.x, this.y, this.width, this.height);
     }
     slide() {
         this.draw();
         this.x -= this.Sp;
-        ctx.rect(this.x, this.y, this.height, this.width);
+        Collison(this.x,this.width,this.y,this.height);
+        ctx.rect(this.x, this.y, this.width, this.height);
         ctx.stroke();
     }
 }
@@ -133,7 +158,6 @@ class Bullet {
 }
 
 let randomgen = Math.floor(Math.random() * (0 - 500)) + 500;
-
 function general(){
 if(randomgen%30<0){
     randomgen = Math.floor(Math.random() * (0 - 500)) + 500;
@@ -142,15 +166,17 @@ if(randomgen%30<0){
 general()
 
 class Oils {
-    constructor(size) {
-        this.size = size;
+    constructor(width , height) {
+        this.height = height;
+        this.width = width;
         this.x = randomgen;
         this.y = randomgen;
     }
     draw() {
         oil.src = "./src/oil.png";
-        ctx.drawImage(oil, this.x, this.y, this.size, this.size);
-        ctx.rect(this.x, this.y, this.size, this.size);
+        Oilcol(this.x,this.width,this.y,this.height);
+        ctx.drawImage(oil, this.x, this.y, this.width, this.height);
+        ctx.rect(this.x, this.y, this.width, this.height);
         ctx.stroke();
     }
 }
@@ -174,7 +200,7 @@ class BossOne {
 
 function hitbox(){
     ctx.beginPath();
-    ctx.rect(player.x, player.y, player.size, player.size);
+    ctx.rect(player.x, player.y, player.width, player.height);
     ctx.stroke();
 }
 
@@ -188,22 +214,22 @@ let oilrandom =  Math.floor(Math.random() * (10000 - 13000)) + 10000;
 
 
 function generate() {
-    enemys.push(new RndBlokk(50, 0.5))
+    enemys.push(new Birds(35,30, 0.5))
     setTimeout(generate, birdrandom)
 }
 
 function cloudg() {
-    clouds.push(new Clouds(300, 0.5))
+    clouds.push(new Clouds(85,50, 0.5))
     setTimeout(cloudg,cloudrandom);
 }
 
 function balong() {
-    ballons.push(new Baloons(100, 0.5))
+    ballons.push(new Baloons(70,85, 0.5))
     setTimeout(balong, baloonrandom);
 }
 
 function oilg() {
-    oils.push(new Oils(50))
+    oils.push(new Oils(15,15))
     if(oilg.length==3){
         console.log(oilg.length);
     }
@@ -217,10 +243,13 @@ function bossg() {
 }
 
 /*Eredmény szöveg*/
+let score = 0; 
+let bullet = 3;
+let oilnu = 50;
+
 function text() {
     ctx.font = "15px serif";
     ctx.fillText("Pontszám :" + score / 10000 + " km", 10, 30);
-    ctx.fillText("Best pontszám :" + lastbest + " km", 10, 50);
     ctx.fillText("Lőszer :" + bullet + " lőszer", 480, 30);
     ctx.fillText("Benzin :" + oilnu + " liter", 150, 30);
     score += 1;
@@ -228,7 +257,7 @@ function text() {
     Math.floor(score);
 }
 
-/*Alaprajzolás , rndblokkok rajzolása*/
+/*Alaprajzolás , Birdsok rajzolása*/
 let req = null;
 function start() {
     req = requestAnimationFrame(start);
@@ -236,10 +265,8 @@ function start() {
     player.draw();
     hitbox();
     text()
-    enemys.forEach(RndBlokk => {
-        RndBlokk.slide();
-        console.log(player.x , RndBlokk.x , player.y , RndBlokk.y);
-        
+    enemys.forEach(Birds => {
+        Birds.slide();
     })
     clouds.forEach(Clouds => {
         Clouds.slide();
@@ -254,6 +281,7 @@ function start() {
         Oils.draw();
         oils.splice(3);
     })
+    
     /*boss.forEach(BossOne => {
         BossOne.draw();
     })
@@ -268,16 +296,19 @@ function start() {
     if (player.y == (-60) || player.y == 570) {
         player.y = (-30);
     }
+
     /*Benzin*/
     if(oilnu<0){
-        cancelAnimationFrame(req)
+        cancelAnimationFrame(req);
         end();
     }
     /*fffff*/
 
 }
 
+
 /*Ugrás*/
+
 addEventListener("keydown", e => {
     switch (e.code) {
         case ('ArrowDown'):
@@ -381,14 +412,6 @@ function setCookie(cname, cvalue, exdays) {
     }
   }
 
-  /*leaderboard*/
-  function leaderboard(){
-    document.getElementById('scorewrite').innerText = lastbest;
-}
-leaderboard()
-
-/*---------------*/
-
   function playmenu(){
     checkCookie();
     const path = new Path2D()
@@ -398,9 +421,6 @@ leaderboard()
     ctx.fill(path)
     ctx.lineWidth = 1
     ctx.stroke(path)
-    score = 0; 
-    bullet = 3;
-    oilnu =Infinity;
 
 
     function startbtn(){
@@ -410,7 +430,6 @@ leaderboard()
         ctx.fillStyle = "black";
     }
     startbtn();
-
     function coord(canvas, event){
       const rect = canvas.getBoundingClientRect()
       const y = event.clientY - rect.top
@@ -421,8 +440,7 @@ leaderboard()
     document.addEventListener("click",  function (e) {
       const XY = coord(canvas, e)
       if(ctx.isPointInPath(path, XY.x, XY.y)) {
-        start();
-        started = true;
+        start()
         generate();
         cloudg();
         balong();
@@ -435,8 +453,5 @@ leaderboard()
 
 function end(){
     setCookie("score", score/ 10000 , 365);
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    leaderboard();
-    playmenu();
+    document.getElementById('scorewrite').innerText = score/10000;
 }
-
