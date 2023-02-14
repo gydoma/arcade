@@ -3,7 +3,7 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: $primary-color;
+    background-color: var(--primary-color);
     gap: 10px;
     width: auto;
     height: auto;
@@ -13,7 +13,7 @@
     p{
         all: unset;
         font-weight: 800;
-        color: $secondary-text;
+        color: var(--secondary-text);
         margin: 5px;
     }
     #filterimg {

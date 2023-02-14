@@ -1,7 +1,7 @@
 <nav class="nav flex">
     <img src="Resources/logo/logo.svg" class="navimg">
     <div class="button r" id="button-1">
-        <input type="checkbox" class="checkbox">
+        <input type="checkbox" class="checkbox" name="mode">
             <div class="knobs"></div>
             <div class="layer"></div>
     </div>

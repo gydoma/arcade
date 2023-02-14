@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="/index/style.css">
 </head>
 <body>
+    <?php require("db.php")?>
     <?php include 'navbar.php'?>
+    <script src="javascript/darkmode.js" onload="darkmodecheck()"></script>
     <?php include 'php/christmas.php'?>
     <h1>This is a Header (1)</h1>
     <h2>But, thiiis... this is too (2)</h2>
@@ -37,5 +39,9 @@
 
     <?php include 'footer.php'; ?>
     
+<script>
+
+</script>
+
 </body>
 </html>

@@ -22,14 +22,13 @@ $pink100: #FFF3F8 !default;
 $pink800: #FFE8E8 !default;
 $bgtile: url('/index/Resources/bg-tile/light_small.svg') !default;
 // Dark Colors
-@if $dark-theme {
-  $primary-bg: #202020 !default;
-  $secondary-bg: #2B2B2B !default;
-  $primary-color: #18191F !default;
-  $secondary-color: #FFFFFF !default;
-  $accent-color: #F95A2C !default;
-  $primary-text: #FFFFFF !default;
-  $secondary-text: #D1D1D1 !default;
-  $tertiary-text: #cccccc !default;
-  $bgtile: url('/index/Resources/bg-tile/dark_small.svg') !default;
-}
+
+  $dark_primary-bg: #202020 !default;
+  $dark_secondary-bg: #2B2B2B !default;
+  $dark_primary-color: #18191F !default;
+  $dark_secondary-color: #FFFFFF !default;
+  $dark_accent-color: #F95A2C !default;
+  $dark_primary-text: #FFFFFF !default;
+  $dark_secondary-text: #D1D1D1 !default;
+  $dark_tertiary-text: #cccccc !default;
+  $dark_bgtile: url('/index/Resources/bg-tile/dark_small.svg') !default;

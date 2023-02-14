@@ -13,11 +13,11 @@
 
 
 // Edit this variable to switch between light and dark theme
-$dark-theme: false !default;
+$dark-theme: false;
 // Edit this variable to enable debug-all mode - Creates a red outline around all elements
-$debug-all: false !default;
+$debug-all: false;
 // Edit this variable to enable debug mode - Creates a colored outline based on screen size
-$debug: true !default;
+$debug: true;
 
 // Import variables
 @import "variables";
@@ -38,6 +38,41 @@ $debug: true !default;
 *:focus { outline: none }
 
 .notice { display:none }
+//coloring
+html[data-theme="light"]{
+    --primary-bg: #{$primary-bg};
+    --secondary-bg: #{$secondary-bg};
+    --primary-color: #{$primary-color};
+    --secondary-color: #{$secondary-color};
+    --outline-color: #{$outline-color};
+    --accent-color: #{$accent-color};
+    --primary-text: #{$primary-text};
+    --secondary-text: #{$secondary-text};
+    --tertiary-text: #{$tertiary-text};
+    --blue800: #{$blue800};
+    --darkblue: #{$darkblue};
+    --blue100: #{$blue100};
+    --green100: #{$green100};
+    --yellow: #{$yellow};
+    --yellow800: #{$yellow800};
+    --red: #{$red};
+    --red800: #{$red800};
+    --pink100: #{$pink100};
+    --pink800: #{$pink800};
+    --bgtile: url('/index/Resources/bg-tile/light_small.svg')
+}
+
+html[data-theme="dark"]{
+    --primary-bg: #{$dark_primary-bg};
+    --secondary-bg: #{$dark_secondary-bg};
+    --primary-color: #{$dark_primary-color};
+    --secondary-color: #{$dark_secondary-color};
+    --accent-color: #{$dark_accent-color};
+    --primary-text: #{$dark_primary-text};
+    --secondary-text: #{$dark_secondary-text};
+    --tertiary-text: #{$dark_tertiary-text};
+    --dark_bgtile: url('/index/Resources/bg-tile/dark_small.svg')
+}
 
 // Debug-all mode
 @if $debug-all {
@@ -95,25 +130,25 @@ $debug: true !default;
 }
 
 body {
-    background-color: $primary-color;
-    background-image: $bgtile;
+    background-color: var(--primary-bg);
+    background-image: var(--bgtile);
     background-repeat: repeat;
     margin: 0px;
 }
 
 h1 {
-    color: $secondary-text;
+    color: var(--secondary-text);
     font-size: 36;
     font-weight: 800;
 }
 h2 {
-    color: $secondary-text;
+    color: var(--secondary-text);
     font-size: 24;
     font-weight: 800;
 }
 
 p a {
-    color: $tertiary-text;
+    color: var(--tertiary-text);
     font-size: 17;
     font-weight: 500;
     text-decoration: none;
@@ -122,12 +157,12 @@ p a {
 
 .roundedcorners {
     border-radius: 25px;
-    border: 4px solid $secondary-color;
+    border: 4px solid var(--secondary-color);
     padding: 10px;
 }
 
 .card {
-    background-color: $primary-color;
+    background-color: var(--primary-color);
     border-radius: 25px;
     padding: 20px;
     margin: 20px;
@@ -143,7 +178,7 @@ p a {
 
 .shadow {
     box-shadow: 
-    0px 0px 0px 3px $outline-color inset, 
-    0px 6px 0px 0px $secondary-color, 
+    0px 0px 0px 3px var(--outline-color) inset, 
+    0px 6px 0px 0px var(--secondary-color), 
     0px 6px 6px 0px rgba(0, 0, 0, 0.2);
 }

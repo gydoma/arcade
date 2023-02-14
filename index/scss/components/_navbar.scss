@@ -1,8 +1,8 @@
 .nav {    
-    background-color: $primary-color;
+    background-color: var(--primary-color);
     border-bottom-width: 6px;
     border-bottom-style: solid;
-    border-bottom-color: $secondary-color;
+    border-bottom-color: var(--secondary-color);
     padding: 5px;
     position: relative;
     display: flex;
