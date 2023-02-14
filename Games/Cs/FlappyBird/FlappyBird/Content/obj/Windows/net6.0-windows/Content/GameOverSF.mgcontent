@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/GameOverSF.mp3</SourceFile>
+  <SourceTime>2023-02-05T14:24:30.701195+01:00</SourceTime>
+  <DestFile>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/bin/Windows/Content/GameOverSF.xnb</DestFile>
+  <DestTime>2023-02-05T14:31:50.6058518+01:00</DestTime>
+  <Importer>Mp3Importer</Importer>
+  <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
+  <Processor>SongProcessor</Processor>
+  <ProcessorTime>2022-07-26T13:44:56+02:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput>
+    <string>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/bin/Windows/Content/GameOverSF.wma</string>
+  </BuildOutput>
+</PipelineBuildEvent>

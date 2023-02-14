@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/JumpSF.mp3</SourceFile>
+  <SourceTime>2023-02-05T14:25:42.6535793+01:00</SourceTime>
+  <DestFile>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/bin/Windows/Content/JumpSF.xnb</DestFile>
+  <DestTime>2023-02-05T14:31:50.7720028+01:00</DestTime>
+  <Importer>Mp3Importer</Importer>
+  <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
+  <Processor>SongProcessor</Processor>
+  <ProcessorTime>2022-07-26T13:44:56+02:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput>
+    <string>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/bin/Windows/Content/JumpSF.wma</string>
+  </BuildOutput>
+</PipelineBuildEvent>

@@ -1,0 +1,4 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/wavButtonClickSF2.wav","C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/bin/Windows/wavButtonClickSF2.xnb","SoundEffectProcessor","SoundEffectContent",23126,23145,0,3778699
+"C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/wavMoveSF.wav","C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/bin/Windows/wavMoveSF.xnb","SoundEffectProcessor","SoundEffectContent",78422,78441,0,1587177
+"C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/wavWallSF.wav","C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/bin/Windows/wavWallSF.xnb","SoundEffectProcessor","SoundEffectContent",41558,41577,0,1482808

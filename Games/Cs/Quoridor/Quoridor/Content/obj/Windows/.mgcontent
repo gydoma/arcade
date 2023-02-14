@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/bg.jpg</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/BlackPiece.png</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/board_bg.png</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/ButtonBg.jpg</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/ButtonClickSF.mp3</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/ButtonClickSF2.mp3</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/ButtonFont.spritefont</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/FieldDark.jpg</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/FieldLight.jpg</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/galleryFont.spritefont</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/HorizontalWallMark.png</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/MoveSF.mp3</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/ValidR.png</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/VerticalWallMark.png</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/WallMark.png</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/WallSF.mp3</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/wavButtonClickSF2.wav</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/wavMoveSF.wav</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/wavWallSF.wav</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/Quoridor/Quoridor/Content/WhitePiece.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

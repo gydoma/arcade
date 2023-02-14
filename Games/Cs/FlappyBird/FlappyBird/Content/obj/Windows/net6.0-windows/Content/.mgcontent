@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/bg.png</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/bg1920x1080.png</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/BirdBase-removebg-preview.png</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/BirdBase.png</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/BirdFly-removebg-preview.png</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/Bottom-Pillar-B.png</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/ButtonClickSF2.mp3</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/galleryFont.spritefont</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/GameOver-removebg-preview.png</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/GameOverSF.mp3</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/JumpSF.mp3</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/Lightning_1-removebg-preview.png</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/Lightning_2-removebg-preview.png</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/Lightning_3-removebg-preview.png</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/Quit.png</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/Start.png</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/Start5.png</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/Top-Pillar-B.png</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/Top-Pillar-removebg-preview.png</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/Warning-removebg-preview.png</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/wavButtonClickSF2.wav</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/wavGameOverSF.wav</File>
+    <File>C:/Users/BaBen/OneDrive/Asztali gép/Projecktek/FlappyBird/FlappyBird/Content/wavJumpSF.wav</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
