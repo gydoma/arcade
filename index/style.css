@@ -13,7 +13,7 @@
   position: relative;
   min-width: 200px;
   height: 57px;
-  margin: auto 0 auto 0;
+  margin: auto 1.5rem auto auto;
   box-shadow: 0px 0px 0px 3px #474A57 inset, 0px 6px 0px 0px #000000, 0px 6px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -84,6 +84,14 @@
   transition: 0.4s ease all;
 }
 
+@media only screen and (max-width: 740px) {
+  /* line 80, ../../../../xampp/htdocs/index/scss/components/_toggle.scss */
+  .button {
+    display: none;
+    width: 25%;
+  }
+}
+
 /* line 1, ../../../../xampp/htdocs/index/scss/components/_footer.scss */
 footer {
   border-top: 6px solid #000000;
@@ -150,16 +158,17 @@ footer .grade-row {
   position: relative;
   left: 0;
   height: 100%;
+  width: 50px;
 }
 
-/* line 7, ../../../../xampp/htdocs/index/scss/components/_notification.scss */
+/* line 8, ../../../../xampp/htdocs/index/scss/components/_notification.scss */
 .userimg {
   position: relative;
   top: 0;
   left: 0;
 }
 
-/* line 12, ../../../../xampp/htdocs/index/scss/components/_notification.scss */
+/* line 13, ../../../../xampp/htdocs/index/scss/components/_notification.scss */
 .usernotif {
   position: absolute;
   left: 34px;
@@ -236,7 +245,7 @@ footer .grade-row {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  background: #ffffff;
+  background: var(--primary-color);
   color: #000000;
   padding: 20px;
   z-index: 1;
@@ -426,17 +435,13 @@ footer .grade-row {
   display: none;
 }
 
-/* line 42, ../../../../xampp/htdocs/index/scss/config.scss */
-html[data-theme="light"] {
-  --primary-bg: #FFF4CC;
-  --secondary-bg: #F9E9BF;
-  --primary-color: #FFFFFF;
-  --secondary-color: #000000;
-  --outline-color: #474A57;
-  --accent-color: #FFBD12;
-  --primary-text: #000000;
-  --secondary-text: #18191F;
-  --tertiary-text: #474A57;
+/* line 43, ../../../../xampp/htdocs/index/scss/config.scss */
+* {
+  transition: all 0.35s ease;
+}
+
+/* line 47, ../../../../xampp/htdocs/index/scss/config.scss */
+html {
   --blue800: #5C7CFF;
   --darkblue: #080339;
   --blue100: #E9E7FC;
@@ -447,16 +452,31 @@ html[data-theme="light"] {
   --red800: #FF9692;
   --pink100: #FFF3F8;
   --pink800: #FFE8E8;
+  --outline-color: #474A57;
+}
+
+/* line 61, ../../../../xampp/htdocs/index/scss/config.scss */
+html[data-theme="light"] {
+  --primary-bg: #FFF4CC;
+  --secondary-bg: #F9E9BF;
+  --primary-color: #FFFFFF;
+  --secondary-color: #000000;
+  --outline-color: #474A57;
+  --accent-color: #FFBD12;
+  --primary-text: #000000;
+  --secondary-text: #18191F;
+  --tertiary-text: #474A57;
   --bgtile: url('/index/Resources/bg-tile/light_small.svg')
 ;
 }
 
-/* line 65, ../../../../xampp/htdocs/index/scss/config.scss */
+/* line 74, ../../../../xampp/htdocs/index/scss/config.scss */
 html[data-theme="dark"] {
   --primary-bg: #202020;
   --secondary-bg: #2B2B2B;
   --primary-color: #18191F;
   --secondary-color: #FFFFFF;
+  --outline-color: #b8b5a8;
   --accent-color: #F95A2C;
   --primary-text: #FFFFFF;
   --secondary-text: #D1D1D1;
@@ -465,7 +485,7 @@ html[data-theme="dark"] {
 ;
 }
 
-/* line 86, ../../../../xampp/htdocs/index/scss/config.scss */
+/* line 96, ../../../../xampp/htdocs/index/scss/config.scss */
 body::before {
   font-family: Monaco;
   display: block;
@@ -479,44 +499,44 @@ body::before {
   z-index: 9999;
 }
 
-/* line 98, ../../../../xampp/htdocs/index/scss/config.scss */
+/* line 108, ../../../../xampp/htdocs/index/scss/config.scss */
 body {
   background-image: url("/index/Resources/bg-tile/debug/Light_debug.svg") !important;
 }
 
-/* line 101, ../../../../xampp/htdocs/index/scss/config.scss */
+/* line 111, ../../../../xampp/htdocs/index/scss/config.scss */
 footer {
   border-top: 6px solid green;
 }
 
-/* line 104, ../../../../xampp/htdocs/index/scss/config.scss */
+/* line 114, ../../../../xampp/htdocs/index/scss/config.scss */
 .nav {
   border-bottom: 6px solid green !important;
 }
 
 @media only screen and (max-width: 1100px) {
-  /* line 108, ../../../../xampp/htdocs/index/scss/config.scss */
+  /* line 118, ../../../../xampp/htdocs/index/scss/config.scss */
   footer {
     border-top: 6px solid red;
   }
-  /* line 111, ../../../../xampp/htdocs/index/scss/config.scss */
+  /* line 121, ../../../../xampp/htdocs/index/scss/config.scss */
   .nav {
     border-bottom: 6px solid red !important;
   }
 }
 
 @media only screen and (max-width: 740px) {
-  /* line 116, ../../../../xampp/htdocs/index/scss/config.scss */
+  /* line 126, ../../../../xampp/htdocs/index/scss/config.scss */
   footer {
     border-top: 6px solid blue;
   }
-  /* line 119, ../../../../xampp/htdocs/index/scss/config.scss */
+  /* line 129, ../../../../xampp/htdocs/index/scss/config.scss */
   .nav {
     border-bottom: 6px solid blue !important;
   }
 }
 
-/* line 123, ../../../../xampp/htdocs/index/scss/config.scss */
+/* line 133, ../../../../xampp/htdocs/index/scss/config.scss */
 .notice {
   font-family: Monaco;
   display: block;
@@ -525,7 +545,7 @@ footer {
   color: #fff;
 }
 
-/* line 132, ../../../../xampp/htdocs/index/scss/config.scss */
+/* line 142, ../../../../xampp/htdocs/index/scss/config.scss */
 body {
   background-color: var(--primary-bg);
   background-image: var(--bgtile);
@@ -533,21 +553,21 @@ body {
   margin: 0px;
 }
 
-/* line 139, ../../../../xampp/htdocs/index/scss/config.scss */
+/* line 149, ../../../../xampp/htdocs/index/scss/config.scss */
 h1 {
   color: var(--secondary-text);
   font-size: 36;
   font-weight: 800;
 }
 
-/* line 144, ../../../../xampp/htdocs/index/scss/config.scss */
+/* line 154, ../../../../xampp/htdocs/index/scss/config.scss */
 h2 {
   color: var(--secondary-text);
   font-size: 24;
   font-weight: 800;
 }
 
-/* line 150, ../../../../xampp/htdocs/index/scss/config.scss */
+/* line 160, ../../../../xampp/htdocs/index/scss/config.scss */
 p a {
   color: var(--tertiary-text);
   font-size: 17;
@@ -555,14 +575,14 @@ p a {
   text-decoration: none;
 }
 
-/* line 158, ../../../../xampp/htdocs/index/scss/config.scss */
+/* line 168, ../../../../xampp/htdocs/index/scss/config.scss */
 .roundedcorners {
   border-radius: 25px;
   border: 4px solid var(--secondary-color);
   padding: 10px;
 }
 
-/* line 164, ../../../../xampp/htdocs/index/scss/config.scss */
+/* line 174, ../../../../xampp/htdocs/index/scss/config.scss */
 .card {
   background-color: var(--primary-color);
   border-radius: 25px;
@@ -572,16 +592,41 @@ p a {
   width: 100%-padding;
 }
 
-/* line 173, ../../../../xampp/htdocs/index/scss/config.scss */
-.flex {
+/* line 183, ../../../../xampp/htdocs/index/scss/config.scss */
+.flex, .cards {
   display: flex;
   justify-content: space-between;
   position: relative;
 }
 
-/* line 179, ../../../../xampp/htdocs/index/scss/config.scss */
+/* line 189, ../../../../xampp/htdocs/index/scss/config.scss */
 .shadow {
   box-shadow: 0px 0px 0px 3px var(--outline-color) inset, 0px 6px 0px 0px var(--secondary-color), 0px 6px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
-/*# sourceMappingURL=style.css.map */
+/* line 196, ../../../../xampp/htdocs/index/scss/config.scss */
+.usernotif {
+  z-index: 4;
+}
+
+/* line 200, ../../../../xampp/htdocs/index/scss/config.scss */
+.menubutton {
+  display: none;
+}
+
+@media only screen and (max-width: 740px) {
+  /* line 205, ../../../../xampp/htdocs/index/scss/config.scss */
+  .menubutton {
+    display: block;
+  }
+  /* line 208, ../../../../xampp/htdocs/index/scss/config.scss */
+  .cards {
+    display: block;
+  }
+  /* line 211, ../../../../xampp/htdocs/index/scss/config.scss */
+  .navimg {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=config.css.map */

@@ -18,7 +18,7 @@
     <a href="alma.html">Casual link tag</a>
     <div class="roundedcornes shadow card"><h2>meowmeow card!</h2></div>
 
-    <div class="flex">
+    <div class="cards">
         <div class="roundedcornes shadow card">
             <h2>meowmeow card!</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea minus architecto quam ratione velit quasi error, ab repellat molestias incidunt. Eligendi ea velit, eos rem officia repudiandae aliquam dolor consectetur debitis, beatae expedita perspiciatis id nemo natus ab atque quis reprehenderit aspernatur qui. Alias adipisci ab, eligendi dolorem accusantium laborum.</p>

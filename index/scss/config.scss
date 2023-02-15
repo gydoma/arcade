@@ -39,16 +39,12 @@ $debug: true;
 
 .notice { display:none }
 //coloring
-html[data-theme="light"]{
-    --primary-bg: #{$primary-bg};
-    --secondary-bg: #{$secondary-bg};
-    --primary-color: #{$primary-color};
-    --secondary-color: #{$secondary-color};
-    --outline-color: #{$outline-color};
-    --accent-color: #{$accent-color};
-    --primary-text: #{$primary-text};
-    --secondary-text: #{$secondary-text};
-    --tertiary-text: #{$tertiary-text};
+
+* {
+    transition: all 0.35s ease;
+  }
+  
+html{
     --blue800: #{$blue800};
     --darkblue: #{$darkblue};
     --blue100: #{$blue100};
@@ -59,6 +55,19 @@ html[data-theme="light"]{
     --red800: #{$red800};
     --pink100: #{$pink100};
     --pink800: #{$pink800};
+    --outline-color: #{$outline-color};
+}
+
+html[data-theme="light"]{
+    --primary-bg: #{$primary-bg};
+    --secondary-bg: #{$secondary-bg};
+    --primary-color: #{$primary-color};
+    --secondary-color: #{$secondary-color};
+    --outline-color: #{$outline-color};
+    --accent-color: #{$accent-color};
+    --primary-text: #{$primary-text};
+    --secondary-text: #{$secondary-text};
+    --tertiary-text: #{$tertiary-text};
     --bgtile: url('/index/Resources/bg-tile/light_small.svg')
 }
 
@@ -67,6 +76,7 @@ html[data-theme="dark"]{
     --secondary-bg: #{$dark_secondary-bg};
     --primary-color: #{$dark_primary-color};
     --secondary-color: #{$dark_secondary-color};
+    --outline-color: #{$dark_outline-color};
     --accent-color: #{$dark_accent-color};
     --primary-text: #{$dark_primary-text};
     --secondary-text: #{$dark_secondary-text};
@@ -170,7 +180,7 @@ p a {
     width: 100% - padding;
 }
 
-.flex {
+.flex,.cards {
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -182,3 +192,24 @@ p a {
     0px 6px 0px 0px var(--secondary-color), 
     0px 6px 6px 0px rgba(0, 0, 0, 0.2);
 }
+
+.usernotif{
+    z-index: 4;
+}
+
+.menubutton{
+    display: none;
+}
+
+@media only screen and (max-width: 740px) {
+    .menubutton{
+        display: block;
+    }
+    .cards{
+        display: block;
+    }
+    .navimg{
+        display: flex;
+    }
+  }
+  

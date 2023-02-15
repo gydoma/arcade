@@ -1,28 +1,38 @@
 var checkbox = document.querySelector('input[name=mode]');
-
+// document.cookie = "username=John Doe"; 
 function darkmodecheck(){
-    if(checkbox.checked) {
-        trans()
-        document.documentElement.setAttribute('data-theme', 'dark')
-    } else {
-        trans()
+     var sitetheme = getCookie("sitetheme")
+    if (!sitetheme) {
+        document.cookie = "sitetheme=light; path=/; SameSite=None; Secure";
+    }
+    if(sitetheme == "light") {
+        checkbox.checked = false
+        // trans()
         document.documentElement.setAttribute('data-theme', 'light')
+    } else {
+        checkbox.checked = true
+        // trans()
+        document.documentElement.setAttribute('data-theme', 'dark')
     }
 }
 
 checkbox.addEventListener('change', function() {
     if(this.checked) {
-        trans()
+        document.cookie = "sitetheme=dark; path=/; SameSite=None; Secure";
+        // trans()
         document.documentElement.setAttribute('data-theme', 'dark')
     } else {
-        trans()
+        document.cookie = "sitetheme=light; path=/; SameSite=None; Secure";
+        // trans()
         document.documentElement.setAttribute('data-theme', 'light')
     }
 })
 
-let trans = () => {
-    document.documentElement.classList.add('transition');
-    window.setTimeout(() => {
-        document.documentElement.classList.remove('transition');
-    }, 1000)
-}
+window.getCookie = function getCookie(name) {
+    let cookie = {};
+    document.cookie.split(';').forEach(function(el) {
+      let [k,v] = el.split('=');
+      cookie[k.trim()] = v;
+    })
+    return cookie[name];
+  }
