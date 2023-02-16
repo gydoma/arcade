@@ -1,4 +1,5 @@
 # Chromium Arcade
+
 <div align="center">
 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
@@ -16,6 +17,7 @@
 ![last commit](https://img.shields.io/github/last-commit/gydoma/arcade)
 ![Contributors](https://img.shields.io/github/contributors-anon/gydoma/arcade)
 ![commit activity](https://img.shields.io/github/commit-activity/m/gydoma/arcade)
+
 </div>
 
 ____
@@ -56,19 +58,19 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 
 ## Készítették:
 
-| Név | 3 JS - 2 PY - 4 CS|
+| Név | 3 JS - 2 PY - 6 CS |
 | ------ | ------ |
-| Gyurkovics Dominik | [Projektvezető] py (1)|
-| Katona Roland | [Pv.-helyettes] js (1)|
+| Gyurkovics Dominik | [Projektvezető] py (1) |
+| Katona Roland | [Pv.-helyettes] js (1) |
 | Andrási Szilvia | [Segítő - Tanár] |
 | Bábolnai Bence | js (1) |
 | Orosz Eszter | cs (1) |
 | Dávid Benedek | py (1) |
 | Vajda Dániel | cs (1)|
-| Bán Gergő | cs (1) |
-| Suhajda Zsolt Péter | cs(1) |
+| Bán Gergő |  |
+| Suhajda Zsolt Péter | cs (1) |
 | Rostás András Péter | |
-| Bárczi Bence | cs(2) |
+| Bárczi Bence | cs (2) |
 | Molnár-Horgos Kristóf | [TankTrouble](https://github.com/Trixep/TankTrouble-Multiplayer) |
 | Vígh Noel | [TankTrouble](https://github.com/Trixep/TankTrouble-Multiplayer) |
 | Horváth Péter Ákos | [TankTrouble](https://github.com/Trixep/TankTrouble-Multiplayer) |
@@ -88,7 +90,6 @@ A projekt weboldalának a kinézeti tervét, PHP és SCSS részét készítette 
 | [TankTrouble](https://github.com/Trixep/TankTrouble-Multiplayer)| C# | Unity | 2023/01/27 | [készítette](https://github.com/Trixep/TankTrouble-Multiplayer#a-projekt-tagjai) |
 | Catan | Python | PyGame | 2023/02/01 | Benedek |
 | Keeper Of The Hates 1.6 | C# | Unity | 2023/02/01 | Vajda |
-| Minesweeper | C# | - | 2023/02/04 | BanGergo |
 | RepülösProjektMunka | Javascript | - | 2023/02/07 | Bencso |
 | [Pong](https://github.com/rewerze/Pong) | C# | Unity | 2023/02/07 | [rewerze](https://github.com/rewerze/) |
 | FlappyBird | C# | MonoGame | 2023/02/14 | Bárczi Bence |

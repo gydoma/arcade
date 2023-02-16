@@ -68,7 +68,7 @@ html[data-theme="light"]{
     --primary-text: #{$primary-text};
     --secondary-text: #{$secondary-text};
     --tertiary-text: #{$tertiary-text};
-    --bgtile: url('/index/Resources/bg-tile/light_small.svg');
+    --bgtile: #{$bgtile};
     --bgtiledebug: #{$bgtiledebug};
 }
 
@@ -82,8 +82,9 @@ html[data-theme="dark"]{
     --primary-text: #{$dark_primary-text};
     --secondary-text: #{$dark_secondary-text};
     --tertiary-text: #{$dark_tertiary-text};
-    --bgtile: url('/index/Resources/bg-tile/dark_small.svg');
+    --bgtile: #{$dark_bgtile};
     --bgtiledebug: #{$dark_bgtiledebug};
+    #cat{filter: invert(100%);}
 }
 
 // Debug-all mode

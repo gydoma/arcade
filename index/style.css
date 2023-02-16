@@ -107,7 +107,7 @@ var(--bgtiledebug)
 }
 footer {
   border-top: 6px solid var(--secondary-color);
-  background-color: var(--primary-bg);
+  background-color: var(--primary-color);
   padding: 5px 200px 5px 75px;
 }
 footer a {
@@ -202,6 +202,7 @@ footer .grade-row {
   -ms-transform: translate(-50%, -50%);
   height: 700%;
   z-index: 1;
+  transition: none !important;
 }
 
 .device-s {
@@ -339,7 +340,6 @@ footer .grade-row {
   display: block;
   max-width: 320px;
   min-width: 200px;
-  margin: 0 auto;
   border: 4px solid var(--secondary-color);
   border-radius: 15px;
   background-color: var(--primary-color);
@@ -436,6 +436,9 @@ html[data-theme=dark] {
   --tertiary-text: #cccccc;
   --bgtile: url("/index/Resources/bg-tile/dark_small.svg");
   --bgtiledebug: url("/index/Resources/bg-tile/debug/Dark_debug.svg");
+}
+html[data-theme=dark] #cat {
+  filter: invert(100%);
 }
 
 body {
