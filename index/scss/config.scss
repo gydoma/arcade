@@ -17,7 +17,7 @@ $dark-theme: false;
 // Edit this variable to enable debug-all mode - Creates a red outline around all elements
 $debug-all: false;
 // Edit this variable to enable debug mode - Creates a colored outline based on screen size
-$debug: true;
+$debug: false;
 
 // Import variables
 @import "variables";
@@ -68,7 +68,8 @@ html[data-theme="light"]{
     --primary-text: #{$primary-text};
     --secondary-text: #{$secondary-text};
     --tertiary-text: #{$tertiary-text};
-    --bgtile: url('/index/Resources/bg-tile/light_small.svg')
+    --bgtile: url('/index/Resources/bg-tile/light_small.svg');
+    --bgtiledebug: #{$bgtiledebug};
 }
 
 html[data-theme="dark"]{
@@ -81,7 +82,8 @@ html[data-theme="dark"]{
     --primary-text: #{$dark_primary-text};
     --secondary-text: #{$dark_secondary-text};
     --tertiary-text: #{$dark_tertiary-text};
-    --dark_bgtile: url('/index/Resources/bg-tile/dark_small.svg')
+    --bgtile: url('/index/Resources/bg-tile/dark_small.svg');
+    --bgtiledebug: #{$dark_bgtiledebug};
 }
 
 // Debug-all mode
@@ -106,7 +108,7 @@ html[data-theme="dark"]{
             z-index: 9999;
           }
     body {
-          background-image: url('/index/Resources/bg-tile/debug/Light_debug.svg') !important
+          background-image: var(--bgtiledebug) !important;
     }
     footer {
         border-top: 6px solid green;
@@ -157,11 +159,22 @@ h2 {
     font-weight: 800;
 }
 
-p a {
+p, a{
     color: var(--tertiary-text);
-    font-size: 17;
+    font-size: 17px;
     font-weight: 500;
-    text-decoration: none;
+}
+a:hover {
+    box-shadow: inset 0 -1.125em 0 var(--accent-color);
+    color: #000;
+}
+
+a:focus {
+    background: var(--tertiary-text);
+    outline: none;
+    background: var(--accent-color);
+    color: var(--tertiary-text);
+    box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 
