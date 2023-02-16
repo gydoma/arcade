@@ -29,6 +29,7 @@ $debug: false;
 @import "components/search";
 @import "components/navbar";
 @import "components/filter";
+@import "components/lrpanel";
 
 // Import Montserrat font
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
@@ -36,13 +37,12 @@ $debug: false;
 // Global styles
 *{font-family:'Montserrat',sans-serif;user-select:none;-webkit-tap-highlight-color:transparent}
 *:focus { outline: none }
+*{transition: all 0.35s ease;}
 
 .notice { display:none }
 //coloring
 
-* {
-    transition: all 0.35s ease;
-  }
+
   
 html{
     --blue800: #{$blue800};

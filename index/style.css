@@ -378,6 +378,49 @@ footer .grade-row {
   z-index: -1;
 }
 
+.lrpanel {
+  margin: 5% auto auto auto;
+  width: 20%;
+  background-color: var(--primary-color);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0px 0px 0px 2px var(--outline-color) inset, 0px 4px 0px 0px var(--secondary-color);
+}
+.lrpanel h2 {
+  font-size: 36px;
+  margin: 0 0 10px 0;
+}
+.lrpanel .switch-lr, .lrpanel .switch-lr-link {
+  font-size: 13px;
+  font-weight: 500;
+}
+.lrpanel .switch-lr-link {
+  color: var(--accent-color);
+}
+.lrpanel .lr-input {
+  width: 100%;
+  padding: 15px 0px;
+  margin: 10px 0 10px 0;
+  font-weight: 600;
+  font-size: 21px;
+  border-radius: 16px;
+}
+.lrpanel input[type=submit] {
+  width: 100%;
+  padding: 17px !important;
+  margin: 30px 0 30px 0;
+  font-weight: 800;
+  font-size: 21px;
+  background-color: var(--accent-color);
+  border-radius: 16px;
+  border: 0px;
+  padding: 10px;
+  box-shadow: 0px 0px 0px 2px var(--outline-color) inset, 0px 4px 0px 0px var(--secondary-color);
+}
+.lrpanel input[type=submit]:active {
+  box-shadow: 0px 0px 0px 6px var(--outline-color) inset, 0px 10px 0px 0px var(--secondary-color);
+}
+
 * {
   font-family: "Montserrat", sans-serif;
   user-select: none;
@@ -388,12 +431,12 @@ footer .grade-row {
   outline: none;
 }
 
-.notice {
-  display: none;
-}
-
 * {
   transition: all 0.35s ease;
+}
+
+.notice {
+  display: none;
 }
 
 html {
