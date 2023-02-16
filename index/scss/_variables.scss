@@ -1,6 +1,7 @@
 // Path: index/scss/variables.scss
 
 // Base Colors
+
 $primary-bg: #FFF4CC !default;
 $secondary-bg: #F9E9BF !default;
 $primary-color: #FFFFFF !default;
@@ -21,15 +22,18 @@ $red800: #FF9692 !default;
 $pink100: #FFF3F8 !default;
 $pink800: #FFE8E8 !default;
 $bgtile: url('/index/Resources/bg-tile/light_small.svg') !default;
+$bgtiledebug: url('/index/Resources/bg-tile/debug/Light_debug.svg') !default;
+
 // Dark Colors
 
-  $dark_primary-bg: #202020 !default;
-  $dark_secondary-bg: #2B2B2B !default;
-  $dark_primary-color: #18191F !default;
-  $dark_secondary-color: #FFFFFF !default;
-  $dark_outline-color: #b8b5a8 !default;
-  $dark_accent-color: #F95A2C !default;
-  $dark_primary-text: #FFFFFF !default;
-  $dark_secondary-text: #D1D1D1 !default;
-  $dark_tertiary-text: #cccccc !default;
-  $dark_bgtile: url('/index/Resources/bg-tile/dark_small.svg') !default;
+$dark_primary-bg: #202020 !default;
+$dark_secondary-bg: #2B2B2B !default;
+$dark_primary-color: #18191F !default;
+$dark_secondary-color: #FFFFFF !default;
+$dark_outline-color: #b8b5a8 !default;
+$dark_accent-color: #F95A2C !default;
+$dark_primary-text: #FFFFFF !default;
+$dark_secondary-text: #D1D1D1 !default;
+$dark_tertiary-text: #cccccc !default;
+$dark_bgtile: url('/index/Resources/bg-tile/dark_small.svg') !default;
+$dark_bgtiledebug: url('/index/Resources/bg-tile/debug/Dark_debug.svg') !default;

@@ -1,16 +1,16 @@
 //? The bellow code is used to compile the scss files into css
 //? sass --watch scss/config.scss style.css
+//? To minimize the css file use the following command
+//? sass --watch scss/config.scss style.css --style compressed 
 
 //! Don't use "components/libraries" - experimental
 
 //@import "components/custom/arrow"; // TODO Deprecation warning
 //@import "components/custom/christmas"; // * can be implemented in the future *
-//@import "components/custom/arrow"; // TODO Deprecation warning
 //@import "components/custom/ios_spinner";
 //@import "components/custom/lib_colors";
 //@import "components/custom/lib_media";
 //@import "components/custom/lib_conversion";
-
 
 // Edit this variable to switch between light and dark theme
 $dark-theme: false;

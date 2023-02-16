@@ -27,6 +27,18 @@ ____
   <img width="49%" alt="Deisgn of dark mode" src="https://user-images.githubusercontent.com/65687471/213806773-14e58e2d-a402-43c2-a5e3-9a9c68bb7de6.png">
 </p>
 
+## SASS Compiler
+A stílusa a weboldalnak SASS-ban íródott, semmilyen könyvtárat nem használtunk a sajátos dizájn miatt.
+### SASS CLI Compiler letöltése
+```sh
+npm install -g sass
+```
+### Compiler futtatása:
+```sh
+sass --watch --verbose scss/config.scss style.css
+```
+
+
 ## DEV NOTES
 
 Drótváz front-endes css-html kombója a [codepen](https://codepen.io/harsh-vardhan/full/RwWRqKE)-en megtalálható 

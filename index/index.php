@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="/index/style.css">
 </head>
 <body>
-    <?php require("db.php")?>
     <?php include 'navbar.php'?>
     <script src="javascript/darkmode.js" onload="darkmodecheck()"></script>
     <?php include 'php/christmas.php'?>
