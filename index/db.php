@@ -1,5 +1,5 @@
 <?php
-$lines = file('.env');
+$lines = file(__DIR__ . "\.env");
 foreach ($lines as $line) {
     [$key, $value] = explode('=', $line, 2);
     $key = trim($key);

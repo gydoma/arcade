@@ -13,6 +13,7 @@ function darkmodecheck(){
         checkbox.checked = true
         // trans()
         document.documentElement.setAttribute('data-theme', 'dark')
+        document.getElementById("logo").src = "Resources/logo/logodark.svg"
     }
 }
 
@@ -21,10 +22,12 @@ checkbox.addEventListener('change', function() {
         document.cookie = "sitetheme=dark; path=/; SameSite=None; Secure";
         // trans()
         document.documentElement.setAttribute('data-theme', 'dark')
+        document.getElementById("logo").src = "Resources/logo/logodark.svg"
     } else {
         document.cookie = "sitetheme=light; path=/; SameSite=None; Secure";
         // trans()
         document.documentElement.setAttribute('data-theme', 'light')
+        document.getElementById("logo").src = "Resources/logo/logo.svg"
     }
 })
 

@@ -1,5 +1,5 @@
 <nav class="nav flex">
-    <img src="Resources/logo/logo.svg" class="navimg">
+    <img src="Resources/logo/logo.svg" class="navimg" id="logo">
     <div class="button r" id="button-1">
         <input type="checkbox" class="checkbox" name="mode">
             <div class="knobs"></div>

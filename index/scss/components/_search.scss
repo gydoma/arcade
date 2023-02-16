@@ -35,6 +35,10 @@
     display: none;
 }
 
+#filterbtn {
+    display: none;
+}
+
 @media only screen and (max-width: 740px) {
     .device-m, #filter, #cat, #filterimg {
         display:none;
