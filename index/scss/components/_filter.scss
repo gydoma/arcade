@@ -1,15 +1,14 @@
 .filter {
-    @media only screen and (max-width: 1100px) { 
-        width:50%;
-    }
-    @media only screen and (max-width: 740px) { 
 
-    }
     position: fixed;
     bottom: 20px;
     right: 20px;
     display: none;
     width: 40%;
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    padding: 20px;
+    margin: 20px;
     //margin: auto 0 auto 0;
     .search-input {
         padding-right: 0px;
@@ -35,7 +34,13 @@
 
     }
 
+    .lg{
+        display: block;
+    }
 
+    .sm{
+        display: none;
+    }
 
     /* The container */
     .ch-label {
@@ -173,12 +178,12 @@
   #ratingfilter{
     position: absolute;
     margin-left: 50%;
-    bottom: 5%;
+    bottom: 20%;
   }
 
   #min-star{
     width: 100%;
-    position: static;
+    position: relative;
     top: auto;
   }
 
@@ -190,10 +195,70 @@
         background-position: 98%;
         border-radius: 10px;
         border: 2px solid var(--secondary-color);
-        padding: 10px 0 10px 0;
-        margin-left: 80%;
-        width: 50%;
+        padding: 0.5rem 0 0.5rem 0;
+        margin-top: 5%;
+        margin-left: 70%;
+        width: 25%;
         text-align: center;
   } 
 
+}
+
+
+  @media only screen and (max-width: 740px){
+
+    .filter{
+        left: 0;
+        right: 0;
+        width: 90%;
+        margin: auto 2.5;
+
+
+    .filterh2{
+        display: none;
+    }
+
+   .search-input{
+    margin-left: 5%;
+    width: 90%;
+   } 
+
+   .lg{
+    display: none;
+   }
+
+   .sm{
+    display: block;
+   }
+
+   .ch-labels{
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom:2rem ;
+   }
+
+   .ch-label{
+    display: block;
+    width: 100%;
+   }
+
+   .dd-filter{
+    display: block;
+    width: 90%;
+    top: auto ;
+    margin: auto auto 5rem auto;
+   }
+
+
+   #ratingfilter{
+    position: relative;
+    display: block;
+    width: 90%;
+    top: auto;
+    padding-top: 5%;
+    margin: 5rem 2.5% auto 2.5%;
+   }
+
+  }
 }

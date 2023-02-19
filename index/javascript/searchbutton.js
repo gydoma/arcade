@@ -9,6 +9,6 @@ function searchmenu(){
     document.getElementById("filter").style.display = "none";
     } else {
         document.getElementById("filtermenu").style.display = "none"
-        document.getElementById("filter").style.display = "flex"
+        document.getElementById("filter").style.display = "block"
     }
 }

@@ -1,9 +1,10 @@
 <p class="notice">Under this notice, you can see the filter component. - in /filter.php </p>
-<div class="roundedcornes shadow card filter" id="filtermenu">
-    <h2>Filter menu</h2>
-    <input type="text" class="search-input" value placeholder="Type here the name of the game ... e.g. Apple">
+<div class="roundedcornes shadow filter" id="filtermenu">
+    <h2 class="filterh2">Filter menu</h2>
+    <input type="text" class="search-input lg" value placeholder="Type here the name of the game ... e.g. Apple">
+    <input type="text" class="search-input sm" value placeholder="Search">
     <hr>
-    <h2>Filters</h2>
+    <h2 class="filterh2">Filters</h2>
     <div class="ch-labels">
     <label class="ch-label">Click-To-Play (.js WEB)
         <input type="checkbox" checked="checked">
@@ -30,7 +31,7 @@
     <div id="ratingfilter">
     <h2>Minimum Rating: <!-- 0.1 - 5.0 star rating --> </h2>
     <input type="range" min="1" max="50" value="25" class="min-star" id="min-star">
-    <input type="submit" id="searchbtn" value="Click To Search">
-    </div>
+</div>
+<input type="submit" id="searchbtn" value="Click To Search">
 </div>
 <p class="notice">Above this notice, you can see the filter component. - in /filter.php </p>
