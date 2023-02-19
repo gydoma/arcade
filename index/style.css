@@ -489,9 +489,14 @@ footer .grade-row {
   width: 100%;
   padding: 15px 0px;
   margin: 10px 0 10px 0;
-  font-weight: 600;
+  font-weight: 200;
   font-size: 21px;
   border-radius: 16px;
+}
+.lrpanel .in-icon {
+  position: relative;
+  left: 0px;
+  top: -10px;
 }
 .lrpanel input[type=submit] {
   width: 100%;

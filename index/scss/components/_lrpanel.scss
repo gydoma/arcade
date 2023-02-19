@@ -12,6 +12,8 @@
         font-size: 36px;
         margin: 0 0 10px 0;
     }
+
+    // * p and a tag - switch between login and register forms *
     .switch-lr, .switch-lr-link {
         font-size: 13px;
         font-weight: 500;
@@ -20,13 +22,20 @@
         color: var(--accent-color);
     }
 
+    // * forms input boxes - username, email(opt), password *
     .lr-input{
         width: 100%;
         padding: 15px 0px;
         margin: 10px 0 10px 0;
-        font-weight: 600;
+        font-weight: 200;
         font-size: 21px;
         border-radius: 16px;
+    }
+
+    .in-icon {
+        position: relative;
+        left: 0px;
+        top: -10px
     }
 
     input[type="submit"]{

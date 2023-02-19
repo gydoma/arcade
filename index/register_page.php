@@ -21,12 +21,12 @@
 
             <input type="email" id="email" class="lr-input" name="email" placeholder="Email Address" required>
 
-            <input type="password" id="password" class="lr-input" name="password" placeholder="Password" required>
+            <input type="password" id="password" class="lr-input" name="password" placeholder="●●●●●●●●●" required>
 
             <input type="submit" value="Sign Up">
 
         </form>
-        <p class="switch-lr">You are new? <a class="switch-lr-link" href="login_page.php">Create a new account</a></p>
+        <p class="switch-lr">Already have account? <a class="switch-lr-link" href="login_page.php">Login</a></p>
     </div>
 
     <?php include 'search.php'; ?>

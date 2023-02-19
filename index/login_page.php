@@ -19,12 +19,12 @@
         
             <input type="text" id="username" class="lr-input" name="username" placeholder="Username" required><br>
 
-            <input type="password" id="password" class="lr-input" name="password" placeholder="Password" required><br>
+            <input type="password" id="password" class="lr-input" name="password" placeholder="●●●●●●●●●" required><img class="in-icon" src="scss/components/_lrpanel.scss"><br>
 
             <input type="submit" value="Login">
 
         </form>
-        <p class="switch-lr">Already have account? <a class="switch-lr-link" href="register_page.php">Login</a></p>
+        <p class="switch-lr">You are new? <a class="switch-lr-link" href="register_page.php">Create a new account</a></p>
     </div>
 
     <?php include 'search.php'; ?>
