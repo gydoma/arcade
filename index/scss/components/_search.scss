@@ -44,8 +44,7 @@
         display:none;
     }
     .device-s {
-        display:unset;
-        display:flex;
+        display:inherit;
         position: fixed;
         bottom: 20px;
         right: 20px;

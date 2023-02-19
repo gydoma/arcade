@@ -255,8 +255,7 @@ footer .grade-row {
   }
   /* line 46, ../../Desktop/mappak/projektek/arcade/index/scss/components/_search.scss */
   .device-s {
-    display: unset;
-    display: flex;
+    display: inherit;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -290,6 +289,10 @@ footer .grade-row {
   right: 20px;
   display: none;
   width: 40%;
+  background-color: var(--primary-color);
+  border-radius: 25px;
+  padding: 20px;
+  margin: 20px;
   /* The container */
   /* Hide the browser's default checkbox */
   /* styled checkbox */
@@ -313,14 +316,7 @@ footer .grade-row {
   }*/
 }
 
-@media only screen and (max-width: 1100px) {
-  /* line 1, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
-  .filter {
-    width: 50%;
-  }
-}
-
-/* line 14, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+/* line 13, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .search-input {
   padding-right: 0px;
   background: url("Resources/feather/search.svg") no-repeat right;
@@ -335,7 +331,7 @@ footer .grade-row {
   font-size: 21px;
 }
 
-/* line 27, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+/* line 26, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .label-checkbox {
   display: flex;
   flex-direction: row;
@@ -343,12 +339,22 @@ footer .grade-row {
   font-size: 17px;
 }
 
-/* line 33, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+/* line 32, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .check-checkbox {
   margin: 0 10px 0 0;
 }
 
+/* line 37, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+.filter .lg {
+  display: block;
+}
+
 /* line 41, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+.filter .sm {
+  display: none;
+}
+
+/* line 46, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .ch-label {
   display: flex;
   flex-direction: column;
@@ -367,13 +373,13 @@ footer .grade-row {
   color: var(--secondary-text);
 }
 
-/* line 59, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+/* line 64, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .ch-labels {
   display: inline;
   width: 35%;
 }
 
-/* line 65, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+/* line 70, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .ch-label input {
   position: absolute;
   opacity: 0;
@@ -382,7 +388,7 @@ footer .grade-row {
   width: 0;
 }
 
-/* line 74, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+/* line 79, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .checkmark {
   position: absolute;
   top: 0;
@@ -394,24 +400,24 @@ footer .grade-row {
   border: 4px solid var(--secondary-color);
 }
 
-/* line 88, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+/* line 93, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .ch-label:hover input ~ .checkmark {
   background-color: #8094FF;
 }
 
-/* line 92, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+/* line 97, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .ch-label input:checked ~ .checkmark {
   background-color: #1947E5;
 }
 
-/* line 99, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+/* line 104, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* line 125, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+/* line 130, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .dd-filter {
   position: absolute;
   top: 45%;
@@ -424,7 +430,7 @@ footer .grade-row {
   z-index: 10;
 }
 
-/* line 138, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+/* line 143, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .dd-filter select {
   display: inline;
   border: none;
@@ -442,7 +448,7 @@ footer .grade-row {
   color: var(--secondary-color);
 }
 
-/* line 154, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+/* line 159, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .dd-filter:after {
   position: absolute;
   right: -4px;
@@ -461,21 +467,21 @@ footer .grade-row {
   z-index: -1;
 }
 
-/* line 173, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+/* line 178, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter #ratingfilter {
   position: absolute;
   margin-left: 50%;
-  bottom: 5%;
+  bottom: 20%;
 }
 
-/* line 179, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+/* line 184, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter #min-star {
   width: 100%;
-  position: static;
+  position: relative;
   top: auto;
 }
 
-/* line 186, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+/* line 191, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter #searchbtn {
   position: relative;
   padding-right: 0px;
@@ -483,10 +489,66 @@ footer .grade-row {
   background-position: 98%;
   border-radius: 10px;
   border: 2px solid var(--secondary-color);
-  padding: 10px 0 10px 0;
-  margin-left: 80%;
-  width: 50%;
+  padding: 0.5rem 0 0.5rem 0;
+  margin-top: 5%;
+  margin-left: 70%;
+  width: 25%;
   text-align: center;
+}
+
+@media only screen and (max-width: 740px) {
+  /* line 210, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+  .filter {
+    left: 0;
+    right: 0;
+    width: 90%;
+    margin: auto 2.5;
+  }
+  /* line 217, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+  .filter .filterh2 {
+    display: none;
+  }
+  /* line 221, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+  .filter .search-input {
+    margin-left: 5%;
+    width: 90%;
+  }
+  /* line 226, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+  .filter .lg {
+    display: none;
+  }
+  /* line 230, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+  .filter .sm {
+    display: block;
+  }
+  /* line 234, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+  .filter .ch-labels {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  /* line 241, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+  .filter .ch-label {
+    display: block;
+    width: 100%;
+  }
+  /* line 246, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+  .filter .dd-filter {
+    display: block;
+    width: 90%;
+    top: auto;
+    margin: auto auto 5rem auto;
+  }
+  /* line 254, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+  .filter #ratingfilter {
+    position: relative;
+    display: block;
+    width: 90%;
+    top: auto;
+    padding-top: 5%;
+    margin: 5rem 2.5% auto 2.5%;
+  }
 }
 
 /* line 1, ../../Desktop/mappak/projektek/arcade/index/scss/components/_lrpanel.scss */
