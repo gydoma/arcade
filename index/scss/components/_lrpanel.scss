@@ -30,6 +30,8 @@
         font-weight: 200;
         font-size: 21px;
         border-radius: 16px;
+        // ? make the password input box's hidden dots bigger, doesn't work on some browsers
+        // -webkit-text-security: disc;
     }
 
     .in-icon {

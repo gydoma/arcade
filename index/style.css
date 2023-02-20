@@ -1,27 +1,4 @@
 @charset "UTF-8";
-/* Color variables in css
-
-var(--primary-bg)
-var(--secondary-bg)
-var(--secondary-color)
-var(--outline-color)
-var(--accent-color)
-var(--primary-text)
-var(--secondary-text)
-var(--tertiary-text)
-var(--blue800)
-var(--darkblue)
-var(--blue100)
-var(--green100)
-var(--yellow)
-var(--yellow800)
-var(--red)
-var(--red800)
-var(--pink100)
-var(--pink800)
-var(--bgtile)
-var(--bgtiledebug)
-*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap");
 .button-cover, .knobs, .layer {
   position: absolute;
@@ -89,10 +66,6 @@ var(--bgtiledebug)
   background-color: #F95A2C;
 }
 
-/*
-#button-1 .checkbox:checked ~ .layer {
-}
-*/
 #button-1 .knobs,
 #button-1 .knobs:before,
 #button-1 .layer {
@@ -254,27 +227,6 @@ footer .grade-row {
   border-radius: 25px;
   padding: 20px;
   margin: 20px;
-  /* The container */
-  /* Hide the browser's default checkbox */
-  /* styled checkbox */
-  /*
-    //Show the checkmark when checked 
-    .ch-label input:checked ~ .checkmark:after {
-        display: block;
-    }
-
-    // Style the checkmark
-    .ch-label .checkmark:after {
-        left: 12px;
-        top: 9px;
-        width: 5px;
-        height: 10px;
-        border: solid white;
-        border-width: 0 3px 3px 0;
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
-  }*/
 }
 .filter .search-input {
   padding-right: 0px;
