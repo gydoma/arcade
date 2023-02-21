@@ -9,8 +9,5 @@
             <use xlink:href="#path-1"></use>
         </mask>
         <use id="Path" fill="#18191F" fill-rule="nonzero" transform="translate(12.000000, 13.500000) scale(-1, 1) rotate(90.000000) translate(-12.000000, -13.500000) " xlink:href="#path-1"></use>
-        <g id="COLOR/-black" mask="url(#mask-2)" fill="#18191F">
-            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
-        </g>
     </g>
 </svg>
