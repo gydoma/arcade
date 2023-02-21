@@ -18,10 +18,11 @@
             while($row=mysqli_fetch_array($result)){
                     $uid=$row["UId"];   
                 }
-            $authsessionquery    = "INSERT into `authsessions` (AuthKey, UId, Expire_Date)
+            $authsessionquery = "INSERT into `authsessions` (AuthKey, UId, Expire_Date)
             VALUES ('$authkeyhash', '$uid', '$expire_date')";
             mysqli_query($con, $authsessionquery);
             setcookie("AuthKey", $authkeyhash, time() + (86400 * 7), "/"); 
+            header("location: index.php");
         } else {
             echo "Hibás Felhaszáló név vagy jelszó";
         }

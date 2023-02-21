@@ -1,3 +1,9 @@
+<?php
+    if (isset($_GET['status'])) {
+        $status = $_GET['status'];
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
@@ -15,8 +21,16 @@
     <div class="lrpanel">
         <h2>Login</h2>
         <p>You don't think you should login first and behave like human not robot.</p>
-        <form onsubmit="">
-        
+        <form method="post" action="login.php">
+
+            <?php 
+            if(isset($status)){
+                if($status == "successreg"){
+                    echo "<p>Sikeres Regisztráció, most jelentkezz be</p>";
+                }
+            }
+            ?>
+
             <input type="text" id="username" class="lr-input" name="username" placeholder="Username" required><br>
 
             <input type="password" id="password" class="lr-input" name="password" placeholder="●●●●●●●●●" required><img class="in-icon" src="scss/components/_lrpanel.scss"><br>

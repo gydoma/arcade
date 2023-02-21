@@ -1,4 +1,4 @@
-#filter {
+#filterbtn-m{
     display:flex;
     position: fixed;
     bottom: 20px;
@@ -29,24 +29,26 @@
         height: 700%;
         z-index: 1;
         transition: none !important;
-    }
+    }   
 }
 .device-s {
     display: none;
 }
 
-#filterbtn {
-    display: none;
-}
-
 @media only screen and (max-width: 740px) {
-    .device-m, #filter, #cat, #filterimg {
+    .device-m, #filterbtn-m, #cat, #filterimg, .device-m p {
         display:none;
     }
+
     .device-s {
         display:inherit;
         position: fixed;
         bottom: 20px;
         right: 20px;
+    } 
+
+    .device-s img{
+        display: inherit;
     }
+
 }
