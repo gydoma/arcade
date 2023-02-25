@@ -1,0 +1,92 @@
+{
+    "snakegame": {
+      "id": 1,
+      "name": "Snake Game - v1.",
+      "by": "Orosz Eszter",
+      "rating": 1,
+      "language": "cs",
+      "engine": "",
+      "updated": "2023-01-27"
+    },
+    "Blackjack": {
+      "id": 2,
+      "name": "Blackjack",
+      "by": "Katona Roland",
+      "rating": 1,
+      "language": "js",
+      "engine": "",
+      "updated": "2023-01-27"
+    },
+    "quiz": {
+      "id": 3,
+      "name": "Python Quiz",
+      "by": "Gyurkovics Dominik",
+      "rating": 1,
+      "language": "py",
+      "engine": "",
+      "updated": "2023-01-30"
+    },
+    "TankTrouble": {
+      "id": 4,
+      "name": "Tank Trouble",
+      "by": "Molnár-Horgos Kristóf, Vígh Noel, Horváth Péter Ákos",
+      "rating": 1,
+      "language": "cs",
+      "engine": "unity",
+      "updated": "2023-01-27"
+    },
+    "Catan": {
+      "id": 5,
+      "name": "Catan",
+      "by": "Dávid Benedek",
+      "rating": 1,
+      "language": "py",
+      "engine": "",
+      "updated": "2023-02-01"
+    },
+    "KeeperOfTheHates": {
+      "id": 6,
+      "name": "Keeper Of The Hates - v1.6",
+      "by": "Vajda Dániel",
+      "rating": 1,
+      "language": "cs",
+      "engine": "unity",
+      "updated": "2023-02-01"
+    },
+    "RepülösProjektMunka": {
+      "id": 7,
+      "name": "Repülős Projektmunka",
+      "by": "Bábolnai Bence",
+      "rating": 1,
+      "language": "js",
+      "engine": "",
+      "updated": "2023-02-07"
+    },
+    "Pong": {
+      "id": 8,
+      "name": "Repülős Projektmunka",
+      "by": "Suhajda Zsolt",
+      "rating": 1,
+      "language": "cs",
+      "engine": "unity",
+      "updated": "2023-02-07"
+    },
+    "FlappyBird": {
+      "id": 9,
+      "name": "Flappy Bird",
+      "by": "Bárczi Bence",
+      "rating": 1,
+      "language": "cs",
+      "engine": "MonoGame",
+      "updated": "2023-02-14"
+    },
+    "Quoridor": {
+      "id": 10,
+      "name": "Quoridor",
+      "by": "Bárczi Bence",
+      "rating": 1,
+      "language": "cs",
+      "engine": "MonoGame",
+      "updated": "2023-02-14"
+    }
+  }
