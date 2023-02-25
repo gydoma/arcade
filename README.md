@@ -40,6 +40,10 @@ npm install -g sass
 sass --watch --verbose scss/config.scss style.css
 ```
 
+## How it works
+
+<img width="2368" alt="arcademap" src="https://user-images.githubusercontent.com/65687471/221352315-8cad08f2-4e74-422d-a2ac-a1c28dec9208.png">
+
 
 ## DEV NOTES
 
