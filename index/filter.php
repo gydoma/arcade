@@ -29,9 +29,14 @@
         </select>
     </label>
     <div id="ratingfilter">
-    <h2>Minimum Rating: <!-- 0.1 - 5.0 star rating --> </h2>
-    <input type="range" min="1" max="50" value="25" class="min-star" id="min-star">
+        <div id="mrv">
+    <h2>Minimum Rating:<!-- 1.0 - 5.0 star rating --> </h2>
+    <h2 id="rating"></h2>
+    <img id="starimg">
+    </div>
+    <input type="range" min="10" max="50" value="25" class="min-star" id="min-star">
 </div>
 <input type="submit" id="searchbtn" value="Click To Search">
 </div>
 <p class="notice">Above this notice, you can see the filter component. - in /filter.php </p>
+<script src="javascript/filter.js"></script>
