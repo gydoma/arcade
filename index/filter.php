@@ -1,4 +1,3 @@
-<p class="notice">Under this notice, you can see the filter component. - in /filter.php </p>
 <div class="roundedcornes shadow filter" id="filtermenu">
     <h2 class="filterh2">Filter menu</h2>
     <input type="text" class="search-input lg" value placeholder="Type here the name of the game ... e.g. Apple">
@@ -30,13 +29,12 @@
     </label>
     <div id="ratingfilter">
         <div id="mrv">
-    <h2>Minimum Rating:<!-- 1.0 - 5.0 star rating --> </h2>
-    <h2 id="rating"></h2>
-    <img id="starimg">
-    </div>
+            <h2>Minimum Rating: </h2>
+            <h2 id="rating"></h2>
+            <img id="starimg">
+        </div>
     <input type="range" min="10" max="50" value="25" class="min-star" id="min-star">
+    </div>
+    <input type="submit" id="searchbtn" value="Click To Search">
 </div>
-<input type="submit" id="searchbtn" value="Click To Search">
-</div>
-<p class="notice">Above this notice, you can see the filter component. - in /filter.php </p>
 <script src="javascript/filter.js"></script>

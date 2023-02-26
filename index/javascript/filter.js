@@ -2,14 +2,14 @@ const minstar = document.getElementById("min-star");
 const starimg = document.getElementById("starimg");
 const rating = document.getElementById("rating")
 
-minstar.addEventListener("change", starcheck);
+minstar.addEventListener("mousemove", starcheck);
 
 function starcheck(){
     const min = minstar.value;
 
-    rating.innerHTML = min/10;
+    rating.innerHTML = (min/10).toFixed(1);
 
-    if(min >= 50){
+    if(min >= 40){
         starimg.src = "Resources/rating/Full.svg";
     }
 
