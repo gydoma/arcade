@@ -1,21 +1,18 @@
 <?php
-$lines = file(__DIR__ . "\.env");
-foreach ($lines as $line) {
-    [$key, $value] = explode('=', $line, 2);
-    $key = trim($key);
-    $value = trim($value);
+$file = fopen(__DIR__ . "\.env", "r");
+if ($file) {
+    while (($line = fgets($file)) !== false) {
+        parse_str($line,$dbcred);
+        $sqlhost = (isset($dbcred["sqlhost_"])) ? trim($dbcred["sqlhost_"]) : @$sqlhost; 
+        $sqlpwd = (isset($dbcred["sqlpwd_"])) ? trim($dbcred["sqlpwd_"]) : @$sqlpwd; 
+        $sqluser = (isset($dbcred["sqluser_"])) ? trim($dbcred["sqluser_"]) : @$sqluser; 
+        $sqldb = (isset($dbcred["sqldb_"])) ? trim($dbcred["sqldb_"]) : @$sqldb; 
 
-    putenv(sprintf('%s=%s', $key, $value));
-    $_ENV[$key] = $value;
-    $_SERVER[$key] = $value;
+    }
+    fclose($file);
 }
-
-    $host = $_ENV['sqlhost'];
-    $user = $_ENV['sqluser'];
-    $password = $_ENV['sqlpwd'];
-    $database = $_ENV['sqldb'];
     
-    $con = mysqli_connect($host,$user,$password,$database);
+    $con = mysqli_connect($sqlhost,$sqluser,$sqlpwd,$sqldb);
     if (mysqli_connect_errno()){
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }

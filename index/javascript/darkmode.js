@@ -3,7 +3,7 @@ var checkbox = document.querySelector('input[name=mode]');
 function darkmodecheck(){
      var sitetheme = getCookie("sitetheme")
     if (!sitetheme) {
-        document.cookie = "sitetheme=light; path=/; SameSite=None; Secure";
+        document.cookie = "sitetheme=light; path=/; SameSite=None;";
     }
     if(sitetheme == "light") {
         checkbox.checked = false
@@ -19,12 +19,12 @@ function darkmodecheck(){
 
 checkbox.addEventListener('change', function() {
     if(this.checked) {
-        document.cookie = "sitetheme=dark; path=/; SameSite=None; Secure";
+        document.cookie = "sitetheme=dark; path=/; SameSite=None;";
         // trans()
         document.documentElement.setAttribute('data-theme', 'dark')
         document.getElementById("logo").src = "Resources/logo/logodark.svg"
     } else {
-        document.cookie = "sitetheme=light; path=/; SameSite=None; Secure";
+        document.cookie = "sitetheme=light; path=/; SameSite=None;";
         // trans()
         document.documentElement.setAttribute('data-theme', 'light')
         document.getElementById("logo").src = "Resources/logo/logo.svg"
