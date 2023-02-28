@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chromium Arcade</title>
-    <link rel="stylesheet" href="/index/style.css">
+    <script async data-id="five-server" src="http://localhost:5555/fiveserver.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <?php include 'navbar.php'?>
@@ -16,7 +17,9 @@
     <p>paralelogramma, nah, just paragraph</p>
     <a href="alma.html">Casual link tag</a>
     <br>
-    <div class="games"></div>
+    <div class="games">
+        <?php include "games.php" ?>
+    </div>
 
     <?php include 'filter.php'; ?>
     <?php include 'search.php'; ?>
@@ -24,7 +27,7 @@
 
     <?php include 'footer.php'; ?>
     
-    <script src="javascript/games.js"></script>
+    <!-- <script src="javascript/games.js"></script> -->
 
 </body>
 </html>

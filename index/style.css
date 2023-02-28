@@ -568,8 +568,8 @@ html[data-theme=light] {
   --primary-text: #000000;
   --secondary-text: #18191F;
   --tertiary-text: #474A57;
-  --bgtile: url("/index/Resources/bg-tile/light_small.svg");
-  --bgtiledebug: url("/index/Resources/bg-tile/debug/Light_debug.svg");
+  --bgtile: url("Resources/bg-tile/light_small.svg");
+  --bgtiledebug: url("Resources/bg-tile/debug/Light_debug.svg");
 }
 
 html[data-theme=dark] {
@@ -582,8 +582,8 @@ html[data-theme=dark] {
   --primary-text: #FFFFFF;
   --secondary-text: #D1D1D1;
   --tertiary-text: #cccccc;
-  --bgtile: url("/index/Resources/bg-tile/dark_small.svg");
-  --bgtiledebug: url("/index/Resources/bg-tile/debug/Dark_debug.svg");
+  --bgtile: url("Resources/bg-tile/dark_small.svg");
+  --bgtiledebug: url("Resources/bg-tile/debug/Dark_debug.svg");
 }
 html[data-theme=dark] #cat {
   filter: invert(100%);

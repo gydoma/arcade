@@ -1,5 +1,4 @@
 document.getElementById("filterbtn").addEventListener("click", searchmenu);
-document.getElementById("searchbtn").addEventListener("click", searchmenu)
 const filtermneu = document.getElementById("filtermenu");
 
 function searchmenu(){
