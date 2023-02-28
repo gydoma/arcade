@@ -60,7 +60,6 @@
     } else{
         $games = "SELECT * FROM games";
     }
-    echo $games;
     if($result = mysqli_query($con,$games)){
         if(mysqli_num_rows($result) > 0) {
             while($game=mysqli_fetch_array($result)){
