@@ -1,88 +1,82 @@
--- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Feb 14, 2023 at 10:17 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.1.12
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
+-- --------------------------------------------------------
+-- Host:                         87.229.6.28
+-- Server version:               10.10.3-MariaDB-1:10.10.3+maria~deb11 - mariadb.org binary distribution
+-- Server OS:                    debian-linux-gnu
+-- HeidiSQL Version:             12.3.0.6589
+-- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Database: `arcade`
---
-CREATE DATABASE IF NOT EXISTS `arcade` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+
+-- Dumping database structure for arcade
+CREATE DATABASE IF NOT EXISTS `arcade` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
 USE `arcade`;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `authsessions`
---
-
-CREATE TABLE `authsessions` (
-  `AuthId` int(11) NOT NULL,
-  `AuthKey` varchar(64) NOT NULL,
+-- Dumping structure for table arcade.authsessions
+CREATE TABLE IF NOT EXISTS `authsessions` (
+  `AuthId` int(11) NOT NULL AUTO_INCREMENT,
+  `AuthKey` varchar(96) NOT NULL,
   `UId` int(11) NOT NULL,
-  `expire_date` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `expire_date` datetime NOT NULL,
+  PRIMARY KEY (`AuthId`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- --------------------------------------------------------
+-- Dumping data for table arcade.authsessions: ~0 rows (approximately)
 
---
--- Table structure for table `users`
---
+-- Dumping structure for table arcade.games
+CREATE TABLE IF NOT EXISTS `games` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `by` varchar(100) NOT NULL,
+  `language` varchar(100) NOT NULL,
+  `engine` varchar(100) NOT NULL,
+  `updated` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-CREATE TABLE `users` (
-  `UId` int(11) NOT NULL,
+-- Dumping data for table arcade.games: ~10 rows (approximately)
+INSERT INTO `games` (`id`, `name`, `by`, `language`, `engine`, `updated`) VALUES
+	(1, 'Snake Game - v1', 'Orosz Eszter', 'cs', '', '2023-01-27'),
+	(2, 'Blackjack', 'Katona Roland', 'js', '', '2023-01-27'),
+	(3, 'Python Quiz', 'Gyurkovics Dominik', 'py', '', '2023-01-30'),
+	(4, 'Tank Trouble', 'Molnár-Horgos Kristóf, Vígh Noel, Horváth Péter Ákos', 'cs', 'unity', '2023-01-27'),
+	(5, 'Catan', 'Dávid Benedek', 'py', '', '2023-02-01'),
+	(6, 'Keeper Of The Hates - v1.6', 'Vajda Dániel', 'cs', 'unity', '2023-02-01'),
+	(7, 'Repülős Projektmunka', 'Bábolnai Bence', 'js', '', '2023-02-07'),
+	(8, 'Repülős Projektmunka', 'Suhajda Zsolt', 'cs', 'unity', '2023-02-07'),
+	(9, 'Flappy Bird', 'Bárczi Bence', 'cs', 'MonoGame', '2023-02-14'),
+	(10, 'Quoridor', 'Bárczi Bence', 'cs', 'MonoGame', '2023-02-14');
+
+-- Dumping structure for table arcade.ratings
+CREATE TABLE IF NOT EXISTS `ratings` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `rating` int(11) DEFAULT NULL,
+  `gameid` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Dumping data for table arcade.ratings: ~0 rows (approximately)
+
+-- Dumping structure for table arcade.users
+CREATE TABLE IF NOT EXISTS `users` (
+  `UId` int(11) NOT NULL AUTO_INCREMENT,
   `Username` varchar(64) NOT NULL,
   `Email` varchar(64) NOT NULL,
   `Password` varchar(64) NOT NULL,
-  `CreatedAt` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `CreatedAt` datetime NOT NULL,
+  PRIMARY KEY (`UId`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Indexes for dumped tables
---
 
---
--- Indexes for table `authsessions`
---
-ALTER TABLE `authsessions`
-  ADD PRIMARY KEY (`AuthId`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`UId`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `authsessions`
---
-ALTER TABLE `authsessions`
-  MODIFY `AuthId` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `UId` int(11) NOT NULL AUTO_INCREMENT;
-COMMIT;
-
+/*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;

@@ -17,7 +17,7 @@
             }
         };
 
-        if(isset($_GET['name'])){
+        if(isset($_GET['min-rating'])){
             if(!isset($_GET['js'])){
                 if($where == false){
                     $cond.=" WHERE language != \"js\" ";
@@ -28,24 +28,24 @@
             }
         };
 
-        if(isset($_GET['name'])){
+        if(isset($_GET['min-rating'])){
             if(!isset($_GET['exe'])){
                 if($where == false){
-                    $cond.=" WHERE language != \"exe\" ";
+                    $cond.=" WHERE language != \"cs\" ";
                     $where = true;
                 } else {
-                    $cond.=" AND language != \"exe\" ";
+                    $cond.=" AND language != \"cs\" ";
                 }
             }
         };
 
-        if(isset($_GET['name'])){
-            if(!isset($_GET['cli'])){
+        if(isset($_GET['min-rating'])){
+            if(!isset($_GET['cli'])){ 
                 if($where == false){
-                    $cond.=" WHERE language != \"cli\" ";
+                    $cond.=" WHERE language != \"py\" ";
                     $where = true;
                 } else {
-                    $cond.=" AND language != \"cli\" ";
+                    $cond.=" AND language != \"py\" ";
                 }
             }   
         };
@@ -60,7 +60,7 @@
     } else{
         $games = "SELECT * FROM games";
     }
-
+    echo $games;
     if($result = mysqli_query($con,$games)){
         if(mysqli_num_rows($result) > 0) {
             while($game=mysqli_fetch_array($result)){
