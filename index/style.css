@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap");
 .button-cover, .knobs, .layer {
   position: absolute;
   top: 0;
@@ -132,7 +131,7 @@ footer .grade-row {
   width: 50px;
 }
 
-.userimg {
+#userimg {
   position: relative;
   top: 0;
   left: 0;
@@ -397,11 +396,14 @@ footer .grade-row {
   background-position: 98%;
   border-radius: 10px;
   border: 2px solid var(--secondary-color);
+  background-color: var(--primar-color);
   padding: 0.5rem 0 0.5rem 0;
   margin-top: 5%;
   margin-left: 70%;
-  width: 25%;
+  width: 30%;
   text-align: center;
+  font-weight: 700;
+  font-size: 21px;
 }
 
 #mrv {
@@ -502,6 +504,7 @@ footer .grade-row {
 }
 
 .games {
+  margin: 10%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -510,20 +513,106 @@ footer .grade-row {
   margin: 1em;
   align-items: baseline;
 }
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1000px) {
   .games .card {
     flex-basis: 33.33%;
   }
 }
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 750px) {
   .games .card {
     flex-basis: 50%;
   }
 }
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 540px) {
   .games .card {
-    flex-basis: 100%;
+    flex-basis: 80%;
   }
+}
+.games .card-cs {
+  background-color: var(--blue100);
+}
+.games .card-js {
+  background-color: var(--pink100);
+}
+.games .card-py {
+  background-color: var(--primary-color);
+}
+
+.card-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge {
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 25px;
+  border: 2px solid var(--secondary-color);
+  padding: 5px;
+  background-color: var(--primary-color);
+  height: auto;
+  width: 75px;
+  color: var(--secondary-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.badge-dot {
+  border: 2px solid var(--secondary-color);
+  border-radius: 50%;
+  height: 22px;
+  width: 22px;
+}
+
+.badge-cs {
+  background-color: var(--blue800);
+}
+
+.badge-js {
+  background-color: var(--red);
+}
+
+.badge-py {
+  background-color: var(--yellow);
+}
+
+.rating {
+  height: auto;
+  width: 75px;
+  color: var(--secondary-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footer-madeby {
+  font-size: 13px;
+}
+
+.card-button {
+  font-weight: 700;
+  border: 3px solid var(--secondary-color);
+  border-radius: 10px;
+  height: 38px;
+  width: 100px;
+  color: var(--primary-text);
+  background-color: var(--accent-color);
+  box-shadow: 0px 2px 0px 0px var(--secondary-color);
+}
+
+.card-button:active {
+  box-shadow: 0px 0px 0px 0px var(--secondary-color);
+  margin-top: 2px;
 }
 
 * {
@@ -582,10 +671,15 @@ html[data-theme=dark] {
   --primary-text: #FFFFFF;
   --secondary-text: #D1D1D1;
   --tertiary-text: #cccccc;
-  --bgtile: url("Resources/bg-tile/dark_small.svg");
-  --bgtiledebug: url("Resources/bg-tile/debug/Dark_debug.svg");
+  --bgtile: url("/index/Resources/bg-tile/dark_small.svg");
+  --bgtiledebug: url("/index/Resources/bg-tile/debug/Dark_debug.svg");
+  --pink100: #460E0E;
+  --blue100: #080339;
 }
 html[data-theme=dark] #cat {
+  filter: invert(100%);
+}
+html[data-theme=dark] #filterimg {
   filter: invert(100%);
 }
 
@@ -603,7 +697,7 @@ h1 {
 }
 
 h2 {
-  color: var(--secondary-text);
+  color: var(--primary-text);
   font-size: 24;
   font-weight: 800;
 }
@@ -643,7 +737,7 @@ a:focus {
 }
 
 .shadow {
-  box-shadow: 0px 0px 0px 3px var(--outline-color) inset, 0px 6px 0px 0px var(--secondary-color), 0px 6px 6px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 0px 2px var(--outline-color) inset, 0px 6px 0px 0px var(--secondary-color), 0px 6px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
 .usernotif {

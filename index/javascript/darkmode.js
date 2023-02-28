@@ -1,15 +1,15 @@
 var checkbox = document.querySelector('input[name=mode]');
-// document.cookie = "username=John Doe"; 
+
 function darkmodecheck(){
      var sitetheme = getCookie("sitetheme")
     if (!sitetheme) {
-        document.cookie = "sitetheme=light; path=/; SameSite=None;";
+        document.cookie = "sitetheme=light; path=/; Secure; SameSite=None;";
     }
     if(sitetheme == "light") {
         checkbox.checked = false
         // trans()
         document.documentElement.setAttribute('data-theme', 'light')
-    } else {
+    } else if (sitetheme == "dark"){
         checkbox.checked = true
         // trans()
         document.documentElement.setAttribute('data-theme', 'dark')
@@ -19,15 +19,17 @@ function darkmodecheck(){
 
 checkbox.addEventListener('change', function() {
     if(this.checked) {
-        document.cookie = "sitetheme=dark; path=/; SameSite=None;";
+        document.cookie = "sitetheme=dark; path=/; Secure; SameSite=None;";
         // trans()
         document.documentElement.setAttribute('data-theme', 'dark')
         document.getElementById("logo").src = "Resources/logo/logodark.svg"
+        document.getElementById("userimg").src = "Resources/feather/userdark.svg"
     } else {
-        document.cookie = "sitetheme=light; path=/; SameSite=None;";
+        document.cookie = "sitetheme=light; path=/; Secure; SameSite=None;";
         // trans()
         document.documentElement.setAttribute('data-theme', 'light')
         document.getElementById("logo").src = "Resources/logo/logo.svg"
+        document.getElementById("userimg").src = "Resources/feather/user.svg"
     }
 })
 
