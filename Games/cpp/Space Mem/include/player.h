@@ -20,6 +20,7 @@ private:
 
     float lastShotTime;
     float timeBetweenShots;
+    int coins;
 
     Sound shotSound;
 };

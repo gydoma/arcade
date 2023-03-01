@@ -7,3 +7,4 @@ Codebits/.DS_Store/
 .env
 Games/cpp/Space Mem/.vscode/c_cpp_properties.json
 Games/cpp/Space Mem/.vscode/tasks.json
+Games/cpp/Space Mem/build/afile.txt

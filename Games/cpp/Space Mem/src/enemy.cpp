@@ -1,5 +1,7 @@
 #include "enemy.h"
+#include <stdio.h>
 
+int multiplier = 0;
 
 Enemy::Enemy()
 {
@@ -7,6 +9,8 @@ Enemy::Enemy()
     enemyCollisionObjects.push_back(this);
 
     id = GetRandomValue(0, 2);
+
+    SetTraceLogLevel(LOG_DEBUG);
 
     // 3 féle enemy van, mind a 3 máshogy néz ki, szóval azt loadoljuk be amelyik éppen ki lett választva
     switch (id)
@@ -21,7 +25,10 @@ Enemy::Enemy()
         texture.width *= 10;
 
         // Sebesség
-        speed = -400;
+        speed = (-400 + multiplier);
+        char array[10];
+        sprintf(array, "%f", speed);
+        TraceLog(LOG_DEBUG, array);
         break;
     }
     case 1 : 
@@ -34,7 +41,10 @@ Enemy::Enemy()
         texture.width *= 10;
 
         // Sebesség
-        speed = -450;
+        speed =(-450 + multiplier);
+        char array[10];
+        sprintf(array, "%f", speed);
+        TraceLog(LOG_DEBUG, array);
         break; 
     } case 2:
     {
@@ -46,7 +56,10 @@ Enemy::Enemy()
         texture.width *= 10;
 
         // Sebesség
-        speed = -465;
+        speed = (-465 + multiplier);
+        char array[10];
+        sprintf(array, "%f", speed);
+        TraceLog(LOG_DEBUG, array);
         break;
     }
     default:
@@ -90,6 +103,7 @@ void Enemy::Destroy()
 Enemy::~Enemy()
 {
     ++score;
+    multiplier -= 10;
 
     enemyCollisionObjects.erase(std::remove(enemyCollisionObjects.begin(), enemyCollisionObjects.end(), this));
     gameObjects.erase(std::remove(gameObjects.begin(), gameObjects.end(), this));
