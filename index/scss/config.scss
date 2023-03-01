@@ -31,9 +31,10 @@ $debug: false;
 @import "components/filter";
 @import "components/lrpanel";
 @import "components/games";
+@import "components/gamecard";
 
 // Import Montserrat font
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
 
 // Global styles
 *{font-family:'Montserrat',sans-serif;user-select:none;-webkit-tap-highlight-color:transparent}
@@ -85,7 +86,10 @@ html[data-theme="dark"]{
     --tertiary-text: #{$dark_tertiary-text};
     --bgtile: #{$dark_bgtile};
     --bgtiledebug: #{$dark_bgtiledebug};
-    #cat{filter: invert(100%);}
+    --pink100: #{$dark_pink100};
+    --blue100: #{$dark_blue100};
+    #cat{filter: invert(100%);};
+    #filterimg{filter: invert(100%);}
 }
 
 // Debug-all mode
@@ -166,7 +170,7 @@ h1 {
     font-weight: 800;
 }
 h2 {
-    color: var(--secondary-text);
+    color: var(--primary-text);
     font-size: 24;
     font-weight: 800;
 }
@@ -207,7 +211,7 @@ a:focus {
 
 .shadow {
     box-shadow: 
-    0px 0px 0px 3px var(--outline-color) inset, 
+    0px 0px 0px 2px var(--outline-color) inset, 
     0px 6px 0px 0px var(--secondary-color), 
     0px 6px 6px 0px rgba(0, 0, 0, 0.2);
 }

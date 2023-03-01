@@ -7,7 +7,7 @@
     </div>
     <div class="userdiv">
         <img id="notification" class="usernotif" src="Resources/feather/notification.svg">
-        <img class="userimg" src="Resources/feather/user.svg">
+        <img id="userimg" src="Resources/feather/user.svg">
         <!-- ? Can be deleted, to hide the notification - ID [notification] is only a placeholder, not used in css -->
     </div>
     <a href="menu.html" class="menubutton">

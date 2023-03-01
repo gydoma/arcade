@@ -1,9 +1,21 @@
 {
+    "testcard": {
+        "id": 0,
+        "name": "Longest test game name for the testing",
+        "description":"This title may have some detailed descriptions which can go here. But part of this text box is always secured.",
+        "by": "gydoma",
+        "rating": 4.2,
+        "language": "js",
+        "engine": "none",
+        "updated": "1970-01-01",
+        "url": "../Games/Javascript/Alma/index.html",
+        "download":false
+    },
     "snakegame": {
       "id": 1,
       "name": "Snake Game - v1.",
       "by": "Orosz Eszter",
-      "rating": 1,
+      "rating": 3.6,
       "language": "cs",
       "engine": "",
       "updated": "2023-01-27"
@@ -12,16 +24,18 @@
       "id": 2,
       "name": "Blackjack",
       "by": "Katona Roland",
-      "rating": 1,
+      "rating": 4.1,
       "language": "js",
       "engine": "",
-      "updated": "2023-01-27"
+      "updated": "2023-01-27",
+      "url": "../Games/Javascript/Blackjack/index.html",
+      "download":false
     },
     "quiz": {
       "id": 3,
       "name": "Python Quiz",
       "by": "Gyurkovics Dominik",
-      "rating": 1,
+      "rating": 1.2,
       "language": "py",
       "engine": "",
       "updated": "2023-01-30"
@@ -30,7 +44,7 @@
       "id": 4,
       "name": "Tank Trouble",
       "by": "Molnár-Horgos Kristóf, Vígh Noel, Horváth Péter Ákos",
-      "rating": 1,
+      "rating": 3.4,
       "language": "cs",
       "engine": "unity",
       "updated": "2023-01-27"
@@ -39,7 +53,7 @@
       "id": 5,
       "name": "Catan",
       "by": "Dávid Benedek",
-      "rating": 1,
+      "rating": 4.9,
       "language": "py",
       "engine": "",
       "updated": "2023-02-01"
@@ -48,7 +62,7 @@
       "id": 6,
       "name": "Keeper Of The Hates - v1.6",
       "by": "Vajda Dániel",
-      "rating": 1,
+      "rating": 3.6,
       "language": "cs",
       "engine": "unity",
       "updated": "2023-02-01"
@@ -57,7 +71,7 @@
       "id": 7,
       "name": "Repülős Projektmunka",
       "by": "Bábolnai Bence",
-      "rating": 1,
+      "rating": 1.0,
       "language": "js",
       "engine": "",
       "updated": "2023-02-07"
@@ -66,7 +80,7 @@
       "id": 8,
       "name": "Repülős Projektmunka",
       "by": "Suhajda Zsolt",
-      "rating": 1,
+      "rating": 3.1,
       "language": "cs",
       "engine": "unity",
       "updated": "2023-02-07"
@@ -75,7 +89,7 @@
       "id": 9,
       "name": "Flappy Bird",
       "by": "Bárczi Bence",
-      "rating": 1,
+      "rating": 2.9,
       "language": "cs",
       "engine": "MonoGame",
       "updated": "2023-02-14"
@@ -84,7 +98,7 @@
       "id": 10,
       "name": "Quoridor",
       "by": "Bárczi Bence",
-      "rating": 1,
+      "rating": 4.0,
       "language": "cs",
       "engine": "MonoGame",
       "updated": "2023-02-14"

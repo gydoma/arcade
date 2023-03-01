@@ -1,23 +1,33 @@
 .games {
+    margin: 10%;
     display: flex;
     flex-wrap: wrap;
     
     .card {
-      flex: 1 0 25%; // 4 columns on larger screens
-      margin: 1em;
-      align-items: baseline;
+        flex: 1 0 25%; // 3 columns on larger screens, doesn't work if this is removed or changed lol
+        margin: 1em;
+        align-items: baseline;
       
-      @media only screen and (max-width: 1400px) {
-        flex-basis: 33.33%; // 3 columns on smaller screens
-      }
-      
-      @media only screen and (max-width: 1100px) {
-        flex-basis: 50%; // 2 columns on even smaller screens
-      }
-      
-      @media only screen and (max-width: 740px) {
-        flex-basis: 100%; // 1 column on smallest screens
-      }
+        @media only screen and (max-width: 1000px) {
+          flex-basis: 33.33%; // 3 columns on smaller screens
+        }
+
+        @media only screen and (max-width: 750px) {
+          flex-basis: 50%; // 2 columns on even smaller screens
+        }
+
+        @media only screen and (max-width: 540px) {
+          flex-basis: 80%; // 1 column on smallest screens
+        }
+    }
+    .card-cs {
+        background-color: var(--blue100);
+    }
+    .card-js {
+        background-color: var(--pink100);
+    }
+    .card-py {
+        background-color: var(--primary-color);
     }
   }
   
