@@ -70,14 +70,48 @@
                 $ratingresult = mysqli_query($con,$ratings);
                 $rating = mysqli_fetch_array($ratingresult);
                 
-                echo "<div class=\"card roundedcornes shadow\">";
-                echo "<h2>" . $game['name']. "</h2>";
-                echo "<p>" . $game['by']. "</p>";
-                echo "<p>" . ($rating['rating'] ? $rating['rating'] : "Not rated yet") . "</p>";
-                echo "<p>" . $game['language']. "</p>";
-                echo "<p>" . $game['engine']. "</p>";
-                echo "<p>" . $game['updated']. "</p>";
+                if($rating['rating'] > 4.0){
+                    $starimg = "Resources/rating/Full.svg";
+                } 
+                else if ($rating['rating'] > 3.0){
+                    $starimg = "Resources/rating/Half.svg";
+                } 
+                else {
+                    $starimg = "Resources/rating/Empty.svg";
+                }
+
+                if($game['language'] == "js" ){
+                    $buttonname = "Play";
+                    $file_ext = "web";
+                } 
+                else {
+                    $buttonname = "Download";
+                    $file_ext = ($game['language'] == "py" ? ".py" : ".exe");
+                }
+
+                echo "<div class=\"card roundedcornes shadow game-card card-" . $game['language'] . "\">";
+                
+                
+                echo "<div class=\"card-top\">";
+                echo "<div class=\"rating\">";
+                echo "<h2>" . $rating['rating'] . "</h2>" ;
+                echo "<img src=\"" . $starimg . "\">";
                 echo "</div>";
+                
+                echo "<div class=\"badge\">";
+                echo "<div class=\"badge-dot badge-". $game['language'] ."\">"  . "</div>";
+                echo $file_ext;
+                echo "</div>";
+                echo "</div>";
+                
+                echo "<h2>" . $game['name']. "</h2>";
+                echo "<p>" . (strlen($game['description']) > 0 ? $game['description'] : "undefined"). "</p>";
+                echo "<div class=\"card-footer\">";
+                echo "<p class=\"footer-madeby \">" . "made by " . $game['by'] . "</p>";
+                echo "<button class=\"card-button\" onclick=\"window.location.href = '". $game['url'] . "';" ."\">" . $buttonname . "</button>";
+                echo "</div>";
+                echo "</div>";
+
             }
         } 
     }

@@ -1,7 +1,7 @@
 -- --------------------------------------------------------
 -- Host:                         87.229.6.28
--- Server version:               10.10.3-MariaDB-1:10.10.3+maria~deb11 - mariadb.org binary distribution
--- Server OS:                    debian-linux-gnu
+-- Server version:               8.0.32 - MySQL Community Server - GPL
+-- Server OS:                    Linux
 -- HeidiSQL Version:             12.3.0.6589
 -- --------------------------------------------------------
 
@@ -16,14 +16,14 @@
 
 
 -- Dumping database structure for arcade
-CREATE DATABASE IF NOT EXISTS `arcade` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
+CREATE DATABASE IF NOT EXISTS `arcade` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `arcade`;
 
 -- Dumping structure for table arcade.authsessions
 CREATE TABLE IF NOT EXISTS `authsessions` (
-  `AuthId` int(11) NOT NULL AUTO_INCREMENT,
-  `AuthKey` varchar(96) NOT NULL,
-  `UId` int(11) NOT NULL,
+  `AuthId` int NOT NULL AUTO_INCREMENT,
+  `AuthKey` varchar(96) COLLATE utf8mb4_general_ci NOT NULL,
+  `UId` int NOT NULL,
   `expire_date` datetime NOT NULL,
   PRIMARY KEY (`AuthId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -32,48 +32,56 @@ CREATE TABLE IF NOT EXISTS `authsessions` (
 
 -- Dumping structure for table arcade.games
 CREATE TABLE IF NOT EXISTS `games` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) NOT NULL,
-  `by` varchar(100) NOT NULL,
-  `language` varchar(100) NOT NULL,
-  `engine` varchar(100) NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `description` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `by` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `language` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `engine` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
   `updated` date NOT NULL,
+  `url` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `download` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table arcade.games: ~10 rows (approximately)
-INSERT INTO `games` (`id`, `name`, `by`, `language`, `engine`, `updated`) VALUES
-	(1, 'Snake Game - v1', 'Orosz Eszter', 'cs', '', '2023-01-27'),
-	(2, 'Blackjack', 'Katona Roland', 'js', '', '2023-01-27'),
-	(3, 'Python Quiz', 'Gyurkovics Dominik', 'py', '', '2023-01-30'),
-	(4, 'Tank Trouble', 'Molnár-Horgos Kristóf, Vígh Noel, Horváth Péter Ákos', 'cs', 'unity', '2023-01-27'),
-	(5, 'Catan', 'Dávid Benedek', 'py', '', '2023-02-01'),
-	(6, 'Keeper Of The Hates - v1.6', 'Vajda Dániel', 'cs', 'unity', '2023-02-01'),
-	(7, 'Repülős Projektmunka', 'Bábolnai Bence', 'js', '', '2023-02-07'),
-	(8, 'Repülős Projektmunka', 'Suhajda Zsolt', 'cs', 'unity', '2023-02-07'),
-	(9, 'Flappy Bird', 'Bárczi Bence', 'cs', 'MonoGame', '2023-02-14'),
-	(10, 'Quoridor', 'Bárczi Bence', 'cs', 'MonoGame', '2023-02-14');
+INSERT INTO `games` (`id`, `name`, `description`, `by`, `language`, `engine`, `updated`, `url`, `download`) VALUES
+	(1, 'Snake Game - v1', NULL, 'Orosz Eszter', 'cs', '', '2023-01-27', NULL, 1),
+	(2, 'Blackjack', NULL, 'Katona Roland', 'js', '', '2023-01-27', '../Games/Javascript/Blackjack/index.html', 0),
+	(3, 'Python Quiz', NULL, 'Gyurkovics Dominik', 'py', '', '2023-01-30', NULL, 1),
+	(4, 'Tank Trouble', NULL, 'Molnár-Horgos Kristóf, Vígh Noel, Horváth Péter Ákos', 'cs', 'unity', '2023-01-27', NULL, 1),
+	(5, 'Catan', NULL, 'Dávid Benedek', 'py', '', '2023-02-01', NULL, 1),
+	(6, 'Keeper Of The Hates - v1.6', NULL, 'Vajda Dániel', 'cs', 'unity', '2023-02-01', NULL, 1),
+	(7, 'Repülős Projektmunka', NULL, 'Bábolnai Bence', 'js', '', '2023-02-07', NULL, 0),
+	(8, 'Repülős Projektmunka', NULL, 'Suhajda Zsolt', 'cs', 'unity', '2023-02-07', NULL, 1),
+	(9, 'Flappy Bird', NULL, 'Bárczi Bence', 'cs', 'MonoGame', '2023-02-14', NULL, 1),
+	(10, 'Quoridor', NULL, 'Bárczi Bence', 'cs', 'MonoGame', '2023-02-14', NULL, 1);
 
 -- Dumping structure for table arcade.ratings
 CREATE TABLE IF NOT EXISTS `ratings` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `rating` int(11) DEFAULT NULL,
-  `gameid` int(11) DEFAULT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `rating` int DEFAULT NULL,
+  `gameid` int DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table arcade.ratings: ~0 rows (approximately)
+-- Dumping data for table arcade.ratings: ~3 rows (approximately)
+INSERT INTO `ratings` (`id`, `rating`, `gameid`) VALUES
+	(1, 5, 1),
+	(2, 3, 1),
+	(3, 1, 5);
 
 -- Dumping structure for table arcade.users
 CREATE TABLE IF NOT EXISTS `users` (
-  `UId` int(11) NOT NULL AUTO_INCREMENT,
-  `Username` varchar(64) NOT NULL,
-  `Email` varchar(64) NOT NULL,
-  `Password` varchar(64) NOT NULL,
+  `UId` int NOT NULL AUTO_INCREMENT,
+  `Username` varchar(64) COLLATE utf8mb4_general_ci NOT NULL,
+  `Email` varchar(64) COLLATE utf8mb4_general_ci NOT NULL,
+  `Password` varchar(64) COLLATE utf8mb4_general_ci NOT NULL,
   `CreatedAt` datetime NOT NULL,
   PRIMARY KEY (`UId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- Dumping data for table arcade.users: ~0 rows (approximately)
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

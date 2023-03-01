@@ -17,15 +17,16 @@
     <p>paralelogramma, nah, just paragraph</p>
     <a href="alma.html">Casual link tag</a>
     <br>
-    <div class="games"></div>
+    <div class="games">
+    <?php include 'games.php' ?>
+    </div>
 
     <?php include 'filter.php'; ?>
     <?php include 'search.php'; ?>
 
-
     <?php include 'footer.php'; ?>
     
-    <script src="javascript/games.js"></script>
+    <!-- <script src="javascript/games.js"></script> -->
     <script src="javascript/darkmode.js" onload="darkmodecheck()"></script>
 
 </body>
