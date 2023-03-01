@@ -62,7 +62,7 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 
 ## Készítették:
 
-| Név | 3 JS - 2 PY - 6 CS |
+| Név | 3 JS - 2 PY - 6 CS - 1 C++|
 | ------ | ------ |
 | Gyurkovics Dominik | [Projektvezető] py (1) |
 | Katona Roland | [Pv.-helyettes] js (1) |
@@ -71,7 +71,7 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 | Orosz Eszter | cs (1) |
 | Dávid Benedek | py (1) |
 | Vajda Dániel | cs (1)|
-| Bán Gergő |  |
+| Bán Gergő | cs (1) |
 | Suhajda Zsolt Péter | cs (1) |
 | Rostás András Péter | |
 | Bárczi Bence | cs (2) |
@@ -99,4 +99,5 @@ A projekt weboldalának a kinézeti tervét, PHP és SCSS részét készítette 
 | [Pong](https://github.com/rewerze/Pong) | C# | Unity | 2023/02/07 | [rewerze](https://github.com/rewerze/) |
 | FlappyBird | C# | MonoGame | 2023/02/14 | Bárczi Bence |
 | Quoridor | C# | MonoGame | 2023/02/14 | Bárczi Bence |
-| Space Mem | C++ | - | 2023/03/28 | Kósa Márk |
+| TextRPG | C# | - | 2023/02/28 | Bán Gergő |
+| Space Mem | C++ | - | 2023/03/01 | Kósa Márk |
