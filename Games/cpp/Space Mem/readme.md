@@ -10,3 +10,10 @@ Az első C++ projektem, nem a legjobb, de legalább megy.
 - Lövés sound 💀
 - Játék vége hogyha valamelyiket nem sikerült lelőni / ha valamelyik neked megy
 - **Talán** egy shop a közeljövőben
+
+## Update 1
+
+- Főmenü
+- "Currency" system elkezdve
+- Dinamikus felbontás
+- Minden kill után felgyorsul a game

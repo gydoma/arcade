@@ -75,6 +75,7 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 | Suhajda Zsolt Péter | cs (1) |
 | Rostás András Péter | |
 | Bárczi Bence | cs (2) |
+| Kósa Márk | c++ (1) |
 | Molnár-Horgos Kristóf | [TankTrouble](https://github.com/Trixep/TankTrouble-Multiplayer) |
 | Vígh Noel | [TankTrouble](https://github.com/Trixep/TankTrouble-Multiplayer) |
 | Horváth Péter Ákos | [TankTrouble](https://github.com/Trixep/TankTrouble-Multiplayer) |
@@ -98,3 +99,4 @@ A projekt weboldalának a kinézeti tervét, PHP és SCSS részét készítette 
 | [Pong](https://github.com/rewerze/Pong) | C# | Unity | 2023/02/07 | [rewerze](https://github.com/rewerze/) |
 | FlappyBird | C# | MonoGame | 2023/02/14 | Bárczi Bence |
 | Quoridor | C# | MonoGame | 2023/02/14 | Bárczi Bence |
+| Space Mem | C++ | - | 2023/03/28 | Kósa Márk |
