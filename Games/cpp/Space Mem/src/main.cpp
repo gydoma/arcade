@@ -12,7 +12,7 @@
 
 int main(void)
 {
-    InitWindow(1920, 1080, "Space Mem");
+    InitWindow(GetScreenWidth(), GetScreenHeight(), "Space Mem");
 
     Background bg;
     CollisionHandler handler;
@@ -38,7 +38,6 @@ int main(void)
         {
             gameObject->Render();
         }
-
         EndDrawing();
     }
 
