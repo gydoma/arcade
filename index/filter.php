@@ -30,7 +30,7 @@
     </label>
     <div id="ratingfilter">
         <div id="mrv">
-            <h2>Minimum Rating: </h2>
+            <h2 id="min-rating">Minimum Rating: </h2>
             <h2 id="rating"></h2>
             <img id="starimg">
         </div>

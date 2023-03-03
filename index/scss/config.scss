@@ -227,7 +227,13 @@ a:focus {
 @media only screen and (max-width: 740px) {
     .menubutton{
         display: block;
+        margin: auto 0px auto auto;
     }
+
+    .userdiv{
+        display: none;
+    }
+
     .cards{
         display: block;
     }
