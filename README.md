@@ -22,6 +22,30 @@
 
 ____
 Ki ne szeretne játszani? Ez az oldal a Verebély László Technikumának a 2022/23. évi 11. szoftverfejlesztő és tesztelő évfolyamának I. sávú csoportjának a második projektmunkája. Mi úgy terveztük és készítettuk ezt a projektmunkát, hogy az unalmas óráidban csak böngéssz a játékok közül és nyugalmasan játszhass velük, esetleg tudj tanulni is a nyílt kódforrásunknak köszönhetően.
+
+3 egyszerű lépésből már játszani is tudsz a játékainkkal!
+1. Regisztrálj/Jelentkezz be!
+2. Válassz ki egy játékot
+3. Játssz!
+
+
+## Q&A
+[Q] **Miért kell regisztrálnom?**
+
+[A] *Egyszerű, ne terhelje le a szervert a sok bot és adatbázis-kezelést is bele kellett vinni a projektünkbe.*
+
+[Q] **Biztonságos ha megadom a saját jelszavam?**
+
+[A] *Igen és Nem, A jelszavakat a szerver titkosítja, tehát mi nem tudjuk látni senkinek se a jelszavát. Viszont, nem ajánlott ugyanazt a jelszavat használni minden oldalon, mert a hekkerek előszeretettel fogják feltörni a fiókjaidat különböző platformokon is.*
+
+[Q] **Telefonról vagyok, tudok futtatni .exe vagy .py játékokat?**
+
+[A] *Mint egy egyszerű felhasználó, nem feltétlen. Ha értesz hozzá meglehet csinálni ezt is.*
+
+[Q] **Vírusok vannak a játékaitokban?**
+
+[A] *Nincsenek, gondosan átnéztük az összes fájt kézileg, le is teszteltük, és nem terveztünk kémprogramokat esetleg trójai falókat telepíteni a gépedre.* 
+
 ____
 
 <p float="left">
@@ -47,8 +71,6 @@ sass --watch --verbose scss/config.scss style.css
 
 ## DEV NOTES
 
-Drótváz front-endes css-html kombója a [codepen](https://codepen.io/harsh-vardhan/full/RwWRqKE)-en megtalálható 
-
 **Drótvázat - dizájntervet [ITT](https://www.sketch.com/s/be49d22c-e4f3-4380-bbfe-fca234c20055) tudod megnézni**
 
 Elakadtál? Nincs Ötleted? Itt egy pár játékötlet chatgpt-vel generálva: https://github.com/gydoma/arcade/issues/5
@@ -56,9 +78,12 @@ Elakadtál? Nincs Ötleted? Itt egy pár játékötlet chatgpt-vel generálva: h
 
 Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint a kitűzött (nem konzolos JavaScript, Python, C#) akkor ügyelj arra, hogy lehessen futtatni a weben vagy könnyen letölthető egy fájlos (pl.: .exe) a programod/játékod.
 
-### Hexadecimális kódok a színekhez
+### Weboldalra használt színpaletta
 
-<img width="35%" alt="scss" src="https://user-images.githubusercontent.com/65687471/215570711-0d048625-121e-40f7-a973-408382938760.png">
+
+<img width="1596" alt="Screenshot 2023-03-05 at 13 43 38" src="https://user-images.githubusercontent.com/65687471/222961189-6031020c-136b-4c0f-820d-4ecfe436d90a.png">
+
+A weboldal háttere svg-ben készült, 2 monokróm 	`#FFF4CC`,	`#F9E9BF` színnel. A kártyák háttere `#FFFFFF`, körvonaluk `#474A57` (sötét módban: `#b8b5a8`) és `#000000`. A nagyobb kontrasztot adó fő hangsúlyú a `#FFBD12`, sötét módban ez a `#F95A2C`. Világos módban a szövegek: 1. rangú (primary) -  `#000000`; 2. rangú (secondary) - `#18191F`; 3. rangú (tertiary) - `#474A57`. Sötét hátteren ebben a sorrendben: `#FFFFFF`; `#D1D1D1`; `#cccccc`.
 
 ## Készítették:
 
@@ -82,8 +107,6 @@ Ha valami más programozási nyelvben szeretnéd megcsinálni a játékodat mint
 
 A projekt weboldalának a kinézeti tervét, PHP és SCSS részét készítette és fenntartja: gydoma
 
-**Projekt várható befejezésének időpontja: 2023 Közepe**
-
 
 ## Játékok Listája
 
@@ -101,3 +124,6 @@ A projekt weboldalának a kinézeti tervét, PHP és SCSS részét készítette 
 | Quoridor | C# | MonoGame | 2023/02/14 | Bárczi Bence |
 | TextRPG | C# | - | 2023/02/28 | Bán Gergő |
 | Space Mem | C++ | - | 2023/03/01 | Kósa Márk |
+
+
+> __Note__ **Projekt várható befejezésének időpontja: 2023 Közepe**
