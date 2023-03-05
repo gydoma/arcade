@@ -88,7 +88,7 @@ html[data-theme="dark"]{
     --bgtiledebug: #{$dark_bgtiledebug};
     --pink100: #{$dark_pink100};
     --blue100: #{$dark_blue100};
-    #cat{filter: invert(100%);};
+    #cat{filter: invert(30%);};
     #filterimg{filter: invert(100%);}
 }
 
@@ -223,6 +223,12 @@ a:focus {
 .menubutton{
     display: none;
 }
+
+.flex-filter {
+    flex-grow: 1;
+}
+
+
 
 @media only screen and (max-width: 740px) {
     .menubutton{

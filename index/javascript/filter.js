@@ -8,7 +8,7 @@ minstar.addEventListener("touchmove", starcheck);
 function starcheck(){
     const min = minstar.value;
 
-    rating.innerHTML = (min/10).toFixed(1);
+    rating.innerHTML = "Minimum Rating: "+(min/10).toFixed(1);
 
     if(min >= 40){
         starimg.src = "Resources/rating/Full.svg";
