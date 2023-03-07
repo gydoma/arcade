@@ -197,16 +197,16 @@ footer .horizontal {
   justify-content: space-between;
   margin: 10px;
 }
-footer .grade-row {
+footer .grade-row, footer .grade-container {
   display: flex;
   flex-direction: row;
-  margin: 10px;
+  margin: 0px 10px 0px 10px;
   white-space: nowrap;
 }
 
 @media only screen and (max-width: 1100px) {
   footer {
-    padding: 5px 100px 5px 100px;
+    padding: 5px 0px 5px 0px;
     text-align: center;
   }
   footer a {
@@ -215,12 +215,13 @@ footer .grade-row {
     text-decoration-color: rgb(0, 0, 0);
     text-decoration-thickness: 2px;
   }
-  footer .horizontal {
+  footer .horizontal, footer .grade-container {
     display: flex;
     flex-direction: column;
     justify-content: start;
   }
   footer .grade-row {
+    margin-top: 0px;
     display: flex;
     flex-direction: row;
   }
@@ -288,14 +289,12 @@ footer .grade-row {
   .device-m, #filterbtn-m, #cat, #filterimg, .device-m p {
     display: none;
   }
-
   .device-s {
     display: inherit;
     position: fixed;
     bottom: 20px;
     right: 20px;
   }
-
   .device-s img {
     display: inherit;
   }
@@ -306,7 +305,9 @@ footer .grade-row {
   border-bottom-style: solid;
   border-bottom-color: var(--secondary-color);
   padding: 5px;
-  position: relative;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -528,7 +529,7 @@ footer .grade-row {
     left: 0;
     right: 0;
     width: 90%;
-    margin: auto 2.5;
+    margin: auto;
   }
   .filter .filterh2 {
     display: none;
@@ -868,12 +869,14 @@ a:focus {
 @media only screen and (max-width: 740px) {
   .menubutton {
     display: block;
+    margin: auto 0px auto auto;
   }
-
+  .userdiv {
+    display: none;
+  }
   .cards {
     display: block;
   }
-
   .navimg {
     display: flex;
   }

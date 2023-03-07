@@ -4,7 +4,9 @@
     border-bottom-style: solid;
     border-bottom-color: var(--secondary-color);
     padding: 5px;
-    position: relative;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
