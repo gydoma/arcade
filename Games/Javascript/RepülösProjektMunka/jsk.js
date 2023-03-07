@@ -3,11 +3,16 @@ window.onkeydown = function(e) {
     return !(e.code == "ArrowUp" || "ArrowDown" && e.target == document.body);
 };
 
+
 let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext('2d');
 let random = Math.floor(Math.random() * (1000 - 4000)) + 4000;
 let started = 0;
 let randomgen = Math.floor(Math.random() * (100 - 400)) + 400;
+
+function clear(){
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
 
 /*Játékos rajzolása, ugrás*/
 const img = new Image();
@@ -51,7 +56,7 @@ function Collison(enx, enw, eny, enh) {
     ) {} else {
         console.log("dadada");
         cancelAnimationFrame(req);
-        end()
+        end();
     }
 }
 
@@ -89,52 +94,51 @@ function playmenu() {
             cloudg();
             balong();
             oilg();
-            started = 1;
+
         }
     }, false)
 }
 
 playmenu();
 
-
-document.addEventListener("keydown", e => {
+    document.addEventListener("keydown", e => {
     switch (e.code) {
         case ('ArrowDown'):
             player.y += 30;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            clear();
             player.draw();
             setTimeout(() => {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                clear();
                 player.draw();
             }, 250)
             break;
             /**/
         case ('ArrowUp'):
             player.y -= 30;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            clear();
             player.draw();
             setTimeout(() => {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                clear();
                 player.draw();
             }, 250)
             break;
             /**/
         case ('ArrowRight'):
             player.x += 30;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            clear();
             player.draw();
             setTimeout(() => {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                clear();
                 player.draw();
             }, 250)
             break;
             /**/
         case ('ArrowLeft'):
             player.x -= 30;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            clear();
             player.draw();
             setTimeout(() => {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                clear();
                 player.draw();
             }, 250)
             break;
@@ -152,6 +156,7 @@ document.addEventListener("keydown", e => {
             break;
     }
 });
+
 
 
 /*A random blokkok , felhők*/
@@ -188,8 +193,8 @@ class Birds {
 
 class Bullet {
     constructor(size, speed) {
-        this.x = player.x + 50;
-        this.y = player.y + 50;
+        this.x = player.x + 30;
+        this.y = player.y + 30;
         this.size = size;
         this.Sp = speed;
     }
@@ -202,7 +207,7 @@ class Bullet {
         this.x += this.Sp;
         ctx.rect(this.x, this.y, this.size, this.size);
         ctx.stroke();
-
+        Collison(this.x, this.width, this.y, this.height);
     }
 }
 
@@ -345,25 +350,27 @@ let score = 0;
 let bullet = 3;
 let oilnu = 100;
 
+/*Alaprajzolás , Birdsok rajzolása*/
+let req = null;
+
 function text() {
     ctx.font = "15px serif";
     ctx.fillText("Pontszám :" + score + " m", 10, 30);
     ctx.fillText("Lőszer :" + bullet + " db", 480, 30);
-    ctx.fillText("Üzemanyag :" + oilnu + " liter", 150, 30);
+    ctx.fillText("Üzemanyag :" + Math.round(oilnu) + " liter", 150, 30);
     score += 1;
     oilnu -= 0.04;
     Math.floor(score);
 }
 
-/*Alaprajzolás , Birdsok rajzolása*/
-let req = null;
-
 function start() {
+    started = 1;
+    bullet = 3;
     req = requestAnimationFrame(start);
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    clear();
     player.draw();
     hitbox();
-    text()
+    text();
     enemys.forEach(Birds => {
         Birds.slide();       
     })
@@ -396,7 +403,6 @@ function start() {
     /*fffff*/
 
 }
-
 
 /*Lőszer gen*/
 function shoot() {
@@ -445,9 +451,57 @@ function checkCookie() {
 }
 
 function end() {
+    started = 0;
+    cancelAnimationFrame(req);
+    enemys.splice(0);
+    clouds.splice(0);
+    ballons.splice(0);
+    bullets.splice(0);
+    oils.splice(0);
+    boss.splice(0);
+    clear();
     if (score > document.cookie.split('; ').find((row) => row.startsWith('score=')).split('=')[1]) {
         setCookie("score", score, 28);
     }
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    playmenu();
+    checkCookie();
+
+    const path = new Path2D()
+    ctx.fillStyle = "darkblue";
+    function startbtn() {
+        ctx.fillStyle = "white";
+        ctx.font = "60px serif";
+        ctx.fillText("Restart", 195, 365);
+        ctx.fillStyle = "black";
+    }
+    
+    ctx.font = "30px serif";
+    path.rect(150, 300, 250, 100)
+    path.closePath()
+    ctx.fill(path)
+    ctx.lineWidth = 1
+    ctx.stroke(path)
+    ctx.fillText("Pontszám :" + score + " m", 150, 225);
+    ctx.fillText("Lőszer :" + bullet + " db", 150, 255);
+    ctx.fillText("Üzemanyag :" + Math.round(oilnu) + " liter", 150, 285);
+
+    function coord(canvas, event) {
+        const rect = canvas.getBoundingClientRect()
+        const y = event.clientY - rect.top
+        const x = event.clientX - rect.left
+        return { x: x, y: y }
+    }
+    document.addEventListener("click", function(e) {
+        const XY = coord(canvas, e)
+        if (ctx.isPointInPath(path, XY.x, XY.y) && started == 0) {
+            start()
+            generate();
+            cloudg();
+            balong();
+            oilg();
+        }
+    }, false)
+    startbtn();
+    oilnu = 100;
+    score = 0;
+    bullet = 3;
 }
