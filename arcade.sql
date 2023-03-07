@@ -52,7 +52,8 @@ INSERT INTO `games` (`id`, `name`, `by`, `language`, `engine`, `updated`) VALUES
 	(7, 'Repülős Projektmunka', 'Bábolnai Bence', 'js', '', '2023-02-07'),
 	(8, 'Repülős Projektmunka', 'Suhajda Zsolt', 'cs', 'unity', '2023-02-07'),
 	(9, 'Flappy Bird', 'Bárczi Bence', 'cs', 'MonoGame', '2023-02-14'),
-	(10, 'Quoridor', 'Bárczi Bence', 'cs', 'MonoGame', '2023-02-14');
+	(10, 'Quoridor', 'Bárczi Bence', 'cs', 'MonoGame', '2023-02-14'),
+	(11, 'Space Mem', 'Kósa Márk', 'c++', '', '2023-03-01');
 
 -- Dumping structure for table arcade.ratings
 CREATE TABLE IF NOT EXISTS `ratings` (
