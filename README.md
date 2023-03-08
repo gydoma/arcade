@@ -92,9 +92,6 @@ A weboldal háttere svg-ben készült, 2 monokróm 	`#FFF4CC`,	`#F9E9BF` színne
 - [ ] Játékok futtatása mobilon
 - [ ] Játékok futtatása böngészőben (offline)
 
-Export Here?
-Export Done.
-MASTERCARD,5455482999857906,OTP BANK PLC,180,08/2025,6358;
 ## Készítették:
 
 | Név | 3 JS - 2 PY - 6 CS - 1 C++|
