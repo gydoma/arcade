@@ -16,6 +16,7 @@ class Enemy : public GameObject
         virtual ~Enemy(void);
 
         void Destroy();
+        void Unload();
         Rectangle GetRect();
 
     private:
