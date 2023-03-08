@@ -289,12 +289,14 @@ footer .grade-row, footer .grade-container {
   .device-m, #filterbtn-m, #cat, #filterimg, .device-m p {
     display: none;
   }
+
   .device-s {
     display: inherit;
     position: fixed;
     bottom: 20px;
     right: 20px;
   }
+
   .device-s img {
     display: inherit;
   }
@@ -871,12 +873,15 @@ a:focus {
     display: block;
     margin: auto 0px auto auto;
   }
+
   .userdiv {
     display: none;
   }
+
   .cards {
     display: block;
   }
+
   .navimg {
     display: flex;
   }

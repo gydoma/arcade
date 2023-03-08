@@ -14,15 +14,19 @@
     "snakegame": {
       "id": 1,
       "name": "Snake Game - v1.",
+      "description":"A játék a Snake játékot próbálja megvalósítani. A játék célja, hogy a kígyót a falakon és a saját magán kívül ellenőrzött irányba mozgatva a lehető legtöbb gyümölcsöt megegye. A játékot a nyilak segítségével lehet irányítani. A játék véget ér, ha a kígyó a falba ütközik vagy a saját magába ütközik.",
       "by": "Orosz Eszter",
       "rating": 3.6,
       "language": "cs",
       "engine": "",
-      "updated": "2023-01-27"
+      "updated": "2023-01-27",
+      "url": "../Games/Javascript/SnakeGame/index.html",
+      "download":false
     },
     "Blackjack": {
       "id": 2,
       "name": "Blackjack",
+      "description":"A játék célja, hogy a játékosnak 21 pontot kell elérnie. A játékosnak 2 lapja van, amelyeket a lapokat kattintva tudja látni. A lapokat kattintva a játékosnak lehetősége van új lapot kapni, vagy leállni.",
       "by": "Katona Roland",
       "rating": 4.1,
       "language": "js",
