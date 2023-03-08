@@ -179,12 +179,21 @@
     position: absolute;
     margin-left: 50%;
     bottom: 20%;
+    display: block;
+    width: 40%;
   }
-
   #min-star{
     width: 100%;
     position: relative;
     top: auto;
+  }
+  #starimg {
+    align-self: right;
+  }
+  
+  hr {
+    width:80%;
+    margin: 15px auto 15px auto;
   }
 
 
@@ -213,8 +222,8 @@
     box-shadow: inset 0px -2px 0px 0px #000000;
   }
     input[type="range"]::-webkit-slider-thumb:hover {
-      border: 2px solid #e74c3c;
-      box-shadow: inset 0px -2px 0px 0px #e74c3c;
+      border: 2px solid var(--accent-color);
+      box-shadow: inset 0px -2px 0px 0px var(--accent-color);
     }
     input[type="range"]::-webkit-slider-thumb:active {
       transform: scale(1.6);
@@ -233,10 +242,9 @@
         background-position: 98%;
         border-radius: 10px;
         border: 2px solid var(--secondary-color);
-        background-color: var(--primar-color);
         padding: 0.5rem 0 0.5rem 0;
         margin-top: 5%;
-        margin-left: 70%;
+        margin-left: 66.5%;
         width: 30%;
         text-align: center;
         font-weight: 700;
@@ -247,7 +255,9 @@
 
 #mrv{
   display: flex;
+  font-size: 14px;
 }
+
 
   @media only screen and (max-width: 740px){
 
@@ -255,7 +265,7 @@
         left: 0;
         right: 0;
         width: 90%;
-        margin: auto 2.5;
+        margin: auto;
 
 
     .filterh2{

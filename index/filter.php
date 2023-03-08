@@ -30,11 +30,11 @@
     </label>
     <div id="ratingfilter">
         <div id="mrv">
-            <h2>Minimum Rating: </h2>
             <h2 id="rating"></h2>
+            <div class="flex-filter"></div>
             <img id="starimg">
         </div>
-    <input type="range" min="10" max="50" value="25" class="min-star" id="min-star" name="min-rating">
+        <input type="range" min="10" max="50" value="1" class="min-star" id="min-star" name="min-rating">
     </div>
     <input type="submit" id="searchbtn" value="Click To Search">
 </div>

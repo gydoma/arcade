@@ -7,7 +7,7 @@
         </div>
         <div>
             <h2>Made With <!-- Unicode: U+2764 U+FE0F, UTF-8: E2 9D A4 EF B8 8F-->❤️ By:</h2>
-            <div class="grade-row">
+            <div class="grade-container">
                 <div class="grade-row">
                     <img src="Resources/footer/5.svg">
                     <p> Chinaza Akachi</p>
@@ -17,7 +17,7 @@
                     <p> Rustem Tolstobrov</p>
                 </div>
             </div>
-            <div class="grade-row">
+            <div class="grade-container">
                 <div class="grade-row">
                     <img src="Resources/footer/4.svg">
                     <p> Balveer Bhadiar</p>
