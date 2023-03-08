@@ -10,3 +10,4 @@ std::list<GameObject*> gameObjects;
 
 int score = 10;
 int coins = 0;
+int lives = 3;

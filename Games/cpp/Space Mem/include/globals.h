@@ -11,5 +11,6 @@ extern int coins;
 extern bool isInMenu;
 extern int btnState;
 extern bool btnAction;
+extern int lives;
 
 #endif
