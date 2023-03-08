@@ -42,5 +42,4 @@ void Wall::Render()
 Wall::~Wall()
 {
     UnloadTexture(texture);
-    UnloadSound(shotSound);
 }

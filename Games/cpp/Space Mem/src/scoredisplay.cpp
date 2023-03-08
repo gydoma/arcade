@@ -31,6 +31,7 @@ ScoreDisplay::ScoreDisplay()
 {
     gameObjects.push_back(this); // gameobjectbe "mentés"
     coins = LoadPoints();
+    lives = 3;
 }
 
 void ScoreDisplay::Update()

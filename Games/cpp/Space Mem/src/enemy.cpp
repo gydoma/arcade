@@ -99,6 +99,16 @@ void Enemy::Destroy()
     delete this;
 }
 
+void EndGame()
+{
+    isInMenu = !isInMenu;
+    score = 0;
+    lives = 3;
+    btnState = 0; 
+    btnAction = false; 
+    ShowCursor();
+}
+
 void Enemy::Unload()
 {
     for (Enemy* &enemy : enemyCollisionObjects)
@@ -107,13 +117,13 @@ void Enemy::Unload()
         gameObjects.erase(std::remove(gameObjects.begin(), gameObjects.end(), enemy));
     }
     enemyCollisionObjects.clear();
-    score = 0;
     multiplier = 0;
-
-    isInMenu = !isInMenu;
-    btnState = 0; 
-    btnAction = false; 
-    ShowCursor();
+    if(lives > 0)
+    {
+        lives -= 1;
+    } else {
+        EndGame();
+    }
 }
 
 // Ez meg lesz hívva hogyha az egyik "meghal"
