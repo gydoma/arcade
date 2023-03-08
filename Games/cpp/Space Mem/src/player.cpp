@@ -3,7 +3,6 @@
 #include <iostream>
 #include <stdio.h>
 
-
 Player::Player()
 {
     gameObjects.push_back(this); // gameobjectbe "mentés"
@@ -32,33 +31,8 @@ Player::Player()
     // Lövés hang effekt
     shotSound = LoadSound("../assets/bullet.mp3");
     //HideCursor();
-
-    //LoadPoints()
 }
 
-// void Player::LoadPoints(int coin)
-// {
-//     char data[8];
-
-//     std::ifstream infile; 
-//     infile.open("afile.txt"); 
-
-//     infile >> data;
-    
-//     TraceLog(LOG_INFO, data);
-
-//     infile.close();
-// }
-
-// void Player::SavePoints()
-// {
-//     std::ofstream outfile;
-//     outfile.open("afile.txt");
-
-//     outfile << coins << std::endl;
-
-//     outfile.close();
-// }
 
 void Player::Update()
 {
