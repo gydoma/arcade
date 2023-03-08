@@ -12,6 +12,7 @@ public:
     virtual void Update();
     virtual void Render();
     ~Player(void);
+
 private:
     Vector2 position;
     float speed;
@@ -19,6 +20,7 @@ private:
 
     float lastShotTime;
     float timeBetweenShots;
+    int coins;
 
     Sound shotSound;
 };

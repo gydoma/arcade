@@ -7,9 +7,5 @@
 extern std::list<GameObject*> gameObjects;
 
 extern int score;
-extern int coins;
-extern bool isInMenu;
-extern int btnState;
-extern bool btnAction;
 
 #endif

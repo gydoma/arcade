@@ -99,33 +99,11 @@ void Enemy::Destroy()
     delete this;
 }
 
-void Enemy::Unload()
-{
-    for (Enemy* &enemy : enemyCollisionObjects)
-    {
-        UnloadTexture(enemy->texture);
-        gameObjects.erase(std::remove(gameObjects.begin(), gameObjects.end(), enemy));
-    }
-    enemyCollisionObjects.clear();
-    score = 0;
-    multiplier = 0;
-
-    isInMenu = !isInMenu;
-    btnState = 0; 
-    btnAction = false; 
-    ShowCursor();
-}
-
 // Ez meg lesz hívva hogyha az egyik "meghal"
 Enemy::~Enemy()
 {
     ++score;
     multiplier -= 10;
-
-    int szerencse = GetRandomValue(0, 5);
-    if(szerencse == 1){
-        coins += 5;
-    }
 
     enemyCollisionObjects.erase(std::remove(enemyCollisionObjects.begin(), enemyCollisionObjects.end(), this));
     gameObjects.erase(std::remove(gameObjects.begin(), gameObjects.end(), this));

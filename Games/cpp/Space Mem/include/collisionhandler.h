@@ -5,7 +5,6 @@
 #include "raylib.h"
 #include "collisionobjects.h"
 #include "bullet.h"
-#include "wall.h"
 #include "enemy.h"
 #include <stdio.h>
 

@@ -7,8 +7,6 @@
 #include "enemyspawner.h"
 #include "musicplayer.h"
 #include "scoredisplay.h"
-#include "globals.h"
-#include "wall.h"
 #include <list>
 #include <iostream>
 #include <stdio.h>
@@ -16,8 +14,6 @@
 
 bool isInMenu = true;
 bool exitWindow = false;
-int btnState = 0;
-bool btnAction = false;
 
 int main(void)
 {
@@ -31,7 +27,6 @@ int main(void)
     EnemySpawner spawner;
     MusicPlayer musicPlayer;
     ScoreDisplay display;
-    Wall wall;
 
     SetExitKey(KEY_NULL);
     Texture2D button = LoadTexture("../assets/start.png");
@@ -41,6 +36,8 @@ int main(void)
 
     Rectangle btnBounds = { GetScreenWidth()/2.0f - button.width/2.0f, (float)GetScreenHeight() / 1.3f - button.height/2.0f, (float)button.width, frameHeight };
 
+    int btnState = 0;
+    bool btnAction = false;
 
     Vector2 mousePoint = { 0.0f, 0.0f };
 
@@ -72,12 +69,6 @@ int main(void)
             if(IsKeyPressed(KEY_BACKSPACE) || WindowShouldClose()) 
             { 
                 exitWindow = true;
-                std::ofstream outfile;
-                outfile.open("afile.txt");
-
-                outfile << coins << std::endl;
-
-                outfile.close();
             }
         }
 
@@ -89,8 +80,7 @@ int main(void)
         if(isInMenu){
             ClearBackground(RAYWHITE);
             DrawTextureRec(button, sourceRec, (Vector2){ btnBounds.x, btnBounds.y }, WHITE);
-            int width = MeasureText("Press the button to start the game.", 40);
-            DrawText("Press the button to start the game.", width, GetScreenHeight() / 2.0f, 20, RED);
+            DrawText("Press the button to start the game.", GetScreenWidth() / 2.7f, GetScreenHeight() / 2, 20, RED);
         } else {
             HideCursor();
             for (GameObject* gameObject : gameObjects)
