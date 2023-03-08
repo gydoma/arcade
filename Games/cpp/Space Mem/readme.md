@@ -17,3 +17,11 @@ Az első C++ projektem, nem a legjobb, de legalább megy.
 - "Currency" system elkezdve
 - Dinamikus felbontás
 - Minden kill után felgyorsul a game
+
+## Update 2
+
+- Főmenü befejezve
+- Currency system befejezve
+- Dinamikus felbontás "majdnem" befejezve
+- "Élet" system (3x ronthatod el, utánna vége a gamenek)
+- Shop elkezdve
