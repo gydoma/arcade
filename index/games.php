@@ -50,6 +50,17 @@
             }   
         };
 
+        if(isset($_GET['min-rating'])){
+            if(isset($_GET['author'])){ 
+                if($where == false){
+                    $cond.=" WHERE games.by LIKE '%" . $_GET['author'] . "%' ";
+                    $where = true;
+                } else {
+                    $cond.=" AND games.by LIKE '%" . $_GET['author'] . "%' ";
+                }
+            }   
+        };
+
 
         $games = "
         SELECT * 
@@ -57,6 +68,7 @@
         . (strlen($cond) > 1 ? $cond : " ")
         ."HAVING id IN (SELECT gameid FROM ratings WHERE (SELECT AVG(rating)) >= " . $min_star/10 . " GROUP BY gameid )
         ";
+
     } else{
         $games = "SELECT * FROM games";
     }

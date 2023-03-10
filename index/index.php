@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+    <!-- Ne töröld csak commenteld! -->
+    <!-- <script async data-id="five-server" src="http://localhost:5555/fiveserver.js"></script> -->
 </head>
 <body>
     <?php include 'navbar.php'?>

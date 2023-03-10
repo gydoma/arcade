@@ -20,12 +20,21 @@
     </label>
     </div>  
     <label for='styledSelect1' class='dd-filter'>
-        <select id="styledSelect1" name='options'>
+        <select id="styledSelect1" name='author'>
             <option value=''>Creator Name</option>
-            <option value='1'>gydoma</option>
-            <option value='2'>lorem placeholer 2</option>
-            <option value='3'>ph 3</option>
-            <option value='4'>placeholder 4</option>
+            <option value='gydoma'>gydoma</option>
+            <option value='KatRoland'>KatRoland</option>
+            <option value='Esztii'>Esztii</option>
+            <option value='Trixep11'>Trixep11</option>
+            <option value='CayŁ'>CayŁ</option>
+            <option value='Chip'>Chip</option>
+            <option value='Benedek'>Benedek</option>
+            <option value='Vajdani'>Vajdani</option>
+            <option value='Bencso'>Bencso</option>
+            <option value='rewerze'>rewerze</option>
+            <option value='Depymasut32'>Depymasut32</option>
+            <option value='Levfert'>Levfert</option>
+            <option value='keirahela'>keirahela</option>
         </select>
     </label>
     <div id="ratingfilter">
