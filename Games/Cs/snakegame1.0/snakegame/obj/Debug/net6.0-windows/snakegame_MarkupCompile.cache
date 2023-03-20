@@ -1,19 +1,19 @@
 ﻿snakegame
-1.0.0.0
+
 
 winexe
 C#
 .cs
-c:\Users\Rolikaa2\Desktop\mappak\projektek\arcade\Games\Cs\snakegame1.0\snakegame\obj\Debug\net6.0-windows\
+C:\Users\orosz\source\repos\snakegame1.0\snakegame\obj\Debug\net6.0-windows\
 snakegame
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-c:\Users\Rolikaa2\Desktop\mappak\projektek\arcade\Games\Cs\snakegame1.0\snakegame\App.xaml
+C:\Users\orosz\source\repos\snakegame1.0\snakegame\App.xaml
 11407045341
 
-9-1289347522
-194-2004305220
+8-1650545703
+194237474483
 MainWindow.xaml;
 
 True
