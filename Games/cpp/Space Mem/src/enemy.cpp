@@ -11,6 +11,11 @@ Enemy::Enemy()
     id = GetRandomValue(0, 2);
 
     SetTraceLogLevel(LOG_DEBUG);
+    Image coin = LoadImage("../assets/coin.png");
+
+    coinTexture = LoadTextureFromImage(coin);
+    coinTexture.height /= 2;
+    coinTexture.width /= 2;
 
     // 3 féle enemy van, mind a 3 máshogy néz ki, szóval azt loadoljuk be amelyik éppen ki lett választva
     switch (id)
@@ -135,6 +140,7 @@ Enemy::~Enemy()
     int szerencse = GetRandomValue(0, 5);
     if(szerencse == 1){
         coins += 5;
+        DrawTexture(coinTexture, position.x - texture.width / 2, position.y - texture.height / 2, YELLOW);
     }
 
     enemyCollisionObjects.erase(std::remove(enemyCollisionObjects.begin(), enemyCollisionObjects.end(), this));

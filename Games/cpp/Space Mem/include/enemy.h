@@ -25,6 +25,7 @@ class Enemy : public GameObject
         int id;
 
         Texture texture;
+        Texture coinTexture;
         Vector2 position;
         float speed;
 
