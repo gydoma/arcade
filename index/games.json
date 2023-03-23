@@ -42,7 +42,9 @@
       "rating": 1.2,
       "language": "py",
       "engine": "",
-      "updated": "2023-01-30"
+      "updated": "2023-01-30",
+      "url": "../Games/Python/quiz/quiz.zip",
+      "download":true
     },
     "TankTrouble": {
       "id": 4,

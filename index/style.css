@@ -289,14 +289,12 @@ footer .grade-row, footer .grade-container {
   .device-m, #filterbtn-m, #cat, #filterimg, .device-m p {
     display: none;
   }
-
   .device-s {
     display: inherit;
     position: fixed;
     bottom: 20px;
     right: 20px;
   }
-
   .device-s img {
     display: inherit;
   }
@@ -731,6 +729,38 @@ footer .grade-row, footer .grade-container {
   margin-top: 2px;
 }
 
+.btn-download {
+  margin: 0 10px;
+  background-color: var(--accent-color);
+  color: var(--primary-text);
+  padding: 15px;
+  font-size: 21px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 0px 2px var(--outline-color) inset, 0px 6px 0px 0px var(--secondary-color), 0px 6px 6px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.btn-download:hover {
+  margin: 0 10px;
+  background-color: var(--accent-color);
+  padding: 15px;
+  font-size: 21px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 0px 2px var(--outline-color) inset, 0px 1px 0px 0px var(--secondary-color);
+  display: flex;
+  justify-content: center;
+}
+
+.download-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  flex-direction: column;
+  align-items: center;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
   user-select: none;
@@ -799,11 +829,18 @@ html[data-theme=dark] #filterimg {
   filter: invert(100%);
 }
 
+footer {
+  margin-top: auto;
+}
+
 body {
   background-color: var(--primary-bg);
   background-image: var(--bgtile);
   background-repeat: repeat;
   margin: 0px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -852,6 +889,14 @@ a:focus {
   width: 100%-padding;
 }
 
+.big-card {
+  background-color: var(--primary-color);
+  border-radius: 25px;
+  padding: 20px;
+  margin: 5%;
+  height: auto;
+}
+
 .shadow {
   box-shadow: 0px 0px 0px 2px var(--outline-color) inset, 0px 6px 0px 0px var(--secondary-color), 0px 6px 6px 0px rgba(0, 0, 0, 0.2);
 }
@@ -873,17 +918,21 @@ a:focus {
     display: block;
     margin: auto 0px auto auto;
   }
-
   .userdiv {
     display: none;
   }
-
   .cards {
     display: block;
   }
-
   .navimg {
     display: flex;
+  }
+  .big-card {
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    padding: 20px;
+    margin: 5%;
+    height: auto;
   }
 }
 

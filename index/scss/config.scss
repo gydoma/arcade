@@ -3,7 +3,7 @@
 //? To minimize the css file use the following command
 //? sass --watch scss/config.scss style.css --style compressed 
 
-//! Don't use "components/libraries" - experimental
+//! Don't use " components/custom/_lib_*.scss " - experimental
 
 //@import "components/custom/arrow"; // TODO Deprecation warning
 @import "components/custom/christmas"; // * can be implemented in the future *
@@ -32,6 +32,7 @@ $debug: false;
 @import "components/lrpanel";
 @import "components/games";
 @import "components/gamecard";
+@import "components/button_download";
 
 // Import Montserrat font
 // @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
@@ -157,11 +158,20 @@ html[data-theme="dark"]{
     }
 }
 
+
+// Default overrides - Basic elements
+
+footer{
+    margin-top: auto;
+}
 body {
     background-color: var(--primary-bg);
     background-image: var(--bgtile);
     background-repeat: repeat;
     margin: 0px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -194,6 +204,7 @@ a:focus {
 }
 
 
+
 .roundedcorners {
     border-radius: 25px;
     border: 4px solid var(--secondary-color);
@@ -207,6 +218,14 @@ a:focus {
     margin: 20px;
     height: auto;
     width: 100% - padding;
+}
+
+.big-card {
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    padding: 20px;
+    margin: 5%;
+    height: auto;
 }
 
 .shadow {
@@ -245,6 +264,14 @@ a:focus {
     }
     .navimg{
         display: flex;
+    }
+
+    .big-card {
+        background-color: var(--primary-color);
+        border-radius: 25px;
+        padding: 20px;
+        margin: 5%;
+        height: auto;
     }
   }
   
