@@ -761,6 +761,51 @@ footer .grade-row, footer .grade-container {
   align-items: center;
 }
 
+.tabs {
+  margin-left: 0;
+  border-right: 1px solid black;
+  height: 100%;
+  width: 10vw;
+  float: left;
+}
+
+.tab {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  text-align: center;
+  height: 5%;
+}
+
+.signout {
+  border-left: 2px solid black;
+  border-bottom-left-radius: 25px;
+  background-color: var(--red);
+}
+
+.tab-label {
+  border-bottom: 2px solid black;
+  text-align: center;
+}
+
+.profile-card {
+  background-color: var(--primary-color);
+  border-radius: 25px;
+  margin: 5%;
+  height: auto;
+}
+
+.profile-card h1 {
+  text-align: center;
+}
+
+.tab-container {
+  height: 100%;
+}
+
+.content {
+  display: none;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
   user-select: none;
