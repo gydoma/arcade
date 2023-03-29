@@ -33,6 +33,18 @@ void CollisionHandler::Update()
             }
         }
     }
+
+    for(Enemy* &enemy : enemyCollisionObjects)
+    {
+        for(Player* &player : playerCollisionObjects)
+        {
+            bool collided = CheckCollisionRecs(enemy->GetRect(), player->GetRect());
+            if (collided)
+            {
+                enemy->Unload();
+            }
+        }
+    }
 }
 void CollisionHandler::Render()
 {

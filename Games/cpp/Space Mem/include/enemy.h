@@ -3,8 +3,8 @@
 
 #include "globals.h"
 #include "raylib.h"
-#include "collisionobjects.h"
 #include "player.h"
+#include "collisionobjects.h"
 #include <algorithm>
 
 class Enemy : public GameObject
