@@ -6,6 +6,7 @@
 Player::Player()
 {
     gameObjects.push_back(this); // gameobjectbe "mentés"
+    playerCollisionObjects.push_back(this);
 
     // A játékosunk
     Image playerImage = LoadImage("../assets/ship.png");
@@ -31,8 +32,20 @@ Player::Player()
     // Lövés hang effekt
     shotSound = LoadSound("../assets/bullet.mp3");
     //HideCursor();
+    collisionRect.height = texture.height;
+    collisionRect.width = texture.width;
 }
 
+inline void Player::UpdateCollisionRectPosition()
+{
+    collisionRect.x = position.x - texture.width / 2;
+    collisionRect.y = position.y - texture.height / 2;
+}
+
+Rectangle Player::GetRect()
+{
+    return collisionRect;
+}
 
 void Player::Update()
 {
@@ -56,6 +69,8 @@ void Player::Update()
 
         lastShotTime = (float)GetTime();
     }
+
+    UpdateCollisionRectPosition();
 }
 void Player::Render()
 {
