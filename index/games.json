@@ -118,5 +118,15 @@
       "language": "js",
       "engine": "",
       "updated": "2023-02-14"
+    },
+    "SpaceMem": {
+      "id": 12,
+      "name": "Space Mem",
+      "description": "",
+      "by": "Kósa Márk",
+      "rating": 4.2,
+      "language": "cpp",
+      "engine": "",
+      "updated": "2023-03-29"
     }
   }
