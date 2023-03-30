@@ -1,15 +1,15 @@
 {
     "testcard": {
-        "id": 0,
-        "name": "Longest test game name for the testing",
-        "description":"This title may have some detailed descriptions which can go here. But part of this text box is always secured.",
-        "by": "gydoma",
-        "rating": 4.2,
-        "language": "js",
-        "engine": "none",
-        "updated": "1970-01-01",
-        "url": "../Games/Javascript/Alma/index.html",
-        "download":false
+      "id": 0,
+      "name": "Longest test game name for the testing",
+      "description":"This title may have some detailed descriptions which can go here. But part of this text box is always secured.",
+      "by": "gydoma",
+      "rating": 4.2,
+      "language": "js",
+      "engine": "none",
+      "updated": "1970-01-01",
+      "url": "../Games/Javascript/Alma/index.html",
+      "download":false
     },
     "snakegame": {
       "id": 1,
@@ -107,6 +107,16 @@
       "rating": 4.0,
       "language": "cs",
       "engine": "MonoGame",
+      "updated": "2023-02-14"
+    },
+    "TicTacToe": {
+      "id": 11,
+      "name": "Tic Tac Toe",
+      "description": "A játék célja, hogy a játékosok egymás ellen játszanak. A játékosoknak 3x3-as táblán kell elhelyezniük a saját jelüket. A játék akkor ér véget, ha valamelyik játékosnak sikerül 3 jelét egymás mellett elhelyeznie. A játékot a nyilak segítségével lehet irányítani. A játék véget ér, ha a kígyó a falba ütközik vagy a saját magába ütközik.",
+      "by": "gydoma",
+      "rating": 3.0,
+      "language": "js",
+      "engine": "",
       "updated": "2023-02-14"
     }
   }

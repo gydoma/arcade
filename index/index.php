@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <div class="body-content">
     <?php include 'navbar.php'?>
     <?php include 'php/christmas.php'?>

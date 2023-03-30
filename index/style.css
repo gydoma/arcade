@@ -197,11 +197,21 @@ footer .horizontal {
   justify-content: space-between;
   margin: 10px;
 }
-footer .grade-row, footer .grade-container {
+footer .grade-row {
   display: flex;
   flex-direction: row;
-  margin: 0px 10px 0px 10px;
+  margin: -20px 10px 0px 0px;
   white-space: nowrap;
+  flex: 0 0 auto;
+  justify-content: space-between;
+}
+footer .grade-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+footer .grade-img {
+  margin: 0px 10px;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -224,6 +234,7 @@ footer .grade-row, footer .grade-container {
     margin-top: 0px;
     display: flex;
     flex-direction: row;
+    border-bottom: 1px dotted var(--secondary-color);
   }
   footer br {
     display: none;
@@ -581,6 +592,11 @@ footer .grade-row, footer .grade-container {
   font-size: 36px;
   margin: 0 0 10px 0;
 }
+.lrpanel .lr-p-alert {
+  color: var(--accent-color);
+  font-size: 17px;
+  font-weight: 800;
+}
 .lrpanel .switch-lr, .lrpanel .switch-lr-link {
   font-size: 13px;
   font-weight: 500;
@@ -592,9 +608,15 @@ footer .grade-row, footer .grade-container {
   width: 100%;
   padding: 15px 0px;
   margin: 10px 0 10px 0;
-  font-weight: 200;
   font-size: 21px;
   border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.lrpanel .lr-input::-webkit-input-placeholder {
+  padding-left: 10px;
+}
+.lrpanel .lr-input:-moz-placeholder {
+  padding-left: 10px;
 }
 .lrpanel .in-icon {
   position: relative;
@@ -608,13 +630,14 @@ footer .grade-row, footer .grade-container {
   font-weight: 800;
   font-size: 21px;
   background-color: var(--accent-color);
+  color: var(--primary-text);
   border-radius: 16px;
   border: 0px;
   padding: 10px;
-  box-shadow: 0px 0px 0px 2px var(--outline-color) inset, 0px 4px 0px 0px var(--secondary-color);
+  box-shadow: 0px 0px 0px 2px var(--secondary-color) inset, 0px 4px 0px 0px var(--secondary-color);
 }
 .lrpanel input[type=submit]:active {
-  box-shadow: 0px 0px 0px 6px var(--outline-color) inset, 0px 10px 0px 0px var(--secondary-color);
+  box-shadow: 0px 0px 0px 6px var(--secondary-color) inset, 0px 10px 0px 0px var(--secondary-color);
 }
 
 .games {
@@ -652,18 +675,34 @@ footer .grade-row, footer .grade-container {
   background-color: var(--primary-color);
 }
 
+.game-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-filler {
+  flex-grow: 1;
+}
+
+.game-card:only-child(3) {
+  margin-top: 150px;
+}
+
 .card-top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .card-footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  width: 100%;
+  align-items: flex-end;
 }
 
 .badge {
@@ -879,7 +918,7 @@ footer {
 }
 
 body {
-  background-color: var(--primary-bg);
+  background-color: var(--primary-color);
   background-image: var(--bgtile);
   background-repeat: repeat;
   margin: 0px;
