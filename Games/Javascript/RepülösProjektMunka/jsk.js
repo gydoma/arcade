@@ -168,6 +168,8 @@ let oils = [];
 let boss = [];
 ctx.strokeStyle = "red";
 
+let bulletx = [];
+let bullety = [];
 
 
 class Birds {
@@ -186,15 +188,40 @@ class Birds {
         this.draw();
         this.x -= this.Sp;
         Collison(this.x, this.width, this.y, this.height);
+        BullCollison(this.x, this.width, this.y, this.height);
         ctx.rect(this.x, this.y, this.width, this.height);
         ctx.stroke();
     }
 }
 
+function BullCollison(enx, enw, eny, enh) {
+
+    bulletx.forEach(ex => {
+        bullety.forEach(ey =>{
+        if (ey > eny + enh ||
+                ey + 4 < eny||
+                ex > enx + enw ||
+                ex + 4 < enx) {
+         } 
+         else {
+            const found = (element) => element = enx;
+            const index = enemys.findIndex(found);
+            delete enemys[index];
+            const bullet = (element) => element = ex;
+            const i = bullets.findIndex(bullet);
+            delete bullet[i];
+            
+            return found;
+        }
+
+        })})};
+ 
+   
+
 class Bullet {
     constructor(size, speed) {
-        this.x = player.x + 30;
-        this.y = player.y + 30;
+        this.x = player.x + 40;
+        this.y = player.y + 40;
         this.size = size;
         this.Sp = speed;
     }
@@ -207,7 +234,9 @@ class Bullet {
         this.x += this.Sp;
         ctx.rect(this.x, this.y, this.size, this.size);
         ctx.stroke();
-        Collison(this.x, this.width, this.y, this.height);
+        bulletx.push(this.x);
+        bullety.push(this.y);
+
     }
 }
 
@@ -447,7 +476,6 @@ function checkCookie() {
             setCookie("score", score, 28);
         }
     }
-    document.getElementById('scorewrite').innerText = document.cookie.split('; ').find((row) => row.startsWith('score=')).split('=')[1];;
 }
 
 function end() {
