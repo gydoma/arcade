@@ -122,7 +122,7 @@
     "SpaceMem": {
       "id": 12,
       "name": "Space Mem",
-      "description": "",
+      "description": "Egy arcade space shooter játék. A játékosnak egy hajót kell fel-le irányítania, és minden ellenséget lelőni, de az ellenség folyamatosan gyorsul. Gyűjts össze minél több pénzt és fejleszd a hajódat.",
       "by": "Kósa Márk",
       "rating": 4.2,
       "language": "cpp",
