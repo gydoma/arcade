@@ -167,7 +167,8 @@ let bullets = [];
 let oils = [];
 let boss = [];
 ctx.strokeStyle = "red";
-
+let bulletx = [];
+let bullety = [];
 
 
 class Birds {
@@ -186,15 +187,36 @@ class Birds {
         this.draw();
         this.x -= this.Sp;
         Collison(this.x, this.width, this.y, this.height);
+        BullCollison(this.x, this.width, this.y, this.height);
         ctx.rect(this.x, this.y, this.width, this.height);
         ctx.stroke();
     }
 }
 
+function BullCollison(enx, enw, eny, enh) {
+    bulletx.forEach(ex => {
+        bullety.forEach(ey =>{
+        if (ey > eny + enh ||
+                ey + 4 < eny||
+                ex > enx + enw ||
+                ex + 4 < enx) {
+         } 
+         else {
+            const found = (element) => element = enx;
+            const bullet = (element) => element = ex;
+            const index = enemys.findIndex(found);
+            const i = bullets.findIndex(bullet);
+            delete enemys[index];
+            delete bullet[i];
+        }
+})})};
+ 
+   
+
 class Bullet {
     constructor(size, speed) {
-        this.x = player.x + 30;
-        this.y = player.y + 30;
+        this.x = player.x;
+        this.y = player.y + 40;
         this.size = size;
         this.Sp = speed;
     }
@@ -207,7 +229,8 @@ class Bullet {
         this.x += this.Sp;
         ctx.rect(this.x, this.y, this.size, this.size);
         ctx.stroke();
-        Collison(this.x, this.width, this.y, this.height);
+        bulletx.push(this.x);
+        bullety.push(this.y);
     }
 }
 
@@ -382,6 +405,10 @@ function start() {
     })
     bullets.forEach(Bullets => {
         Bullets.slide();
+        if(Bullets.x>600){
+            bullets.splice(0);
+        }
+        console.log(Bullets.x)
     })
     oils.forEach(Oils => {
         Oils.draw();
@@ -447,7 +474,6 @@ function checkCookie() {
             setCookie("score", score, 28);
         }
     }
-    document.getElementById('scorewrite').textContent = document.cookie.split('; ').find((row) => row.startsWith('score=')).split('=')[1];
 }
 
 function end() {
