@@ -685,10 +685,6 @@ footer .grade-img {
   flex-grow: 1;
 }
 
-.game-card:only-child(3) {
-  margin-top: 150px;
-}
-
 .card-top {
   display: flex;
   flex-direction: row;
@@ -800,11 +796,16 @@ footer .grade-img {
   align-items: center;
 }
 
+p, h1 {
+  max-width: 35vw;
+}
+
 .tabs {
   margin-left: 0;
   border-right: 1px solid black;
   height: 100%;
-  width: 10vw;
+  width: 12.5vw;
+  display: inline-block;
   float: left;
 }
 
@@ -817,32 +818,53 @@ footer .grade-img {
 
 .signout {
   border-left: 2px solid black;
-  border-bottom-left-radius: 25px;
   background-color: var(--red);
-}
-
-.tab-label {
-  border-bottom: 2px solid black;
-  text-align: center;
 }
 
 .profile-card {
   background-color: var(--primary-color);
   border-radius: 25px;
-  margin: 5%;
+  margin: 5% auto 5% auto;
   height: auto;
+  width: 50vw;
 }
 
-.profile-card h1 {
+.profile-header {
   text-align: center;
+  border-bottom: 2px solid black;
+}
+
+.tab-content {
+  display: inline-block;
+  margin-left: 1vw;
 }
 
 .tab-container {
-  height: 100%;
+  height: auto;
+  min-height: 100%;
+  border-right: 1px solid black;
 }
 
 .content {
   display: none;
+}
+
+hr {
+  width: 20vw;
+}
+
+#personal {
+  margin-top: 2.5vh;
+  margin-bottom: 2.5vh;
+}
+
+#personal p {
+  margin-top: 2.5px;
+  margin-bottom: 2.5px;
+}
+
+#game {
+  margin-left: 10%;
 }
 
 * {
