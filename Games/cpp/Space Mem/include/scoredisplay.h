@@ -14,6 +14,8 @@ class ScoreDisplay : public GameObject
     private:
         Texture texture1;
         Texture emptyTexture1;
+        Font alagard;
+        Vector2 pos;
 };
 
 #endif
