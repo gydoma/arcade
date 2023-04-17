@@ -14,11 +14,21 @@ footer {
         justify-content: space-between;
         margin:10px;
     }
-    .grade-row, .grade-container {
+    .grade-row {
         display: flex;
         flex-direction: row;
-        margin: 0px 10px 0px 10px;
+        margin: -20px 10px 0px 0px;
         white-space: nowrap;
+        flex: 0 0 auto;
+        justify-content: space-between;
+    }
+    .grade-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .grade-img {
+        margin: 0px 10px;
     }
 }
 @media only screen and (max-width: 1100px) {
@@ -41,6 +51,7 @@ footer {
             margin-top: 0px;
             display: flex;
             flex-direction: row;
+            border-bottom: 1px dotted var(--secondary-color);
         }
         br {
             display: none;

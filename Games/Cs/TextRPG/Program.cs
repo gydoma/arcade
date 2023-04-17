@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Numerics;
+using System.Xml.Serialization;
 
 namespace TextRPG
 {
     class Program
     {
+        static Player? player;
         static void SaveOrNewGame()
         {
             string myDocuments = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
@@ -12,12 +14,18 @@ namespace TextRPG
 
             if (File.Exists(folderpath + @"\save.dat"))
             {
-                Console.WriteLine("Do you want to continue your journey?");
-                Console.WriteLine("Type (1) to continue or type (2) to create a new character!");
-                int choice = Convert.ToInt32(Console.ReadLine());
+                int choice;
+                do
+                {
+                    Console.Clear();
+                    Console.WriteLine("Do you want to continue your journey?");
+                    Console.WriteLine("Type (1) to continue or type (2) to create a new character!");
+                    choice = Convert.ToInt32(Console.ReadLine());
+                } while (choice != 1 && choice != 2);
                 if (choice == 1)
                 {
-
+                    string[] beolvasas = File.ReadAllLines(folderpath + @"\save.dat");
+                    player = new Player(beolvasas);
                 }
                 else
                 {
@@ -42,16 +50,26 @@ namespace TextRPG
         {
             Console.WriteLine("Welcome to TextRPG!");
 
+            string[] Character =
+            {
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+            };
 
-            Player player = new Player();
 
             Console.WriteLine("Enter your character name:");
-            player.Name = Console.ReadLine();
-            while (player.Name.Length == 0)
+            Character[0] = Console.ReadLine()!;
+            while (Character[0].Length == 0)
             {
                 Console.WriteLine("You can't leave your name blank!");
                 Console.WriteLine("Enter your character name:");
-                player.Name = Console.ReadLine();
+                Character[0] = Console.ReadLine()!;
             }
 
             Console.WriteLine("Choose your character class:\n1. Warrior\n2. Mage\n3. Rogue");
@@ -60,51 +78,43 @@ namespace TextRPG
             switch (choice)
             {
                 case 1:
-                    player.CharacterClass = "Warrior";
-                    player.Health = 100;
-                    player.Mana = 0;
-                    player.Strength = 10;
-                    player.Intelligence = 5;
-                    player.Agility = 7;
-                    player.Gold = 10;
+                    Character[1] = "Warrior";
+                    Character[2] = "100";
+                    Character[3] = "0";
+                    Character[4] = "10";
+                    Character[5] = "5";
+                    Character[6] = "7";
+                    Character[7] = "10";
                     break;
 
                 case 2:
-                    player.CharacterClass = "Mage";
-                    player.Health = 50;
-                    player.Mana = 100;
-                    player.Strength = 5;
-                    player.Intelligence = 10;
-                    player.Agility = 5;
-                    player.Gold = 10;
+                    Character[1] = "Mage";
+                    Character[2] = "50";
+                    Character[3] = "100";
+                    Character[4] = "5";
+                    Character[5] = "10";
+                    Character[6] = "5";
+                    Character[7] = "10";
                     break;
 
                 case 3:
-                    player.CharacterClass = "Rogue";
-                    player.Health = 75;
-                    player.Mana = 25;
-                    player.Strength = 7;
-                    player.Intelligence = 5;
-                    player.Agility = 10;
-                    player.Gold = 10;
+                    Character[1] = "Rogue";
+                    Character[2] = "75";
+                    Character[3] = "25";
+                    Character[4] = "7";
+                    Character[5] = "5";
+                    Character[6] = "10";
+                    Character[7] = "10";
                     break;
             }
             
-            string[] Character =
-            {
-                player.Name,
-                player.CharacterClass,
-                player.Health.ToString(),
-                player.Mana.ToString(),
-                player.Strength.ToString(),
-                player.Intelligence.ToString(),
-                player.Agility.ToString(),
-                player.Gold.ToString(),
-            };
+            
 
             SaveGame(Character);
+
+            player = new Player(Character);
             
-            Console.WriteLine("Welcome, {0} the {1}!", player.Name, player.CharacterClass);
+            Console.WriteLine("Welcome, {0} the {1}!", Character[0], Character[1]);
         }
         static void Main(string[] args)
         {
@@ -117,13 +127,26 @@ namespace TextRPG
 
     class Player
     {
-        public string Name { get; set; }
-        public string CharacterClass { get; set; }
+        public string? Name { get; set; }
+        public string? CharacterClass { get; set; }
         public int Health { get; set; }
         public int Mana { get; set; }
         public int Strength { get; set; }
         public int Intelligence { get; set; }
         public int Agility { get; set; }
         public int Gold { get; set;  }
+
+        public Player(string[] line)
+        {
+            
+            this.Name = line[0]; 
+            this.CharacterClass = line[1];
+            this.Health = int.Parse(line[2]);
+            this.Mana = int.Parse(line[3]);
+            this.Strength = int.Parse(line[4]);
+            this.Intelligence = int.Parse(line[5]);
+            this.Agility = int.Parse(line[6]);
+            this.Gold = int.Parse(line[7]);
+        }
     }
 }

@@ -1,15 +1,24 @@
-//.game-card {display:flex;flex-direction:row;justify-content:space-between;align-items:center;}
+.game-card {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}   
+.card-filler {
+    flex-grow:1;
+  }
 .card-top {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 .card-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    width: 100%;
+    align-items:flex-end;
 }
 .badge {
     font-size: 13px;

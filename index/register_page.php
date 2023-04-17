@@ -22,6 +22,7 @@
 
     <div class="lrpanel">
         <h2>Sign Up</h2>
+        <!-- add to this paragraph: .lr-p-alert if the input has an error, and change the paragraph to the error name and description -->
         <p>You have chance to create new account if you really want to.</p>
         <form method="post" action="register.php">
         

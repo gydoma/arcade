@@ -197,11 +197,21 @@ footer .horizontal {
   justify-content: space-between;
   margin: 10px;
 }
-footer .grade-row, footer .grade-container {
+footer .grade-row {
   display: flex;
   flex-direction: row;
-  margin: 0px 10px 0px 10px;
+  margin: -20px 10px 0px 0px;
   white-space: nowrap;
+  flex: 0 0 auto;
+  justify-content: space-between;
+}
+footer .grade-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+footer .grade-img {
+  margin: 0px 10px;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -224,6 +234,7 @@ footer .grade-row, footer .grade-container {
     margin-top: 0px;
     display: flex;
     flex-direction: row;
+    border-bottom: 1px dotted var(--secondary-color);
   }
   footer br {
     display: none;
@@ -289,14 +300,12 @@ footer .grade-row, footer .grade-container {
   .device-m, #filterbtn-m, #cat, #filterimg, .device-m p {
     display: none;
   }
-
   .device-s {
     display: inherit;
     position: fixed;
     bottom: 20px;
     right: 20px;
   }
-
   .device-s img {
     display: inherit;
   }
@@ -583,6 +592,11 @@ footer .grade-row, footer .grade-container {
   font-size: 36px;
   margin: 0 0 10px 0;
 }
+.lrpanel .lr-p-alert {
+  color: var(--accent-color);
+  font-size: 17px;
+  font-weight: 800;
+}
 .lrpanel .switch-lr, .lrpanel .switch-lr-link {
   font-size: 13px;
   font-weight: 500;
@@ -594,9 +608,15 @@ footer .grade-row, footer .grade-container {
   width: 100%;
   padding: 15px 0px;
   margin: 10px 0 10px 0;
-  font-weight: 200;
   font-size: 21px;
   border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.lrpanel .lr-input::-webkit-input-placeholder {
+  padding-left: 10px;
+}
+.lrpanel .lr-input:-moz-placeholder {
+  padding-left: 10px;
 }
 .lrpanel .in-icon {
   position: relative;
@@ -610,13 +630,14 @@ footer .grade-row, footer .grade-container {
   font-weight: 800;
   font-size: 21px;
   background-color: var(--accent-color);
+  color: var(--primary-text);
   border-radius: 16px;
   border: 0px;
   padding: 10px;
-  box-shadow: 0px 0px 0px 2px var(--outline-color) inset, 0px 4px 0px 0px var(--secondary-color);
+  box-shadow: 0px 0px 0px 2px var(--secondary-color) inset, 0px 4px 0px 0px var(--secondary-color);
 }
 .lrpanel input[type=submit]:active {
-  box-shadow: 0px 0px 0px 6px var(--outline-color) inset, 0px 10px 0px 0px var(--secondary-color);
+  box-shadow: 0px 0px 0px 6px var(--secondary-color) inset, 0px 10px 0px 0px var(--secondary-color);
 }
 
 .games {
@@ -654,18 +675,30 @@ footer .grade-row, footer .grade-container {
   background-color: var(--primary-color);
 }
 
+.game-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-filler {
+  flex-grow: 1;
+}
+
 .card-top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .card-footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  width: 100%;
+  align-items: flex-end;
 }
 
 .badge {
@@ -729,6 +762,109 @@ footer .grade-row, footer .grade-container {
 .card-button:active {
   box-shadow: 0px 0px 0px 0px var(--secondary-color);
   margin-top: 2px;
+}
+
+.btn-download {
+  margin: 0 10px;
+  background-color: var(--accent-color);
+  color: var(--primary-text);
+  padding: 15px;
+  font-size: 21px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 0px 2px var(--outline-color) inset, 0px 6px 0px 0px var(--secondary-color), 0px 6px 6px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.btn-download:hover {
+  margin: 0 10px;
+  background-color: var(--accent-color);
+  padding: 15px;
+  font-size: 21px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 0px 2px var(--outline-color) inset, 0px 1px 0px 0px var(--secondary-color);
+  display: flex;
+  justify-content: center;
+}
+
+.download-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+p, h1 {
+  max-width: 35vw;
+}
+
+.tabs {
+  margin-left: 0;
+  border-right: 1px solid black;
+  height: 100%;
+  width: 12.5vw;
+  display: inline-block;
+  float: left;
+}
+
+.tab {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  text-align: center;
+  height: 5%;
+}
+
+.signout {
+  border-left: 2px solid black;
+  background-color: var(--red);
+}
+
+.profile-card {
+  background-color: var(--primary-color);
+  border-radius: 25px;
+  margin: 5% auto 5% auto;
+  height: auto;
+  width: 50vw;
+}
+
+.profile-header {
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+
+.tab-content {
+  display: inline-block;
+  margin-left: 1vw;
+}
+
+.tab-container {
+  height: auto;
+  min-height: 100%;
+  border-right: 1px solid black;
+}
+
+.content {
+  display: none;
+}
+
+hr {
+  width: 20vw;
+}
+
+#personal {
+  margin-top: 2.5vh;
+  margin-bottom: 2.5vh;
+}
+
+#personal p {
+  margin-top: 2.5px;
+  margin-bottom: 2.5px;
+}
+
+#game {
+  margin-left: 10%;
 }
 
 * {
@@ -799,11 +935,18 @@ html[data-theme=dark] #filterimg {
   filter: invert(100%);
 }
 
+footer {
+  margin-top: auto;
+}
+
 body {
-  background-color: var(--primary-bg);
+  background-color: var(--primary-color);
   background-image: var(--bgtile);
   background-repeat: repeat;
   margin: 0px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -852,6 +995,14 @@ a:focus {
   width: 100%-padding;
 }
 
+.big-card {
+  background-color: var(--primary-color);
+  border-radius: 25px;
+  padding: 20px;
+  margin: 5%;
+  height: auto;
+}
+
 .shadow {
   box-shadow: 0px 0px 0px 2px var(--outline-color) inset, 0px 6px 0px 0px var(--secondary-color), 0px 6px 6px 0px rgba(0, 0, 0, 0.2);
 }
@@ -873,17 +1024,21 @@ a:focus {
     display: block;
     margin: auto 0px auto auto;
   }
-
   .userdiv {
     display: none;
   }
-
   .cards {
     display: block;
   }
-
   .navimg {
     display: flex;
+  }
+  .big-card {
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    padding: 20px;
+    margin: 5%;
+    height: auto;
   }
 }
 

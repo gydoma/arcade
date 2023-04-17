@@ -9,23 +9,80 @@
             <h2>Made With <!-- Unicode: U+2764 U+FE0F, UTF-8: E2 9D A4 EF B8 8F-->❤️ By:</h2>
             <div class="grade-container">
                 <div class="grade-row">
-                    <img src="Resources/footer/5.svg">
-                    <p> Chinaza Akachi</p>
+                    <img class="grade-img" src="Resources/footer/5.svg">
+                    <p>Gyurkovics Dominik</p>
                 </div>
                 <div class="grade-row">
-                    <img src="Resources/footer/2.svg">
-                    <p> Rustem Tolstobrov</p>
+                    <img class="grade-img" src="Resources/footer/2.svg">
+                    <p>Katona Roland</p>
                 </div>
             </div>
             <div class="grade-container">
                 <div class="grade-row">
-                    <img src="Resources/footer/4.svg">
-                    <p> Balveer Bhadiar</p>
+                    <img class="grade-img" src="Resources/footer/4.svg">
+                    <p>Andrási Szilvia</p>
                 </div>
                 <div class="grade-row">
-                    <img src="Resources/footer/3.svg">
-                    <p> Ored Sjögren</p>
+                    <img class="grade-img" src="Resources/footer/1.svg">
+                    <p>Bábolnai Bence</p>
                 </div>
+            </div>
+            <div class="grade-container">
+                <div class="grade-row">
+                    <img class="grade-img" src="Resources/footer/4.svg">
+                    <p>Orosz Eszter</p>
+                </div>
+                <div class="grade-row">
+                    <img class="grade-img" src="Resources/footer/5.svg">
+                    <p>Dávid Benedek</p>
+                </div>
+            </div>
+            <div class="grade-container">
+                <div class="grade-row">
+                    <img class="grade-img" src="Resources/footer/2.svg">
+                    <p>Vajda Dániel</p>
+                </div>
+                <div class="grade-row">
+                    <img class="grade-img" src="Resources/footer/5.svg">
+                    <p>Bán Gergő</p>
+                </div>
+            </div>
+            <div class="grade-container">
+                <div class="grade-row">
+                    <img class="grade-img" src="Resources/footer/2.svg">
+                    <p>Suhajda Zsolt Péter</p>
+                </div>
+                <div class="grade-row">
+                    <img class="grade-img" src="Resources/footer/1.svg">
+                    <p>Rostás András Péter</p>
+                </div>
+            </div>
+            <div class="grade-container">
+                <div class="grade-row">
+                    <img class="grade-img" src="Resources/footer/3.svg">
+                    <p>Bárczi Bence</p>
+                </div>
+                <div class="grade-row">
+                    <img class="grade-img" src="Resources/footer/4.svg">
+                    <p>Kósa Márk</p>
+                </div>
+            </div>
+            <div class="grade-container">
+                <div class="grade-row">
+                    <img class="grade-img" src="Resources/footer/4.svg">
+                    <p>Molnár-Horgos Kristóf</p>
+                </div>
+                <div class="grade-row">
+                    <img class="grade-img" src="Resources/footer/3.svg">
+                    <p>Vígh Noel</p>
+                </div>
+            </div>
+            <div class="grade-container">
+                <div class="grade-row">
+                    <img class="grade-img" src="Resources/footer/4.svg">
+                    <p>Horváth Péter Ákos</p>
+                </div>
+
             </div>
         </div>
         </div>

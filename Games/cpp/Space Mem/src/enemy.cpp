@@ -1,5 +1,10 @@
 #include "enemy.h"
 #include <stdio.h>
+#include <iostream>
+#include <fstream>
+#include <chrono>
+#include <thread>
+#include <functional>
 
 int multiplier = 0;
 
@@ -11,6 +16,12 @@ Enemy::Enemy()
     id = GetRandomValue(0, 2);
 
     SetTraceLogLevel(LOG_DEBUG);
+
+    Image coin = LoadImage("../assets/coin.png");
+
+    coinTexture = LoadTextureFromImage(coin);
+    coinTexture.width /= 2;
+    coinTexture.height /= 2;
 
     // 3 féle enemy van, mind a 3 máshogy néz ki, szóval azt loadoljuk be amelyik éppen ki lett választva
     switch (id)
@@ -118,6 +129,12 @@ void Enemy::Unload()
     }
     enemyCollisionObjects.clear();
     multiplier = 0;
+    std::ofstream outfile;
+    outfile.open("afile.txt");
+
+    outfile << coins << std::endl;
+
+    outfile.close();
     if(lives > 0)
     {
         lives -= 1;
@@ -131,10 +148,21 @@ Enemy::~Enemy()
 {
     ++score;
     multiplier -= 10;
+    
 
     int szerencse = GetRandomValue(0, 5);
     if(szerencse == 1){
         coins += 5;
+        std::ofstream outfile;
+        outfile.open("afile.txt");
+
+        outfile << coins << std::endl;
+
+        outfile.close();
+        //DrawTexture(coinTexture, position.x - texture.width / 2, position.y - texture.height / 2, YELLOW);
+        //TraceLog(LOG_DEBUG, "spawned coin");
+        //std::this_thread::sleep_for(std::chrono::seconds(5));
+        //UnloadTexture(coinTexture);
     }
 
     enemyCollisionObjects.erase(std::remove(enemyCollisionObjects.begin(), enemyCollisionObjects.end(), this));

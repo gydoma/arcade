@@ -11,6 +11,9 @@ class ScoreDisplay : public GameObject
         virtual void Update();
         virtual void Render();
         ~ScoreDisplay(void);
+    private:
+        Texture texture1;
+        Texture emptyTexture1;
 };
 
 #endif
