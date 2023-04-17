@@ -51,6 +51,32 @@ p,h1{
     display: none;
 }
 
+@media only screen and (max-width: 1100px) { 
+    .profile-card {
+        border: 0;
+        background-color: var(--primary-color);
+        border-radius: 0;
+        margin: 1% 0;
+        height: auto;
+        h1 {
+            text-align: left;
+        }
+    }
+    .signout{
+        border-left: 1px solid black;
+        border-bottom-left-radius: 0;
+        background-color: var(--red)
+    }
+    .tab{
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        text-align: center;
+        height: 10%;
+        text-overflow:unset;
+    }
+
+}
+
 hr{
     width: 20vw;
 }

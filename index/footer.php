@@ -3,6 +3,8 @@
             <h2>Thank You For Using Our Games & Services</h2>
             <p>By Visiting This Site You Agree Our Terms Of Services.</p>
             <br>
+            <a href="https://wakatime.com/badge/github/gydoma/arcade"><img src="https://wakatime.com/badge/github/gydoma/arcade.svg?style=for-the-badge" alt="wakatime"></a>
+            <br>
             <p>Copyright ©  <a style="" href="https://github.com/gydoma">GyDoma</a> - 2022 - <?php echo date("Y"); ?></p>
         </div>
         <div>
