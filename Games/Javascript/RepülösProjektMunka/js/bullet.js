@@ -1,7 +1,5 @@
 import {ctx,bullets,enemys} from './main.js';
 import { player } from './player.js';
-import { coll } from './airdrop.js';
-
 export var bullet = 3;
 
 export class Bullet {
@@ -17,11 +15,11 @@ export class Bullet {
     }
     collison(){
         enemys.forEach((element,i) => {
-        if (
-        (Math.round(Math.hypot(element.x - this.x, element.y - this.y))) < this.size + element.height){
-            console.log(Math.hypot(element.x - this.x, element.y - this.y).toFixed(2));
-            console.log(this.size + element.height);    
+        if (Math.round((Math.hypot(this.x - element.x, this.y - element.y))) == 16){
             enemys.splice(i,1);
+            var found = (element) => this.x = element.x ;
+            var index = bullets.findIndex(found);
+            bullets.splice(index,1);
             } 
          else {}})
     }
