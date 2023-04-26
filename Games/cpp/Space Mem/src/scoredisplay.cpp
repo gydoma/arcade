@@ -35,6 +35,8 @@ ScoreDisplay::ScoreDisplay()
     Image health = LoadImage("../assets/heart.png");
     Image emptyHealth = LoadImage("../assets/emptyheart.png");
 
+    Vector2 pos = (Vector2){100,100};
+
     texture1 = LoadTextureFromImage(health);
     
     emptyTexture1 = LoadTextureFromImage(emptyHealth);
@@ -73,8 +75,8 @@ void ScoreDisplay::Render()
         DrawTexture(emptyTexture1, GetScreenWidth() / 1.8, 25, BLACK);
     }
     //DrawText(TextFormat("Élet: %01i", lives), GetScreenWidth() / 2.3, 25, 32, RED);
-    DrawText(TextFormat("Pontszám: %01i", score), 100, 25, 32, WHITE);
-    DrawText(TextFormat("Pénz: %01i", coins), GetScreenWidth() / 1.2, 25, 32, WHITE);
+    DrawText(TextFormat("Pontszám: %01i", score), 100, 25, 40, WHITE);
+    DrawText(TextFormat("Pénz: %01i", coins), GetScreenWidth() / 1.2, 25, 40, WHITE);
 }
 
 

@@ -90,7 +90,7 @@ int main(void)
             ClearBackground(RAYWHITE);
             DrawTextureRec(button, sourceRec, (Vector2){ btnBounds.x, btnBounds.y }, WHITE);
             int width = MeasureText("Press the button to start the game.", 40);
-            DrawText("Press the button to start the game.", width, GetScreenHeight() / 2.0f, 20, RED);
+            DrawText("Press the button to start the game.", GetScreenWidth() / 2.9f, GetScreenHeight() / 2.0f, 20, RED);
         } else {
             HideCursor();
             for (GameObject* gameObject : gameObjects)
