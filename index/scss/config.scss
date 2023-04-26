@@ -102,6 +102,14 @@ html[data-theme="dark"]{
 }
 
 // Debug mode
+
+/*
+1. If the debug mode is enabled, the code will show a sticky notice at the top of the page.
+2. The body background will be set to the debug background image.
+3. The footer border color will change depending on the screen size.
+4. The navigation border color will change depending on the screen size.
+5. The notice will change color depending on the screen size. 
+*/
 @if $debug {
         body::before {
             font-family: Monaco;
@@ -162,9 +170,7 @@ html[data-theme="dark"]{
 
 // Default overrides - Basic elements
 
-footer{
-    margin-top: auto;
-}
+// Override the default background color and image
 body {
     background-color: var(--primary-color);
     background-image: var(--bgtile);
@@ -175,35 +181,53 @@ body {
     flex-direction: column;
 }
 
+// Disable default image dragging
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+// Override the default header styles
 h1 {
     color: var(--secondary-text);
     font-size: 36;
     font-weight: 800;
 }
+
+// Override the default subheader styles
 h2 {
     color: var(--primary-text);
     font-size: 24;
     font-weight: 800;
 }
 
+// Override the default paragraph and anchor styles
 p, a{
     color: var(--tertiary-text);
     font-size: 17px;
     font-weight: 500;
 }
-a:hover {
-    box-shadow: inset 0 -1.125em 0 var(--accent-color);
-    color: #000;
+
+// Override the default footer styles
+footer{
+    margin-top: auto;
 }
 
+// Override the default link focus styles
 a:focus {
-    background: var(--tertiary-text);
     outline: none;
-    background: var(--accent-color);
     color: var(--tertiary-text);
     box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.2);
 }
 
+// Override the default link hover styles
+a:hover {
+    box-shadow: inset 0 -1.125em 0 var(--blue800);
+    color: #fff;
+}
 
 
 .roundedcorners {
