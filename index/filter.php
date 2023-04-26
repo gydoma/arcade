@@ -39,4 +39,5 @@
     <input type="submit" id="searchbtn" value="Click To Search">
 </div>
 </form>
+<!--<script src="javascript/minstar_range.js"></script>-->
 <script src="javascript/filter.js"></script>

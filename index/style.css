@@ -342,7 +342,7 @@ footer .grade-img {
   padding: 20px;
   margin: 20px;
   /*#min-star::-webkit-slider-runnable-track {
-    background-color: white;
+    background-color: red;
     margin: 0 auto;
     border-radius: 12px;
     border: 2px solid gray;
@@ -497,6 +497,15 @@ footer .grade-img {
   margin: 0 auto;
   border: 2px solid gray;
 }
+.filter input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 12px;
+  margin: 0 auto;
+  border: 2px solid gray;
+}
 .filter input[type=range]::-webkit-slider-runnable-track {
   -webkit-appearance: none;
 }
@@ -509,8 +518,7 @@ footer .grade-img {
   border: 2px solid black;
   cursor: pointer;
   transition: 0.3s ease-in-out;
-  box-shadow: inset 0px -2px 0px 0px #000000;
-  box-shadow: -10px 0px 0px -8px #e74c3c;
+  box-shadow: inset 0px -2px 0px 0px #000000, -12px 0px 0px -8px #e74c3c, -11px 0px 0px -8px #e74c3c, -10px 0px 0px -8px #e74c3c;
 }
 .filter input[type=range]::-webkit-slider-thumb:hover {
   border: 2px solid var(--accent-color);
@@ -854,24 +862,6 @@ p, h1 {
   display: none;
 }
 
-hr {
-  width: 20vw;
-}
-
-#personal {
-  margin-top: 2.5vh;
-  margin-bottom: 2.5vh;
-}
-
-#personal p {
-  margin-top: 2.5px;
-  margin-bottom: 2.5px;
-}
-
-#game {
-  margin-left: 10%;
-}
-
 @media only screen and (max-width: 1100px) {
   .profile-card {
     border: 0;
@@ -896,6 +886,24 @@ hr {
     text-overflow: unset;
   }
 }
+hr {
+  width: 20vw;
+}
+
+#personal {
+  margin-top: 2.5vh;
+  margin-bottom: 2.5vh;
+}
+
+#personal p {
+  margin-top: 2.5px;
+  margin-bottom: 2.5px;
+}
+
+#game {
+  margin-left: 10%;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
   user-select: none;
@@ -964,6 +972,13 @@ html[data-theme=dark] #filterimg {
   filter: invert(100%);
 }
 
+/*
+1. If the debug mode is enabled, the code will show a sticky notice at the top of the page.
+2. The body background will be set to the debug background image.
+3. The footer border color will change depending on the screen size.
+4. The navigation border color will change depending on the screen size.
+5. The notice will change color depending on the screen size. 
+*/
 body {
   background-color: var(--primary-color);
   background-image: var(--bgtile);
