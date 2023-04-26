@@ -35,8 +35,6 @@ ScoreDisplay::ScoreDisplay()
     Image health = LoadImage("../assets/heart.png");
     Image emptyHealth = LoadImage("../assets/emptyheart.png");
 
-    Vector2 pos = (Vector2){100,100};
-
     texture1 = LoadTextureFromImage(health);
     
     emptyTexture1 = LoadTextureFromImage(emptyHealth);
