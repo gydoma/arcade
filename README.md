@@ -1,5 +1,7 @@
 # Chromium Arcade
 
+![chromium_arcade](https://user-images.githubusercontent.com/65687471/236873814-7ee2c80d-f452-4995-8cda-106564ecd867.jpeg)
+
 <div align="center">
 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
@@ -13,6 +15,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/built-with-grammas-recipe.svg)](https://forthebadge.com)
 
 ![progress](https://progress-bar.dev/30/?scale=100&title=progress&width=220&color=333&suffix=/100)
+
 ![codeql workflow](https://github.com/gydoma/arcade/actions/workflows/codeql.yml/badge.svg)
 ![last commit](https://img.shields.io/github/last-commit/gydoma/arcade)
 ![Contributors](https://img.shields.io/github/contributors-anon/gydoma/arcade)
