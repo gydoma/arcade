@@ -34,6 +34,7 @@ $debug: false;
 @import "components/gamecard";
 @import "components/button_download";
 @import "components/profile";
+@import "components/cookie";
 
 // Import Montserrat font
 // @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
@@ -192,7 +193,7 @@ img {
 
 // Override the default header styles
 h1 {
-    color: var(--secondary-text);
+    color: var(--primary-text);
     font-size: 36;
     font-weight: 800;
 }
@@ -210,7 +211,7 @@ h3 {
 }
 
 // Override the default paragraph and anchor styles
-p, a{
+p, a, li{
     color: var(--tertiary-text);
     font-size: 17px;
     font-weight: 500;

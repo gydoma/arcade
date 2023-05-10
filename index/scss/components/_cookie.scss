@@ -1,0 +1,78 @@
+#okCookie{
+    background-color:var(--primary-color);
+    color:var(--primary-text);
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    padding:10px;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+    border-top:6px solid var(--outline-color);
+    z-index:10;
+  }
+  
+  #okCookie p{margin:0 0 10px 0; float:left; padding:5px 0px;}
+  
+  #okCookie #okClose, #okCookie #okCprivacy{
+    padding:5px 20px;
+    float:right;
+    margin-left:10px;
+    text-decoration:none;
+    border-radius:3px;
+    color:white;
+  }
+  
+  #okCookie #okClose{
+    background-color:var(--accent-color);
+    text-shadow:0px 1px 1px var(--blue100);
+    color:var(--primary-text);
+    border-radius: 15px;
+    border: 4px solid var(--secondary-color);
+    padding: 10px;
+  }
+  
+  #okCookie #okClose:hover{background-color:var(--blue100)}
+  
+  #okCookie #okCprivacy{
+    background-color:var(--primary-color) ;
+    text-shadow:0px 1px 1px #63666B;
+    box-shadow:inset 0px -1px 1px #63666B;
+    color:var(--primary-text);
+    border-radius: 15px;
+    border: 4px solid var(--secondary-color);
+    padding: 10px;
+  }
+  #agreebutton {
+    background-color:var(--accent-color);
+    text-shadow:0px 1px 1px #63666B;
+    box-shadow:inset 0px -1px 1px #63666B;
+    color:var(--primary-text);
+    border-radius: 15px;
+    border: 4px solid var(--secondary-color);
+    padding: 15px;
+    font-size: 20px;
+    width: 100% - padding;
+    margin:30px;
+  }
+
+  #okCookie #okCprivacy:hover{background-color:#a0a8ae}
+  
+  .okcBeginAnimate{
+      -webkit-animation: opacityfade 1s; 
+      animation: opacityfade 1s;
+  }
+  
+  /* Chrome, Safari, Opera */
+  @-webkit-keyframes opacityfade {
+      from {opacity: 0;}
+      to {opacity: 1;}
+  }
+  
+  /* Standard syntax */
+  @keyframes opacityfade {
+      from {opacity: 0;}
+      to {opacity: 1;}
+  } 
+  

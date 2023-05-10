@@ -39,6 +39,7 @@
 
         </form>
         <p class="switch-lr">You are new? <a class="switch-lr-link" href="register_page.php">Create a new account</a></p>
+        <script src="javascript/cookieagreement.js"></script>
     </div>
 
 </body>

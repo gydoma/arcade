@@ -49,6 +49,6 @@
     </div>
 
     <script src="javascript/registervalidating.js"></script>
-
+    <script src="javascript/cookieagreement.js"></script>
 </body>
 </html>

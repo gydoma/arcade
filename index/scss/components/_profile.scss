@@ -1,6 +1,4 @@
-p,h1{
-    max-width: 35vw;
-}
+
 
 .tabs{
     margin-left: 0;
@@ -28,6 +26,9 @@ p,h1{
     margin: 5% auto 5% auto;
     height: auto;
     width: 50vw;
+    p,h1{
+        max-width: 35vw;
+    }
 }
 
 .profile-header{
@@ -60,6 +61,9 @@ p,h1{
         margin: 0% 0;
         height: auto;
         width: 100%;
+        p,h1{
+            max-width: 100%;
+        }
     }
     .signout{
         border-left: 1px solid var(--primary-text);
@@ -79,9 +83,6 @@ p,h1{
         width: 100%;
         display: inline-block;
         float: left;
-    }
-    p,h1{
-        max-width: 100%;
     }
     .tab-content{
         display: inline-block;
