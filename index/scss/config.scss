@@ -203,6 +203,11 @@ h2 {
     font-size: 24;
     font-weight: 800;
 }
+h3 {
+    color: var(--primary-text);
+    font-size: 20;
+    font-weight: 600;
+}
 
 // Override the default paragraph and anchor styles
 p, a{

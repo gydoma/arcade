@@ -8,7 +8,7 @@
 </div>
 
 <div id="summary">
-        <p>Your time on our website:</p>
+        <p>Your time on our website (on the chart you can see your time in minutes):</p>
         <p>11h 28m</p>
 
 <div id="chart">
