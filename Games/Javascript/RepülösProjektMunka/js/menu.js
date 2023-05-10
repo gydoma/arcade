@@ -1,5 +1,5 @@
 import { checkCookie } from "./cookies.js";
-import { ctx , start , generate , cloudg , balong , oilg,started} from "./main.js";
+import { ctx, start, generate, cloudg, balong, oilg, started } from "./main.js";
 
 export function playmenu() {
     checkCookie();
@@ -27,12 +27,14 @@ export function playmenu() {
         return { x: x, y: y }
     }
 
-document.addEventListener("click", function(e) {
-    var XY = coord(canvas, e)
-    if (ctx.isPointInPath(path, XY.x, XY.y)&& started == false) {
-        start()
-        generate();
-        cloudg();
-        balong();
-        oilg();
-}})}
+    document.addEventListener("click", function(e) {
+        var XY = coord(canvas, e)
+        if (ctx.isPointInPath(path, XY.x, XY.y) && started == false) {
+            start()
+            generate();
+            cloudg();
+            balong();
+            oilg();
+        }
+    })
+}

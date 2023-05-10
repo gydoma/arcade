@@ -1,5 +1,7 @@
-import {ctx,bullets,enemys} from './main.js';
+import { ctx, bullets, enemys } from './main.js';
 import { player } from './player.js';
+import { coll } from './airdrop.js';
+
 export var bullet = 3;
 
 export class Bullet {
@@ -11,31 +13,36 @@ export class Bullet {
     }
     draw() {
         ctx.fillStyle = "#00000";
-        ctx.fillRect(this.x,this.y,this.size,this.size);
+        ctx.fillRect(this.x, this.y, this.size, this.size);
     }
-    collison(){
-        enemys.forEach((element,i) => {
-        if (Math.round((Math.hypot(this.x - element.x, this.y - element.y))) == 16){
-            enemys.splice(i,1);
-            var found = (element) => this.x = element.x ;
-            var index = bullets.findIndex(found);
-            bullets.splice(index,1);
-            } 
-         else {}})
+    delete() {
+        bullets.forEach((i) => {
+            bullets.splice(i, 1);
+
+        })
+    }
+    collison() {
+        enemys.forEach((element, i) => {
+            if (
+                (Math.hypot(element.x - this.x, element.y - this.y) < 26) || Math.hypot(element.x - this.x, element.y - this.y) < 10) {
+                this.delete();
+                enemys.splice(i, 1);
+            } else {}
+        })
     }
     slide() {
         this.draw();
-        this.x += this.Sp; 
-        this.collison();       
+        this.x += this.Sp;
+        this.collison();
     }
 }
 
 function bulletg() {
-    bullets.push(new Bullet(4, 1))
+    bullets.push(new Bullet(4, 2.5))
 }
 
-export function supplybullet(){
-    bullet=3;
+export function supplybullet() {
+    bullet = 3;
 }
 
 document.addEventListener("keydown", e => {
@@ -48,4 +55,3 @@ document.addEventListener("keydown", e => {
             break;
     }
 })
-
