@@ -19,28 +19,28 @@
         </div>
         <div class="tab-container">
             <div class="tabs">
-                <div class="tab">
+                <div class="tab" id="generalbtn">
                     <h3>General</h3>
                 </div>
-                <div class="tab">
+                <div class="tab" id="historybtn">
                     <h3>History</h3>
             </div>
-                <div class="tab">
+                <div class="tab" id="chguserbtn">
                     <h3>Change Username</h3>
             </div>
-                <div class="tab">
+                <div class="tab" id="chgemailbtn">
                     <h3>Change Email</h3>
             </div>
-                <div class="tab">
+                <div class="tab" id="chgpwdbtn">
                     <h3>Change Password</h3>
             </div>
-                <div class="tab">
+                <div class="tab" id="dangerzonebtn">
                     <h3>Danger Zone</h3>
             </div>
-                <div class="tab">
+                <div class="tab" id="helpbtn">
                     <h3>Help</h3>
             </div>
-                <div class="tab signout">
+                <div class="tab signout" id="signoutbtn">
                     <h3>Sign Out</h3>
             </div>
             </div>
