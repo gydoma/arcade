@@ -17,7 +17,7 @@ userdiv.addEventListener("click", () => {
     }
 })
 
-window.onclick = function(event) {
+callout_bg.onclick = function(event) {
     if (event.target == callout_bg) {
       callout_menu.style.display = "none";
       callout_bg.style.display = "none";

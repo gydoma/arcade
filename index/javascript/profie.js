@@ -42,7 +42,7 @@ function changetab(new_tab) {
     modalbox.style.display = "block";
     const modal = document.getElementById("modal_content");
     const modalbg = document.getElementById("modal_bg");
-    window.onclick = function(event) {
+    modalbg.onclick = function(event) {
         if (event.target == modalbg) {
           modalbox.style.display = "none";
         }

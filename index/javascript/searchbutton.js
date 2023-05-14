@@ -16,8 +16,7 @@ function searchmenu(){
 }
 
 
-window.onclick = function(event) {
-    console.log(event.target)
+filterbg.onclick = function(event) {
     if(window.getComputedStyle(filtermneu).display === "block") {
     if (event.target == filterbg) {
       filtermneu.style.display = "none";
