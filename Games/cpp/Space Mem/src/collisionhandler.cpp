@@ -21,6 +21,30 @@ void CollisionHandler::Update()
             }
         }
     }
+
+    for(Wall* &wall : wallCollisionObjects)
+    {
+        for(Enemy* &enemy : enemyCollisionObjects)
+        {
+            bool collided = CheckCollisionRecs(enemy->GetRect(), wall->GetRect());
+            if (collided)
+            {
+                enemy->Unload();
+            }
+        }
+    }
+
+    for(Enemy* &enemy : enemyCollisionObjects)
+    {
+        for(Player* &player : playerCollisionObjects)
+        {
+            bool collided = CheckCollisionRecs(enemy->GetRect(), player->GetRect());
+            if (collided)
+            {
+                enemy->Unload();
+            }
+        }
+    }
 }
 void CollisionHandler::Render()
 {

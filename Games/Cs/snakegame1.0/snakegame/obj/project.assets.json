@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\orosz\\source\\repos\\snakegame\\snakegame\\snakegame.csproj",
+      "projectUniqueName": "C:\\Users\\orosz\\source\\repos\\snakegame1.0\\snakegame\\snakegame.csproj",
       "projectName": "snakegame",
-      "projectPath": "C:\\Users\\orosz\\source\\repos\\snakegame\\snakegame\\snakegame.csproj",
+      "projectPath": "C:\\Users\\orosz\\source\\repos\\snakegame1.0\\snakegame\\snakegame.csproj",
       "packagesPath": "C:\\Users\\orosz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\orosz\\source\\repos\\snakegame\\snakegame\\obj\\",
+      "outputPath": "C:\\Users\\orosz\\source\\repos\\snakegame1.0\\snakegame\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

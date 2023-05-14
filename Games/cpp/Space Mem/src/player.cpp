@@ -3,10 +3,10 @@
 #include <iostream>
 #include <stdio.h>
 
-
 Player::Player()
 {
     gameObjects.push_back(this); // gameobjectbe "mentés"
+    playerCollisionObjects.push_back(this);
 
     // A játékosunk
     Image playerImage = LoadImage("../assets/ship.png");
@@ -32,33 +32,20 @@ Player::Player()
     // Lövés hang effekt
     shotSound = LoadSound("../assets/bullet.mp3");
     //HideCursor();
-
-    //LoadPoints()
+    collisionRect.height = texture.height;
+    collisionRect.width = texture.width;
 }
 
-// void Player::LoadPoints(int coin)
-// {
-//     char data[8];
+inline void Player::UpdateCollisionRectPosition()
+{
+    collisionRect.x = position.x - texture.width / 2;
+    collisionRect.y = position.y - texture.height / 2;
+}
 
-//     std::ifstream infile; 
-//     infile.open("afile.txt"); 
-
-//     infile >> data;
-    
-//     TraceLog(LOG_INFO, data);
-
-//     infile.close();
-// }
-
-// void Player::SavePoints()
-// {
-//     std::ofstream outfile;
-//     outfile.open("afile.txt");
-
-//     outfile << coins << std::endl;
-
-//     outfile.close();
-// }
+Rectangle Player::GetRect()
+{
+    return collisionRect;
+}
 
 void Player::Update()
 {
@@ -82,6 +69,8 @@ void Player::Update()
 
         lastShotTime = (float)GetTime();
     }
+
+    UpdateCollisionRectPosition();
 }
 void Player::Render()
 {

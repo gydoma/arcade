@@ -3,8 +3,8 @@
 
 #include "globals.h"
 #include "raylib.h"
-#include "collisionobjects.h"
 #include "player.h"
+#include "collisionobjects.h"
 #include <algorithm>
 
 class Enemy : public GameObject
@@ -16,6 +16,7 @@ class Enemy : public GameObject
         virtual ~Enemy(void);
 
         void Destroy();
+        void Unload();
         Rectangle GetRect();
 
     private:
@@ -24,6 +25,7 @@ class Enemy : public GameObject
         int id;
 
         Texture texture;
+        Texture coinTexture;
         Vector2 position;
         float speed;
 

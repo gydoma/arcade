@@ -15,6 +15,7 @@ namespace snakegame
         public int Score { get; private set; }
         public bool GameOver { get; private set; }
 
+        private readonly LinkedList<direction> dirChanges = new LinkedList<direction>();
         private readonly LinkedList<position> snakepositions = new LinkedList<position>();
         private readonly Random rnd= new Random();
 
@@ -27,6 +28,8 @@ namespace snakegame
 
             AddSnake();
             AddFood();
+           
+
         }
 
         private void AddSnake()
@@ -84,6 +87,90 @@ namespace snakegame
         {
             snakepositions.AddFirst(pos);
             Grid[pos.Sor, pos.Oszlop] = GridValue.Snake;
+        }
+
+        private void RemoveTail()
+        {
+            position tail = snakepositions.Last.Value;
+            Grid[tail.Sor, tail.Oszlop] = GridValue.Empty;
+            snakepositions.RemoveLast();
+
+        }
+
+        private direction GetLastDirection()
+        {
+            if(dirChanges.Count == 0)
+            {
+                return Dir;
+            }
+            return dirChanges.Last.Value;
+        }
+
+        private bool CanChangeDirection(direction newDir)
+        {
+            if (dirChanges.Count == 2)
+            {
+                return false;
+            }
+            direction lastDir = GetLastDirection();
+            return newDir != lastDir && newDir != lastDir.Opposite();
+        }
+        public void ChangeDirection(direction dir)
+        {
+            if(CanChangeDirection(dir))
+            {
+                dirChanges.AddLast(dir);
+            }
+        }
+        private bool OutsideGride(position pos)
+        {
+            return pos.Sor < 0 || pos.Oszlop >= Oszlopok || pos.Sor < 0 || pos.Oszlop >= Oszlopok;
+
+        }
+
+        private GridValue WillHit (position newheadpos)
+        {
+            if (OutsideGride(newheadpos))
+            {
+                return GridValue.Outside;
+            }
+
+            if (newheadpos == TailPosition())
+            {
+                return GridValue.Empty;
+            }
+            return Grid[newheadpos.Sor, newheadpos.Oszlop];
+        }
+
+        public void Move()
+        {
+            if(dirChanges.Count> 0)
+            {
+                Dir = dirChanges.First.Value;
+                dirChanges.RemoveFirst();
+
+            }
+
+            position newheadpos = HeadPosition().Translate(Dir);
+            GridValue hit = WillHit(newheadpos);
+
+            if (hit == GridValue.Outside || hit == GridValue.Snake)
+            {
+                GameOver = true;
+            }
+
+            else if (hit == GridValue.Empty)
+            {
+                RemoveTail();
+                AddHead(newheadpos);
+            }
+
+            else if (hit == GridValue.Food)
+            {
+                AddHead(newheadpos);
+                Score++;
+                AddFood();
+            }
         }
     }
 }
