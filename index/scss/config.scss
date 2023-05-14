@@ -3,10 +3,10 @@
 //? To minimize the css file use the following command
 //? sass --watch scss/config.scss style.css --style compressed 
 
-//! Don't use "components/libraries" - experimental
+//! Don't use " components/custom/_lib_*.scss " - experimental
 
 //@import "components/custom/arrow"; // TODO Deprecation warning
-//@import "components/custom/christmas"; // * can be implemented in the future *
+@import "components/custom/christmas"; // * can be implemented in the future *
 //@import "components/custom/ios_spinner";
 //@import "components/custom/lib_colors";
 //@import "components/custom/lib_media";
@@ -32,6 +32,10 @@ $debug: false;
 @import "components/lrpanel";
 @import "components/games";
 @import "components/gamecard";
+@import "components/button_download";
+@import "components/profile";
+@import "components/cookie";
+@import "components/play";
 
 // Import Montserrat font
 // @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
@@ -100,6 +104,14 @@ html[data-theme="dark"]{
 }
 
 // Debug mode
+
+/*
+1. If the debug mode is enabled, the code will show a sticky notice at the top of the page.
+2. The body background will be set to the debug background image.
+3. The footer border color will change depending on the screen size.
+4. The navigation border color will change depending on the screen size.
+5. The notice will change color depending on the screen size. 
+*/
 @if $debug {
         body::before {
             font-family: Monaco;
@@ -157,40 +169,71 @@ html[data-theme="dark"]{
     }
 }
 
+
+// Default overrides - Basic elements
+
+// Override the default background color and image
 body {
-    background-color: var(--primary-bg);
+    background-color: var(--primary-color);
     background-image: var(--bgtile);
     background-repeat: repeat;
     margin: 0px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+// Disable default image dragging
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+// Override the default header styles
 h1 {
-    color: var(--secondary-text);
+    color: var(--primary-text);
     font-size: 36;
     font-weight: 800;
 }
+
+// Override the default subheader styles
 h2 {
     color: var(--primary-text);
     font-size: 24;
     font-weight: 800;
 }
+h3 {
+    color: var(--primary-text);
+    font-size: 20;
+    font-weight: 600;
+}
 
-p, a{
+// Override the default paragraph and anchor styles
+p, a, li{
     color: var(--tertiary-text);
     font-size: 17px;
     font-weight: 500;
 }
-a:hover {
-    box-shadow: inset 0 -1.125em 0 var(--accent-color);
-    color: #000;
+
+// Override the default footer styles
+footer{
+    margin-top: auto;
 }
 
+// Override the default link focus styles
 a:focus {
-    background: var(--tertiary-text);
     outline: none;
-    background: var(--accent-color);
     color: var(--tertiary-text);
     box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+// Override the default link hover styles
+a:hover {
+    box-shadow: inset 0 -1.125em 0 var(--blue800);
+    color: #fff;
 }
 
 
@@ -207,6 +250,14 @@ a:focus {
     margin: 20px;
     height: auto;
     width: 100% - padding;
+}
+
+.big-card {
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    padding: 20px;
+    margin: 5%;
+    height: auto;
 }
 
 .shadow {
@@ -228,8 +279,6 @@ a:focus {
     flex-grow: 1;
 }
 
-
-
 @media only screen and (max-width: 740px) {
     .menubutton{
         display: block;
@@ -240,11 +289,21 @@ a:focus {
         display: none;
     }
 
+
+        
     .cards{
         display: block;
     }
     .navimg{
         display: flex;
+    }
+
+    .big-card {
+        background-color: var(--primary-color);
+        border-radius: 25px;
+        padding: 20px;
+        margin: 5%;
+        height: auto;
     }
   }
   

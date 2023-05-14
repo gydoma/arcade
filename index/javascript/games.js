@@ -14,9 +14,9 @@ fetch('games.json')
     const ratingImg = document.createElement('img');
     
     // set the src attribute based on the rating value
-    if (game.rating > 4.0) {
+    if (game.rating > 3.9) {
       ratingImg.src = 'Resources/rating/Full.svg';
-    } else if (game.rating > 3.0) {
+    } else if (game.rating > 2.9) {
       ratingImg.src = 'Resources/rating/Half.svg';
     } else {
       ratingImg.src = 'Resources/rating/Empty.svg';
@@ -57,6 +57,7 @@ fetch('games.json')
           </div>
           <h2>${game.name}</h2>
           <p>${game.description}</p>
+          <div class="card-filler"></div>
           <div class="card-footer">
               <p class="footer-madeby">made by ${game.by}</p>
               <button class="card-button" onclick="window.location.href = '${game.url}';">${buttonname}</button>

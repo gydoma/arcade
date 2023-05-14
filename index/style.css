@@ -1,4 +1,107 @@
-/* line 3, ../../Desktop/mappak/projektek/arcade/index/scss/components/_toggle.scss */
+.lightrope {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  margin: -36px 0 0 0;
+  padding: 0;
+  pointer-events: none;
+  width: 100%;
+}
+.lightrope li {
+  position: relative;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 12px;
+  height: 28px;
+  border-radius: 50%;
+  margin: 20px;
+  display: inline-block;
+  background: rgb(0, 247, 165);
+  box-shadow: 0px 4.6666666667px 24px 3px rgb(0, 247, 165);
+  animation-name: flash-1;
+  animation-duration: 2s;
+}
+.lightrope li:nth-child(2n+1) {
+  background: rgb(0, 255, 255);
+  box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 255, 255, 0.5);
+  animation-name: flash-2;
+  animation-duration: 0.4s;
+}
+.lightrope li:nth-child(4n+2) {
+  background: rgb(247, 0, 148);
+  box-shadow: 0px 4.6666666667px 24px 3px rgb(247, 0, 148);
+  animation-name: flash-3;
+  animation-duration: 1.1s;
+}
+.lightrope li:nth-child(odd) {
+  animation-duration: 1.8s;
+}
+.lightrope li:nth-child(3n+1) {
+  animation-duration: 1.4s;
+}
+.lightrope li:before {
+  content: "";
+  position: absolute;
+  background: #222;
+  width: 10px;
+  height: 9.3333333333px;
+  border-radius: 3px;
+  top: -4.6666666667px;
+  left: 1px;
+}
+.lightrope li:after {
+  content: "";
+  top: -14px;
+  left: 9px;
+  position: absolute;
+  width: 52px;
+  height: 18.6666666667px;
+  border-bottom: solid #222 2px;
+  border-radius: 50%;
+}
+.lightrope li:last-child:after {
+  content: none;
+}
+.lightrope li:first-child {
+  margin-left: -40px;
+}
+
+@keyframes flash-1 {
+  0%, 100% {
+    background: rgb(0, 247, 165);
+    box-shadow: 0px 4.6666666667px 24px 3px rgb(0, 247, 165);
+  }
+  50% {
+    background: rgba(0, 247, 165, 0.5);
+    box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 247, 165, 0.2);
+  }
+}
+@keyframes flash-2 {
+  0%, 100% {
+    background: rgb(0, 255, 255);
+    box-shadow: 0px 4.6666666667px 24px 3px rgb(0, 255, 255);
+  }
+  50% {
+    background: rgba(0, 255, 255, 0.5);
+    box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 255, 255, 0.2);
+  }
+}
+@keyframes flash-3 {
+  0%, 100% {
+    background: rgb(247, 0, 148);
+    box-shadow: 0px 4.6666666667px 24px 3px rgb(247, 0, 148);
+  }
+  50% {
+    background: rgba(247, 0, 148, 0.5);
+    box-shadow: 0px 4.6666666667px 24px 3px rgba(247, 0, 148, 0.2);
+  }
+}
 .button-cover, .knobs, .layer {
   position: absolute;
   top: 0;
@@ -7,7 +110,6 @@
   left: 0;
 }
 
-/* line 7, ../../Desktop/mappak/projektek/arcade/index/scss/components/_toggle.scss */
 .button {
   position: relative;
   min-width: 200px;
@@ -16,13 +118,11 @@
   box-shadow: 0px 0px 0px 3px #474A57 inset, 0px 6px 0px 0px #000000, 0px 6px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
-/* line 18, ../../Desktop/mappak/projektek/arcade/index/scss/components/_toggle.scss */
 .button,
 .button .layer {
   border-radius: 30px;
 }
 
-/* line 23, ../../Desktop/mappak/projektek/arcade/index/scss/components/_toggle.scss */
 .checkbox {
   position: relative;
   width: 100%;
@@ -34,19 +134,16 @@
   z-index: 3;
 }
 
-/* line 34, ../../Desktop/mappak/projektek/arcade/index/scss/components/_toggle.scss */
 .knobs {
   z-index: 2;
 }
 
-/* line 38, ../../Desktop/mappak/projektek/arcade/index/scss/components/_toggle.scss */
 .layer {
   width: 100%;
   transition: 0.3s ease all;
   z-index: 1;
 }
 
-/* line 44, ../../Desktop/mappak/projektek/arcade/index/scss/components/_toggle.scss */
 #button-1 .knobs:before {
   content: "Light";
   position: absolute;
@@ -65,14 +162,12 @@
   padding: 10px;
 }
 
-/* line 62, ../../Desktop/mappak/projektek/arcade/index/scss/components/_toggle.scss */
 #button-1 .checkbox:checked + .knobs:before {
   content: "Dark";
   left: 87px;
   background-color: #F95A2C;
 }
 
-/* line 71, ../../Desktop/mappak/projektek/arcade/index/scss/components/_toggle.scss */
 #button-1 .knobs,
 #button-1 .knobs:before,
 #button-1 .layer {
@@ -80,76 +175,71 @@
 }
 
 @media only screen and (max-width: 740px) {
-  /* line 78, ../../Desktop/mappak/projektek/arcade/index/scss/components/_toggle.scss */
   .button {
     display: none;
     width: 25%;
   }
 }
-
-/* line 1, ../../Desktop/mappak/projektek/arcade/index/scss/components/_footer.scss */
 footer {
   border-top: 6px solid var(--secondary-color);
   background-color: var(--primary-color);
   padding: 5px 200px 5px 75px;
 }
-
-/* line 5, ../../Desktop/mappak/projektek/arcade/index/scss/components/_footer.scss */
 footer a {
   text-decoration-line: underline !important;
   text-decoration-style: "solid";
-  text-decoration-color: black;
+  text-decoration-color: rgb(0, 0, 0);
   text-decoration-thickness: 2px;
 }
-
-/* line 11, ../../Desktop/mappak/projektek/arcade/index/scss/components/_footer.scss */
 footer .horizontal {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 10px;
 }
-
-/* line 17, ../../Desktop/mappak/projektek/arcade/index/scss/components/_footer.scss */
-footer .grade-row, footer .grade-container {
+footer .grade-row {
   display: flex;
   flex-direction: row;
-  margin: 0px 10px 0px 10px;
+  margin: -20px 10px 0px 0px;
   white-space: nowrap;
+  flex: 0 0 auto;
+  justify-content: space-between;
+}
+footer .grade-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+footer .grade-img {
+  margin: 0px 10px;
 }
 
 @media only screen and (max-width: 1100px) {
-  /* line 25, ../../Desktop/mappak/projektek/arcade/index/scss/components/_footer.scss */
   footer {
     padding: 5px 0px 5px 0px;
     text-align: center;
   }
-  /* line 28, ../../Desktop/mappak/projektek/arcade/index/scss/components/_footer.scss */
   footer a {
     text-decoration-line: underline !important;
     text-decoration-style: "solid";
-    text-decoration-color: black;
+    text-decoration-color: rgb(0, 0, 0);
     text-decoration-thickness: 2px;
   }
-  /* line 34, ../../Desktop/mappak/projektek/arcade/index/scss/components/_footer.scss */
   footer .horizontal, footer .grade-container {
     display: flex;
     flex-direction: column;
     justify-content: start;
   }
-  /* line 40, ../../Desktop/mappak/projektek/arcade/index/scss/components/_footer.scss */
   footer .grade-row {
     margin-top: 0px;
     display: flex;
     flex-direction: row;
+    border-bottom: 1px dotted var(--secondary-color);
   }
-  /* line 45, ../../Desktop/mappak/projektek/arcade/index/scss/components/_footer.scss */
   footer br {
     display: none;
   }
 }
-
-/* line 1, ../../Desktop/mappak/projektek/arcade/index/scss/components/_notification.scss */
 .userdiv {
   position: relative;
   left: 0;
@@ -157,20 +247,17 @@ footer .grade-row, footer .grade-container {
   width: 50px;
 }
 
-/* line 8, ../../Desktop/mappak/projektek/arcade/index/scss/components/_notification.scss */
 #userimg {
   position: relative;
   top: 0;
   left: 0;
 }
 
-/* line 13, ../../Desktop/mappak/projektek/arcade/index/scss/components/_notification.scss */
 .usernotif {
   position: absolute;
   left: 34px;
 }
 
-/* line 1, ../../Desktop/mappak/projektek/arcade/index/scss/components/_search.scss */
 #filterbtn-m {
   display: flex;
   position: fixed;
@@ -184,22 +271,16 @@ footer .grade-row, footer .grade-container {
   z-index: 0;
   border-radius: 20px;
 }
-
-/* line 13, ../../Desktop/mappak/projektek/arcade/index/scss/components/_search.scss */
 #filterbtn-m p {
   all: unset;
   font-weight: 800;
   color: var(--secondary-text);
   margin: 5px;
 }
-
-/* line 19, ../../Desktop/mappak/projektek/arcade/index/scss/components/_search.scss */
 #filterbtn-m #filterimg {
   min-width: 10%;
   min-height: 10%;
 }
-
-/* line 23, ../../Desktop/mappak/projektek/arcade/index/scss/components/_search.scss */
 #filterbtn-m #cat {
   position: absolute;
   top: 50%;
@@ -211,37 +292,33 @@ footer .grade-row, footer .grade-container {
   transition: none !important;
 }
 
-/* line 34, ../../Desktop/mappak/projektek/arcade/index/scss/components/_search.scss */
 .device-s {
   display: none;
 }
 
 @media only screen and (max-width: 740px) {
-  /* line 39, ../../Desktop/mappak/projektek/arcade/index/scss/components/_search.scss */
   .device-m, #filterbtn-m, #cat, #filterimg, .device-m p {
     display: none;
   }
-  /* line 43, ../../Desktop/mappak/projektek/arcade/index/scss/components/_search.scss */
   .device-s {
     display: inherit;
     position: fixed;
     bottom: 20px;
     right: 20px;
   }
-  /* line 50, ../../Desktop/mappak/projektek/arcade/index/scss/components/_search.scss */
   .device-s img {
     display: inherit;
   }
 }
-
-/* line 1, ../../Desktop/mappak/projektek/arcade/index/scss/components/_navbar.scss */
 .nav {
   background-color: var(--primary-color);
   border-bottom-width: 6px;
   border-bottom-style: solid;
   border-bottom-color: var(--secondary-color);
   padding: 5px;
-  position: relative;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -254,7 +331,118 @@ footer .grade-row, footer .grade-container {
   box-sizing: border-box;
 }
 
-/* line 1, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
+.callouts {
+  display: none;
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  padding: 15px;
+  background-color: var(--primary-color);
+  border: 3px solid var(--secondary-color);
+  border-radius: 20px;
+  right: -20px;
+  z-index: 99999;
+}
+
+.callouts h1, .callouts p {
+  color: var(--secondary-color);
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.callouts p {
+  font-size: 0.9em;
+}
+
+.callouts hr {
+  width: 95%;
+}
+
+.calloutbtns {
+  justify-content: space-between !important;
+  display: flex !important;
+}
+
+.callouts:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: 23px;
+  top: -42px;
+  border: 10px solid transparent;
+  border-bottom: 32px solid var(--secondary-color);
+  z-index: 3;
+}
+
+.callouts:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: 25px;
+  top: -32px;
+  border: 8px solid transparent;
+  border-bottom: 25px solid var(--primary-color);
+  z-index: 5;
+}
+
+.callout-button {
+  font-weight: 700;
+  border: 2px solid var(--secondary-color);
+  border-bottom: 4px solid var(--secondary-color);
+  border-radius: 10px;
+  height: 38px;
+  width: 150px;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  box-shadow: 0px 2px 0px 0px var(--secondary-color);
+}
+
+#callout-signout {
+  border: 2px solid var(--red);
+  border-bottom: 4px solid var(--red);
+  color: var(--red);
+  width: 135px;
+}
+
+#callout_bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+}
+
+.callout-auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9;
+}
+.callout-auth .callout-log {
+  margin-bottom: 30px;
+}
+.callout-auth button {
+  width: 75%;
+  height: 35px;
+  font-weight: 1200;
+  font-size: 16px;
+  background-color: var(--accent-color);
+  color: var(--primary-text);
+  border-radius: 16px;
+  border: 0px;
+  box-shadow: 0px 0px 0px 2px var(--secondary-color) inset, 0px 4px 0px 0px var(--secondary-color);
+  text-align: center;
+  z-index: 9;
+}
+.callout-auth button:active {
+  box-shadow: 0px 0px 0px 2px var(--secondary-color) inset, 0px 1px 0px 0px var(--secondary-color);
+}
+
 .filter {
   position: fixed;
   bottom: 20px;
@@ -265,9 +453,16 @@ footer .grade-row, footer .grade-container {
   border-radius: 25px;
   padding: 20px;
   margin: 20px;
+  /*chrome */
+  /** FF*/
+  /* IE*/
+  /*#min-star::-webkit-slider-runnable-track {
+    background-color: red;
+    margin: 0 auto;
+    border-radius: 12px;
+    border: 2px solid gray;
+  }*/
 }
-
-/* line 13, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .search-input {
   padding-right: 0px;
   background: url("Resources/feather/search.svg") no-repeat right;
@@ -281,31 +476,21 @@ footer .grade-row, footer .grade-container {
   font-weight: 600;
   font-size: 21px;
 }
-
-/* line 26, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .label-checkbox {
   display: flex;
   flex-direction: row;
   font-weight: 600;
   font-size: 17px;
 }
-
-/* line 32, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .check-checkbox {
   margin: 0 10px 0 0;
 }
-
-/* line 37, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .lg {
   display: block;
 }
-
-/* line 41, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .sm {
   display: none;
 }
-
-/* line 46, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .ch-label {
   display: flex;
   flex-direction: column;
@@ -323,14 +508,10 @@ footer .grade-row, footer .grade-container {
   font-size: 17px;
   color: var(--secondary-text);
 }
-
-/* line 64, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .ch-labels {
   display: inline;
   width: 35%;
 }
-
-/* line 70, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .ch-label input {
   position: absolute;
   opacity: 0;
@@ -338,8 +519,6 @@ footer .grade-row, footer .grade-container {
   height: 0;
   width: 0;
 }
-
-/* line 79, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .checkmark {
   position: absolute;
   top: 0;
@@ -350,25 +529,17 @@ footer .grade-row, footer .grade-container {
   border-radius: 10px;
   border: 4px solid var(--secondary-color);
 }
-
-/* line 93, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .ch-label:hover input ~ .checkmark {
   background-color: #8094FF;
 }
-
-/* line 97, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .ch-label input:checked ~ .checkmark {
   background-color: #1947E5;
 }
-
-/* line 104, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
-
-/* line 130, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .dd-filter {
   position: absolute;
   top: 45%;
@@ -380,8 +551,6 @@ footer .grade-row, footer .grade-container {
   background-color: var(--primary-color);
   z-index: 10;
 }
-
-/* line 143, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .dd-filter select {
   display: inline;
   border: none;
@@ -398,8 +567,6 @@ footer .grade-row, footer .grade-container {
   font-size: 21px;
   color: var(--secondary-color);
 }
-
-/* line 159, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter .dd-filter:after {
   position: absolute;
   right: -4px;
@@ -417,8 +584,6 @@ footer .grade-row, footer .grade-container {
   background-color: var(--accent-color);
   z-index: -1;
 }
-
-/* line 178, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter #ratingfilter {
   position: absolute;
   margin-left: 50%;
@@ -426,27 +591,44 @@ footer .grade-row, footer .grade-container {
   display: block;
   width: 40%;
 }
-
-/* line 185, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter #min-star {
   width: 100%;
   position: relative;
   top: auto;
 }
-
-/* line 190, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter #starimg {
   align-self: right;
 }
-
-/* line 194, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter hr {
   width: 80%;
   margin: 15px auto 15px auto;
 }
-
-/* line 200, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
-.filter input[type="range"] {
+.filter #min-star {
+  -webkit-appearance: none;
+  overflow: hidden;
+}
+.filter #min-star::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #FFBD12;
+  cursor: pointer;
+  border: 4px solid #333;
+  box-shadow: -400px 0 0 400px #FFBD12;
+}
+.filter input[type=range]::-moz-range-progress {
+  height: 12px;
+  background-color: #FFBD12;
+}
+.filter input[type=range]::-moz-range-track {
+  background-color: #fff;
+}
+.filter input[type=range]::-ms-fill-lower {
+  height: 12px;
+  background-color: #FFBD12;
+}
+.filter input[type=range]::-ms-fill-upper {
+  background-color: #fff;
+}
+.filter input[type=range] {
   -webkit-appearance: none;
   -moz-appearance: none;
   width: 100%;
@@ -455,9 +637,19 @@ footer .grade-row, footer .grade-container {
   margin: 0 auto;
   border: 2px solid gray;
 }
-
-/* line 213, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
-.filter input[type="range"]::-webkit-slider-thumb {
+.filter input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 12px;
+  margin: 0 auto;
+  border: 2px solid gray;
+}
+.filter input[type=range]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+}
+.filter input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   background-color: white;
   width: 24px;
@@ -465,29 +657,15 @@ footer .grade-row, footer .grade-container {
   border-radius: 50%;
   border: 2px solid black;
   cursor: pointer;
-  transition: .3s ease-in-out;
-  box-shadow: inset 0px -2px 0px 0px #000000;
+  transition: 0.3s ease-in-out;
+  box-shadow: inset 0px -2px 0px 0px #000000, -12px 0px 0px -8px #e74c3c, -11px 0px 0px -8px #e74c3c, -10px 0px 0px -8px #e74c3c;
 }
-
-/* line 224, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
-.filter input[type="range"]::-webkit-slider-thumb:hover {
+.filter input[type=range]::-webkit-slider-thumb:hover {
   border: 2px solid var(--accent-color);
-  box-shadow: inset 0px -2px 0px 0px var(--accent-color);
 }
-
-/* line 228, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
-.filter input[type="range"]::-webkit-slider-thumb:active {
-  transform: scale(1.6);
+.filter #min-star::-ms-fill-lower {
+  background: orange;
 }
-
-/* line 232, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
-.filter #min-star::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  color: #13bba4;
-  margin-top: -1px;
-}
-
-/* line 238, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 .filter #searchbtn {
   position: relative;
   padding-right: 0px;
@@ -504,57 +682,47 @@ footer .grade-row, footer .grade-container {
   font-size: 21px;
 }
 
-/* line 256, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
 #mrv {
   display: flex;
   font-size: 14px;
 }
 
 @media only screen and (max-width: 740px) {
-  /* line 264, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
   .filter {
     left: 0;
     right: 0;
     width: 90%;
-    margin: auto 2.5;
+    margin: auto;
   }
-  /* line 271, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
   .filter .filterh2 {
     display: none;
   }
-  /* line 275, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
   .filter .search-input {
     margin-left: 5%;
     width: 90%;
   }
-  /* line 280, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
   .filter .lg {
     display: none;
   }
-  /* line 284, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
   .filter .sm {
     display: block;
   }
-  /* line 288, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
   .filter .ch-labels {
     position: relative;
     display: block;
     width: 100%;
     margin-bottom: 2rem;
   }
-  /* line 295, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
   .filter .ch-label {
     display: block;
     width: 100%;
   }
-  /* line 300, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
   .filter .dd-filter {
     display: block;
     width: 90%;
     top: auto;
     margin: auto auto 5rem auto;
   }
-  /* line 308, ../../Desktop/mappak/projektek/arcade/index/scss/components/_filter.scss */
   .filter #ratingfilter {
     position: relative;
     display: block;
@@ -564,8 +732,17 @@ footer .grade-row, footer .grade-container {
     margin: 5rem 2.5% auto 2.5%;
   }
 }
+#filter_bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+}
 
-/* line 1, ../../Desktop/mappak/projektek/arcade/index/scss/components/_lrpanel.scss */
 .lrpanel {
   margin: 5% auto auto auto;
   width: 20%;
@@ -574,127 +751,120 @@ footer .grade-row, footer .grade-container {
   padding: 20px;
   box-shadow: 0px 0px 0px 2px var(--outline-color) inset, 0px 4px 0px 0px var(--secondary-color);
 }
-
-/* line 11, ../../Desktop/mappak/projektek/arcade/index/scss/components/_lrpanel.scss */
 .lrpanel h2 {
   font-size: 36px;
   margin: 0 0 10px 0;
 }
-
-/* line 17, ../../Desktop/mappak/projektek/arcade/index/scss/components/_lrpanel.scss */
+.lrpanel .lr-p-alert {
+  color: var(--accent-color);
+  font-size: 17px;
+  font-weight: 800;
+}
 .lrpanel .switch-lr, .lrpanel .switch-lr-link {
   font-size: 13px;
   font-weight: 500;
 }
-
-/* line 21, ../../Desktop/mappak/projektek/arcade/index/scss/components/_lrpanel.scss */
 .lrpanel .switch-lr-link {
   color: var(--accent-color);
 }
-
-/* line 26, ../../Desktop/mappak/projektek/arcade/index/scss/components/_lrpanel.scss */
 .lrpanel .lr-input {
   width: 100%;
   padding: 15px 0px;
   margin: 10px 0 10px 0;
-  font-weight: 200;
   font-size: 21px;
   border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--primary-text);
 }
-
-/* line 37, ../../Desktop/mappak/projektek/arcade/index/scss/components/_lrpanel.scss */
+.lrpanel .lr-input::-webkit-input-placeholder {
+  padding-left: 10px;
+}
+.lrpanel .lr-input:-moz-placeholder {
+  padding-left: 10px;
+}
 .lrpanel .in-icon {
   position: relative;
   left: 0px;
   top: -10px;
 }
-
-/* line 43, ../../Desktop/mappak/projektek/arcade/index/scss/components/_lrpanel.scss */
-.lrpanel input[type="submit"] {
+.lrpanel input[type=submit] {
   width: 100%;
   padding: 17px !important;
   margin: 30px 0 30px 0;
   font-weight: 800;
   font-size: 21px;
   background-color: var(--accent-color);
+  color: var(--primary-text);
   border-radius: 16px;
   border: 0px;
   padding: 10px;
-  box-shadow: 0px 0px 0px 2px var(--outline-color) inset, 0px 4px 0px 0px var(--secondary-color);
+  box-shadow: 0px 0px 0px 2px var(--secondary-color) inset, 0px 4px 0px 0px var(--secondary-color);
+}
+.lrpanel input[type=submit]:active {
+  box-shadow: 0px 0px 0px 2px var(--secondary-color) inset, 0px 1px 0px 0px var(--secondary-color);
 }
 
-/* line 58, ../../Desktop/mappak/projektek/arcade/index/scss/components/_lrpanel.scss */
-.lrpanel input[type="submit"]:active {
-  box-shadow: 0px 0px 0px 6px var(--outline-color) inset, 0px 10px 0px 0px var(--secondary-color);
-}
-
-/* line 1, ../../Desktop/mappak/projektek/arcade/index/scss/components/_games.scss */
 .games {
   margin: 10%;
   display: flex;
   flex-wrap: wrap;
 }
-
-/* line 6, ../../Desktop/mappak/projektek/arcade/index/scss/components/_games.scss */
 .games .card {
   flex: 1 0 25%;
   margin: 1em;
   align-items: baseline;
 }
-
 @media only screen and (max-width: 1000px) {
-  /* line 6, ../../Desktop/mappak/projektek/arcade/index/scss/components/_games.scss */
   .games .card {
     flex-basis: 33.33%;
   }
 }
-
 @media only screen and (max-width: 750px) {
-  /* line 6, ../../Desktop/mappak/projektek/arcade/index/scss/components/_games.scss */
   .games .card {
     flex-basis: 50%;
   }
 }
-
 @media only screen and (max-width: 540px) {
-  /* line 6, ../../Desktop/mappak/projektek/arcade/index/scss/components/_games.scss */
   .games .card {
     flex-basis: 80%;
   }
 }
-
-/* line 23, ../../Desktop/mappak/projektek/arcade/index/scss/components/_games.scss */
 .games .card-cs {
   background-color: var(--blue100);
 }
-
-/* line 26, ../../Desktop/mappak/projektek/arcade/index/scss/components/_games.scss */
 .games .card-js {
   background-color: var(--pink100);
 }
-
-/* line 29, ../../Desktop/mappak/projektek/arcade/index/scss/components/_games.scss */
 .games .card-py {
   background-color: var(--primary-color);
 }
 
-/* line 2, ../../Desktop/mappak/projektek/arcade/index/scss/components/_gamecard.scss */
+.game-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-filler {
+  flex-grow: 1;
+}
+
 .card-top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
-/* line 8, ../../Desktop/mappak/projektek/arcade/index/scss/components/_gamecard.scss */
 .card-footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  width: 100%;
+  align-items: flex-end;
 }
 
-/* line 14, ../../Desktop/mappak/projektek/arcade/index/scss/components/_gamecard.scss */
 .badge {
   font-size: 13px;
   font-weight: 700;
@@ -710,7 +880,6 @@ footer .grade-row, footer .grade-container {
   justify-content: space-evenly;
 }
 
-/* line 28, ../../Desktop/mappak/projektek/arcade/index/scss/components/_gamecard.scss */
 .badge-dot {
   border: 2px solid var(--secondary-color);
   border-radius: 50%;
@@ -718,22 +887,18 @@ footer .grade-row, footer .grade-container {
   width: 22px;
 }
 
-/* line 35, ../../Desktop/mappak/projektek/arcade/index/scss/components/_gamecard.scss */
 .badge-cs {
   background-color: var(--blue800);
 }
 
-/* line 36, ../../Desktop/mappak/projektek/arcade/index/scss/components/_gamecard.scss */
 .badge-js {
   background-color: var(--red);
 }
 
-/* line 37, ../../Desktop/mappak/projektek/arcade/index/scss/components/_gamecard.scss */
 .badge-py {
   background-color: var(--yellow);
 }
 
-/* line 39, ../../Desktop/mappak/projektek/arcade/index/scss/components/_gamecard.scss */
 .rating {
   height: auto;
   width: 75px;
@@ -743,12 +908,10 @@ footer .grade-row, footer .grade-container {
   justify-content: space-evenly;
 }
 
-/* line 47, ../../Desktop/mappak/projektek/arcade/index/scss/components/_gamecard.scss */
 .footer-madeby {
   font-size: 13px;
 }
 
-/* line 50, ../../Desktop/mappak/projektek/arcade/index/scss/components/_gamecard.scss */
 .card-button {
   font-weight: 700;
   border: 2px solid var(--secondary-color);
@@ -760,35 +923,448 @@ footer .grade-row, footer .grade-container {
   box-shadow: 0px 2px 0px 0px var(--secondary-color);
 }
 
-/* line 60, ../../Desktop/mappak/projektek/arcade/index/scss/components/_gamecard.scss */
 .card-button:active {
   box-shadow: 0px 0px 0px 0px var(--secondary-color);
   margin-top: 2px;
 }
 
-/* line 40, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
+.btn-download {
+  margin: 0 10px;
+  background-color: var(--accent-color);
+  color: var(--primary-text);
+  padding: 15px;
+  font-size: 21px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 0px 2px var(--outline-color) inset, 0px 6px 0px 0px var(--secondary-color), 0px 6px 6px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.btn-download:hover {
+  margin: 0 10px;
+  background-color: var(--accent-color);
+  padding: 15px;
+  font-size: 21px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 0px 2px var(--outline-color) inset, 0px 1px 0px 0px var(--secondary-color);
+  display: flex;
+  justify-content: center;
+}
+
+.download-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabs {
+  margin-left: 0;
+  height: 100%;
+  width: 12.5vw;
+  display: inline-block;
+  float: left;
+}
+
+.tab {
+  border-top: 1px solid var(--primary-text);
+  border-right: 1px solid black;
+  border-bottom: 1px solid var(--primary-text);
+  text-align: center;
+  height: 5%;
+}
+
+.signout {
+  border-left: 2px solid var(--primary-text);
+  background-color: var(--red);
+}
+
+.profile-card {
+  background-color: var(--primary-color);
+  border-radius: 25px;
+  margin: 5% auto 5% auto;
+  height: auto;
+  width: 50vw;
+}
+.profile-card p, .profile-card h1 {
+  max-width: 35vw;
+}
+
+.profile-header {
+  text-align: center;
+  border-bottom: 2px solid var(--primary-text);
+}
+
+.tab_title {
+  margin-bottom: 0px;
+}
+
+.content_header {
+  margin-bottom: 50px;
+}
+
+.content_break {
+  margin-bottom: 25px;
+}
+
+.tab-content {
+  display: inline-block;
+  padding-left: 1vw;
+  border-left: 1px solid var(--primary-text);
+  width: calc(99% - 12.5vw - 1vw) !important;
+  height: 100dvh;
+}
+
+.tab-container {
+  height: auto;
+  min-height: 100%;
+}
+
+.content {
+  display: none;
+}
+
+.active {
+  background-color: #FFBD12;
+}
+
+.history ul, .historyelement {
+  width: 100% !important;
+}
+
+.historyaction, .historydesc {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.historyheader {
+  justify-content: space-between !important;
+  display: flex !important;
+}
+
+.signout {
+  overflow: hidden;
+}
+
+.historyheader p {
+  margin-top: 0px;
+  color: #9FA4B4;
+}
+
+ul {
+  list-style: disc;
+}
+
+li::marker {
+  color: #979797;
+  font-size: 2em;
+}
+
+li {
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 1100px) {
+  .nav {
+    margin: 0;
+  }
+  .profile-card {
+    border: 0;
+    background-color: var(--primary-color);
+    border-radius: 0;
+    margin: 0% 0;
+    height: auto;
+    width: 100%;
+  }
+  .profile-card p, .profile-card h1 {
+    max-width: 100%;
+  }
+  .signout {
+    border-left: 1px solid var(--primary-text);
+    border-bottom-left-radius: 0;
+    background-color: var(--red);
+  }
+  .tab {
+    border-top: 1px solid var(--primary-text);
+    border-bottom: 1px solid var(--primary-text);
+    text-align: center;
+    height: 10%;
+    text-overflow: unset;
+  }
+  .tabs {
+    margin-left: 0;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    float: left;
+  }
+  .tab-content {
+    display: inline-block;
+    padding-left: 1vw;
+  }
+}
+hr {
+  width: 20vw;
+}
+
+.content_header {
+  display: block;
+}
+
+.content hr {
+  display: block;
+  float: left;
+  margin-right: 100%;
+}
+
+#personal {
+  margin-top: 2.5vh;
+  margin-bottom: 2.5vh;
+}
+
+#personal p {
+  margin-top: 2.5px;
+  margin-bottom: 2.5px;
+}
+
+#game {
+  margin-left: 10%;
+}
+
+.change_form {
+  display: flex;
+  flex-direction: column;
+}
+.change_form input[type=submit] {
+  width: 30%;
+  padding: 17px !important;
+  margin: -15px 0 30px 0;
+  font-weight: 800;
+  font-size: 21px;
+  background-color: var(--accent-color);
+  color: var(--primary-text);
+  border-radius: 16px;
+  border: 0px;
+  padding: 10px;
+  box-shadow: 0px 0px 0px 2px var(--secondary-color) inset, 0px 4px 0px 0px var(--secondary-color);
+}
+.change_form input[type=submit]:active {
+  box-shadow: 0px 0px 0px 2px var(--secondary-color) inset, 0px 1px 0px 0px var(--secondary-color);
+}
+
+.chg-input {
+  width: 20vw;
+  padding: 15px 0px;
+  margin: 10px 0 10px 0;
+  font-size: 21px;
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--primary-text);
+  border: 2px solid var(--outline-color);
+  margin-bottom: 30px;
+}
+
+.chg-input::-webkit-input-placeholder {
+  padding-left: 10px;
+}
+
+.chg-input:-moz-placeholder {
+  text-indent: 10px;
+}
+
+.chg-input:-ms-placeholder {
+  text-indent: 10px;
+}
+
+#signout_modal {
+  display: none;
+}
+
+#modal_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(1px);
+}
+
+#modal_content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 125px;
+  background-color: var(--primary-bg);
+  border: 1px solid black;
+}
+#modal_content h1 {
+  font-size: 1.2em;
+  margin-top: 5px;
+}
+#modal_content p {
+  margin-bottom: 10px;
+}
+
+#modal_buttons {
+  justify-content: space-between !important;
+  display: flex !important;
+}
+#modal_buttons button {
+  width: 135px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+#modal_buttons #modal_signoutbtn {
+  background-color: var(--red);
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 1100px) {
+  .chg-input {
+    width: 100%;
+  }
+}
+#okCookie {
+  background-color: var(--primary-color);
+  color: var(--primary-text);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-top: 6px solid var(--outline-color);
+  z-index: 10;
+}
+
+#okCookie p {
+  margin: 0 0 10px 0;
+  float: left;
+  padding: 5px 0px;
+}
+
+#okCookie #okClose, #okCookie #okCprivacy {
+  padding: 5px 20px;
+  float: right;
+  margin-left: 10px;
+  text-decoration: none;
+  border-radius: 3px;
+  color: white;
+}
+
+#okCookie #okClose {
+  background-color: var(--accent-color);
+  text-shadow: 0px 1px 1px var(--blue100);
+  color: var(--primary-text);
+  border-radius: 15px;
+  border: 4px solid var(--secondary-color);
+  padding: 10px;
+}
+
+#okCookie #okClose:hover {
+  background-color: var(--blue100);
+}
+
+#okCookie #okCprivacy {
+  background-color: var(--primary-color);
+  text-shadow: 0px 1px 1px #63666B;
+  box-shadow: inset 0px -1px 1px #63666B;
+  color: var(--primary-text);
+  border-radius: 15px;
+  border: 4px solid var(--secondary-color);
+  padding: 10px;
+}
+
+#agreebutton {
+  background-color: var(--accent-color);
+  text-shadow: 0px 1px 1px #63666B;
+  box-shadow: inset 0px -1px 1px #63666B;
+  color: var(--primary-text);
+  border-radius: 15px;
+  border: 4px solid var(--secondary-color);
+  padding: 15px;
+  font-size: 20px;
+  width: 100%-padding;
+  margin: 30px;
+}
+
+#okCookie #okCprivacy:hover {
+  background-color: #a0a8ae;
+}
+
+.okcBeginAnimate {
+  -webkit-animation: opacityfade 1s;
+  animation: opacityfade 1s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes opacityfade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Standard syntax */
+@keyframes opacityfade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.play-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  flex-direction: column;
+  align-items: center;
+  height: 95vh !important;
+  width: 50%;
+  margin: auto;
+  background-color: #fff;
+  margin-bottom: 100px;
+}
+
+.play-header {
+  margin-bottom: 50px;
+}
+.play-header .nav {
+  position: relative;
+}
+
 * {
-  font-family: 'Montserrat',sans-serif;
+  font-family: "Montserrat", sans-serif;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
 
-/* line 41, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
 *:focus {
   outline: none;
 }
 
-/* line 42, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
 * {
   transition: all 0.35s ease;
 }
 
-/* line 44, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
 .notice {
   display: none;
 }
 
-/* line 49, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
 html {
   --blue800: #5C7CFF;
   --darkblue: #080339;
@@ -803,8 +1379,7 @@ html {
   --outline-color: #474A57;
 }
 
-/* line 63, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
-html[data-theme="light"] {
+html[data-theme=light] {
   --primary-bg: #FFF4CC;
   --secondary-bg: #F9E9BF;
   --primary-color: #FFFFFF;
@@ -818,8 +1393,7 @@ html[data-theme="light"] {
   --bgtiledebug: url("Resources/bg-tile/debug/Light_debug.svg");
 }
 
-/* line 77, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
-html[data-theme="dark"] {
+html[data-theme=dark] {
   --primary-bg: #202020;
   --secondary-bg: #2B2B2B;
   --primary-color: #18191F;
@@ -834,69 +1408,83 @@ html[data-theme="dark"] {
   --pink100: #460E0E;
   --blue100: #080339;
 }
-
-/* line 91, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
-html[data-theme="dark"] #cat {
+html[data-theme=dark] #cat {
   filter: invert(30%);
 }
-
-/* line 92, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
-html[data-theme="dark"] #filterimg {
+html[data-theme=dark] #filterimg {
   filter: invert(100%);
 }
 
-/* line 160, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
+/*
+1. If the debug mode is enabled, the code will show a sticky notice at the top of the page.
+2. The body background will be set to the debug background image.
+3. The footer border color will change depending on the screen size.
+4. The navigation border color will change depending on the screen size.
+5. The notice will change color depending on the screen size. 
+*/
 body {
-  background-color: var(--primary-bg);
+  background-color: var(--primary-color);
   background-image: var(--bgtile);
   background-repeat: repeat;
   margin: 0px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* line 167, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
 h1 {
-  color: var(--secondary-text);
+  color: var(--primary-text);
   font-size: 36;
   font-weight: 800;
 }
 
-/* line 172, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
 h2 {
   color: var(--primary-text);
   font-size: 24;
   font-weight: 800;
 }
 
-/* line 178, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
-p, a {
+h3 {
+  color: var(--primary-text);
+  font-size: 20;
+  font-weight: 600;
+}
+
+p, a, li {
   color: var(--tertiary-text);
   font-size: 17px;
   font-weight: 500;
 }
 
-/* line 183, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
-a:hover {
-  box-shadow: inset 0 -1.125em 0 var(--accent-color);
-  color: #000;
+footer {
+  margin-top: auto;
 }
 
-/* line 188, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
 a:focus {
-  background: var(--tertiary-text);
   outline: none;
-  background: var(--accent-color);
   color: var(--tertiary-text);
   box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.2);
 }
 
-/* line 197, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
+a:hover {
+  box-shadow: inset 0 -1.125em 0 var(--blue800);
+  color: #fff;
+}
+
 .roundedcorners {
   border-radius: 25px;
   border: 4px solid var(--secondary-color);
   padding: 10px;
 }
 
-/* line 203, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
 .card {
   background-color: var(--primary-color);
   border-radius: 25px;
@@ -906,43 +1494,50 @@ a:focus {
   width: 100%-padding;
 }
 
-/* line 212, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
+.big-card {
+  background-color: var(--primary-color);
+  border-radius: 25px;
+  padding: 20px;
+  margin: 5%;
+  height: auto;
+}
+
 .shadow {
   box-shadow: 0px 0px 0px 2px var(--outline-color) inset, 0px 6px 0px 0px var(--secondary-color), 0px 6px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
-/* line 219, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
 .usernotif {
   z-index: 4;
 }
 
-/* line 223, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
 .menubutton {
   display: none;
 }
 
-/* line 227, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
 .flex-filter {
   flex-grow: 1;
 }
 
 @media only screen and (max-width: 740px) {
-  /* line 234, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
   .menubutton {
     display: block;
     margin: auto 0px auto auto;
   }
-  /* line 239, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
   .userdiv {
     display: none;
   }
-  /* line 243, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
   .cards {
     display: block;
   }
-  /* line 246, ../../Desktop/mappak/projektek/arcade/index/scss/config.scss */
   .navimg {
     display: flex;
+  }
+  .big-card {
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    padding: 20px;
+    margin: 5%;
+    height: auto;
   }
 }
 

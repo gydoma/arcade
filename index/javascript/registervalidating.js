@@ -11,7 +11,7 @@ function unamecheck(){
     username = uname.value;
     console.log(username);
     if(username.length < 4){
-        uname.style.border = "1px solid red";
+        uname.style.border = "2px solid red";
         regbutton.disabled = true;
     } else {
         uname.style.border = "";
@@ -22,7 +22,7 @@ function unamecheck(){
 function emailcheck(){
     const validemail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if(!email.value.match(validemail)){
-        email.style.border = "1px solid red";
+        email.style.border = "2px solid red";
         regbutton.disabled = true;
     } else {
         email.style.border = "";
@@ -33,7 +33,7 @@ function emailcheck(){
 function passwordcheck(){
     const validpassword = /^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{6,32}$/;
     if(!pwd.value.match(validpassword)){
-        pwd.style.border = "1px solid red";
+        pwd.style.border = "2px solid red";
         regbutton.disabled = true;
     } else {
         pwd.style.border = "";

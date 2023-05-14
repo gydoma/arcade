@@ -24,12 +24,15 @@ checkbox.addEventListener('change', function() {
         document.documentElement.setAttribute('data-theme', 'dark')
         document.getElementById("logo").src = "Resources/logo/logodark.svg"
         document.getElementById("userimg").src = "Resources/feather/userdark.svg"
+        document.getElementById("notification").src = "Resources/feather/notification_dark.svg"
     } else {
         document.cookie = "sitetheme=light; path=/; Secure; SameSite=None;";
         // trans()
         document.documentElement.setAttribute('data-theme', 'light')
         document.getElementById("logo").src = "Resources/logo/logo.svg"
         document.getElementById("userimg").src = "Resources/feather/user.svg"
+        document.getElementById("notification").src = "Resources/feather/notification.svg"
+        
     }
 })
 

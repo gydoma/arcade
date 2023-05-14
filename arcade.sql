@@ -46,8 +46,8 @@ CREATE TABLE IF NOT EXISTS `games` (
 
 -- Dumping data for table arcade.games: ~10 rows (approximately)
 INSERT INTO `games` (`id`, `name`, `description`, `by`, `language`, `engine`, `updated`, `url`, `download`) VALUES
-	(1, 'Snake Game - v1', NULL, 'Orosz Eszter', 'cs', '', '2023-01-27', NULL, 1),
-	(2, 'Blackjack', NULL, 'Katona Roland', 'js', '', '2023-01-27', '../Games/Javascript/Blackjack/index.html', 0),
+	(1, 'Snake Game - v1', "A játék a Snake játékot próbálja megvalósítani. A játék célja, hogy a kígyót a falakon és a saját magán kívül ellenőrzött irányba mozgatva a lehető legtöbb gyümölcsöt megegye. A játékot a nyilak segítségével lehet irányítani. A játék véget ér, ha a kígyó a falba ütközik vagy a saját magába ütközik.", 'Orosz Eszter', 'cs', '', '2023-01-27', NULL, 1),
+	(2, 'Blackjack', "A játék célja, hogy a játékosnak 21 pontot kell elérnie. A játékosnak 2 lapja van, amelyeket a lapokat kattintva tudja látni. A lapokat kattintva a játékosnak lehetősége van új lapot kapni, vagy leállni", 'Katona Roland', 'js', '', '2023-01-27', '../Games/Javascript/Blackjack/index.html', 0),
 	(3, 'Python Quiz', NULL, 'Gyurkovics Dominik', 'py', '', '2023-01-30', NULL, 1),
 	(4, 'Tank Trouble', NULL, 'Molnár-Horgos Kristóf, Vígh Noel, Horváth Péter Ákos', 'cs', 'unity', '2023-01-27', NULL, 1),
 	(5, 'Catan', NULL, 'Dávid Benedek', 'py', '', '2023-02-01', NULL, 1),
@@ -55,7 +55,9 @@ INSERT INTO `games` (`id`, `name`, `description`, `by`, `language`, `engine`, `u
 	(7, 'Repülős Projektmunka', NULL, 'Bábolnai Bence', 'js', '', '2023-02-07', NULL, 0),
 	(8, 'Repülős Projektmunka', NULL, 'Suhajda Zsolt', 'cs', 'unity', '2023-02-07', NULL, 1),
 	(9, 'Flappy Bird', NULL, 'Bárczi Bence', 'cs', 'MonoGame', '2023-02-14', NULL, 1),
-	(10, 'Quoridor', NULL, 'Bárczi Bence', 'cs', 'MonoGame', '2023-02-14', NULL, 1);
+	(10, 'Quoridor', NULL, 'Bárczi Bence', 'cs', 'MonoGame', '2023-02-14', NULL, 1),
+	(11, 'Tic Tac Toe', "A játék célja, hogy a játékosok egymás ellen játszanak. A játékosoknak 3x3-as táblán kell elhelyezniük a saját jelüket. A játék akkor ér véget, ha valamelyik játékosnak sikerül 3 jelét egymás mellett elhelyeznie. A játékot a nyilak segítségével lehet irányítani. A játék véget ér, ha a kígyó a falba ütközik vagy a saját magába ütközik.", 'gydoma', 'js', '', '2023-02-14', NULL, 1),
+	(12, 'Space Mem', NULL, 'Kósa Márk', 'cpp', '', '2023-03-29', NULL, 1);
 
 -- Dumping structure for table arcade.ratings
 CREATE TABLE IF NOT EXISTS `ratings` (

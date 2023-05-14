@@ -10,18 +10,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="body-content">
-        <?php include 'navbar.php'?>
-        <?php include 'php/christmas.php'?>
-        <div class="games">
-            <?php include 'games.php'; ?>
+    <?php include 'navbar.php'?>
+    <?php include 'php/christmas.php'?>
+
+    <div class="card shadow big-card">
+        <div class="download-container">
+            <h1>Game Title</h1>
+            <p>Game Description</p>
+
+            <a class="btn-download" href="index/" download="example.txt">Download</a>
         </div>
-        <?php include 'filter.php'; ?>
-        <?php include 'search.php'; ?>
-        <?php include 'footer.php'; ?>
-        <div class="push"></div>
     </div>
-    <!-- <script src="javascript/games.js"></script> -->
+
+    <?php include 'footer.php'; ?>
+    
+    <script src="javascript/games.js"></script>
     <script src="javascript/darkmode.js" onload="darkmodecheck()"></script>
+
 </body>
 </html>

@@ -1,28 +1,32 @@
 {
     "testcard": {
-        "id": 0,
-        "name": "Longest test game name for the testing",
-        "description":"This title may have some detailed descriptions which can go here. But part of this text box is always secured.",
-        "by": "gydoma",
-        "rating": 4.2,
-        "language": "js",
-        "engine": "none",
-        "updated": "1970-01-01",
-        "url": "../Games/Javascript/Alma/index.html",
-        "download":false
+      "id": 0,
+      "name": "Longest test game name for the testing",
+      "description":"This title may have some detailed descriptions which can go here. But part of this text box is always secured.",
+      "by": "gydoma",
+      "rating": 4.2,
+      "language": "js",
+      "engine": "none",
+      "updated": "1970-01-01",
+      "url": "../Games/Javascript/Alma/index.html",
+      "download":false
     },
     "snakegame": {
       "id": 1,
       "name": "Snake Game - v1.",
+      "description":"A játék a Snake játékot próbálja megvalósítani. A játék célja, hogy a kígyót a falakon és a saját magán kívül ellenőrzött irányba mozgatva a lehető legtöbb gyümölcsöt megegye. A játékot a nyilak segítségével lehet irányítani. A játék véget ér, ha a kígyó a falba ütközik vagy a saját magába ütközik.",
       "by": "Orosz Eszter",
       "rating": 3.6,
       "language": "cs",
       "engine": "",
-      "updated": "2023-01-27"
+      "updated": "2023-01-27",
+      "url": "../Games/Javascript/SnakeGame/index.html",
+      "download":false
     },
     "Blackjack": {
       "id": 2,
       "name": "Blackjack",
+      "description":"A játék célja, hogy a játékosnak 21 pontot kell elérnie. A játékosnak 2 lapja van, amelyeket a lapokat kattintva tudja látni. A lapokat kattintva a játékosnak lehetősége van új lapot kapni, vagy leállni.",
       "by": "Katona Roland",
       "rating": 4.1,
       "language": "js",
@@ -38,7 +42,9 @@
       "rating": 1.2,
       "language": "py",
       "engine": "",
-      "updated": "2023-01-30"
+      "updated": "2023-01-30",
+      "url": "../Games/Python/quiz/quiz.zip",
+      "download":true
     },
     "TankTrouble": {
       "id": 4,
@@ -102,5 +108,25 @@
       "language": "cs",
       "engine": "MonoGame",
       "updated": "2023-02-14"
+    },
+    "TicTacToe": {
+      "id": 11,
+      "name": "Tic Tac Toe",
+      "description": "A játék célja, hogy a játékosok egymás ellen játszanak. A játékosoknak 3x3-as táblán kell elhelyezniük a saját jelüket. A játék akkor ér véget, ha valamelyik játékosnak sikerül 3 jelét egymás mellett elhelyeznie. A játékot a nyilak segítségével lehet irányítani. A játék véget ér, ha a kígyó a falba ütközik vagy a saját magába ütközik.",
+      "by": "gydoma",
+      "rating": 3.0,
+      "language": "js",
+      "engine": "",
+      "updated": "2023-02-14"
+    },
+    "SpaceMem": {
+      "id": 12,
+      "name": "Space Mem",
+      "description": "Egy arcade space shooter játék. A játékosnak egy hajót kell fel-le irányítania, és minden ellenséget lelőni, de az ellenség folyamatosan gyorsul. Gyűjts össze minél több pénzt és fejleszd a hajódat.",
+      "by": "Kósa Márk",
+      "rating": 4.2,
+      "language": "cpp",
+      "engine": "",
+      "updated": "2023-03-29"
     }
   }

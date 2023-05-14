@@ -1,3 +1,4 @@
+<div id="filter_bg">
 <div class="roundedcornes shadow filter" id="filtermenu">
 <form action="" method="get">
     <h2 class="filterh2">Filter menu</h2>
@@ -20,27 +21,18 @@
     </label>
     </div>  
     <label for='styledSelect1' class='dd-filter'>
-        <select id="styledSelect1" name='author'>
+        <select id="styledSelect1" name='options'>
             <option value=''>Creator Name</option>
-            <option value='gydoma'>gydoma</option>
-            <option value='KatRoland'>KatRoland</option>
-            <option value='Esztii'>Esztii</option>
-            <option value='Trixep11'>Trixep11</option>
-            <option value='CayŁ'>CayŁ</option>
-            <option value='Chip'>Chip</option>
-            <option value='Benedek'>Benedek</option>
-            <option value='Vajdani'>Vajdani</option>
-            <option value='Bencso'>Bencso</option>
-            <option value='rewerze'>rewerze</option>
-            <option value='Depymasut32'>Depymasut32</option>
-            <option value='Levfert'>Levfert</option>
-            <option value='keirahela'>keirahela</option>
+            <option value='1'>gydoma</option>
+            <option value='2'>lorem placeholer 2</option>
+            <option value='3'>ph 3</option>
+            <option value='4'>placeholder 4</option>
         </select>
     </label>
     <div id="ratingfilter">
         <div id="mrv">
             <h2 id="rating"></h2>
-            <div class="flex-filter"></div>
+            <div class="flex-filter"></div> 
             <img id="starimg">
         </div>
         <input type="range" min="10" max="50" value="1" class="min-star" id="min-star" name="min-rating">
@@ -48,4 +40,6 @@
     <input type="submit" id="searchbtn" value="Click To Search">
 </div>
 </form>
+</div>
+<!--<script src="javascript/minstar_range.js"></script>-->
 <script src="javascript/filter.js"></script>

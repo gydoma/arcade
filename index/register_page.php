@@ -22,6 +22,7 @@
 
     <div class="lrpanel">
         <h2>Sign Up</h2>
+        <!-- add to this paragraph: .lr-p-alert if the input has an error, and change the paragraph to the error name and description -->
         <p>You have chance to create new account if you really want to.</p>
         <form method="post" action="register.php">
         
@@ -47,7 +48,7 @@
         <p class="switch-lr">Already have account? <a class="switch-lr-link" href="login_page.php">Login</a></p>
     </div>
 
-    <script src="javascript/registervalideting.js"></script>
-
+    <script src="javascript/registervalidating.js"></script>
+    <script src="javascript/cookieagreement.js"></script>
 </body>
 </html>
