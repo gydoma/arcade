@@ -18,3 +18,90 @@
     user-select: none;
     box-sizing: border-box;
 }
+
+.callouts{
+    display: none;
+    position: absolute;
+    width: 300px;
+	height: 100px;
+    padding: 15px;
+	background-color: var(--primary-color);
+    border: 3px solid var(--secondary-color);
+	border-radius: 20px;
+    right: -20px;
+    z-index: 99999;
+}
+
+.callouts h1,.callouts p{
+    color: var(--secondary-color);
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.callouts p{
+    font-size: 0.9em;
+}
+
+.callouts hr{
+width: 95%;
+}
+
+.calloutbtns{
+    justify-content: space-between !important;
+    display: flex !important;
+}
+
+.callouts:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	right: 23px;
+	top: -42px;
+  border: 10px solid transparent;
+ border-bottom: 32px solid var(--secondary-color);
+//  border-bottom: 32px solid rgba(195,195,195,0.5);
+  z-index: 3;
+}
+.callouts:after {
+  content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	right: 25px;
+	top: -32px;
+  border: 8px solid transparent;
+  border-bottom: 25px solid var(--primary-color);
+  z-index: 5;
+}
+
+.callout-button {
+    font-weight:700;
+    border: 2px solid var(--secondary-color);
+    border-bottom: 4px solid var(--secondary-color);
+    border-radius: 10px;
+    height:38px;
+    width: 150px;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    box-shadow: 0px 2px 0px 0px var(--secondary-color);
+}
+
+
+#callout-signout{
+    border: 2px solid var(--red);
+    border-bottom: 4px solid var(--red);
+    color: var(--red);
+    width: 135px;
+}
+
+#callout_bg{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+  }

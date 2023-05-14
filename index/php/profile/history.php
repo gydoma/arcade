@@ -1,6 +1,9 @@
 <div class="content" id="history">
-    <h1>History</h1>
+    <div class="content_header">
+    <h1 class="tab_title">History</h1>
     <hr>
+    </div>
+
     <ul>
         <li>
             <div class="historyelement">

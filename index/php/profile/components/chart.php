@@ -1,4 +1,4 @@
-<div style="height: auto; width:35vw">
+<div style="height: auto; width:100%">
   <canvas id="myChart"></canvas>
 </div>
 

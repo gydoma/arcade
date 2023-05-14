@@ -1,3 +1,4 @@
+<div id="filter_bg">
 <div class="roundedcornes shadow filter" id="filtermenu">
 <form action="" method="get">
     <h2 class="filterh2">Filter menu</h2>
@@ -39,5 +40,6 @@
     <input type="submit" id="searchbtn" value="Click To Search">
 </div>
 </form>
+</div>
 <!--<script src="javascript/minstar_range.js"></script>-->
 <script src="javascript/filter.js"></script>

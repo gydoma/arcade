@@ -17,8 +17,8 @@
         <div class="profile-header">
             <h1>Chromium Arcade Settings</h1>
         </div>
+        <div class="tabs">
         <div class="tab-container">
-            <div class="tabs">
                 <div class="tab" id="generalbtn">
                     <h3>General</h3>
                 </div>
@@ -34,12 +34,12 @@
                 <div class="tab" id="chgpwdbtn">
                     <h3>Change Password</h3>
             </div>
-                <div class="tab" id="dangerzonebtn">
+                <!-- <div class="tab" id="dangerzonebtn">
                     <h3>Danger Zone</h3>
             </div>
                 <div class="tab" id="helpbtn">
                     <h3>Help</h3>
-            </div>
+            </div> -->
                 <div class="tab signout" id="signoutbtn">
                     <h3>Sign Out</h3>
             </div>
@@ -49,6 +49,10 @@
             <?php 
                 include 'php/profile/general.php';
                 include 'php/profile/history.php';
+                include 'php/profile/chguser.php';
+                include 'php/profile/chgemail.php';
+                include 'php/profile/chgpwd.php';
+                include 'php/profile/signout.php';
             ?>
         </div>
     </div>
