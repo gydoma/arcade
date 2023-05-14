@@ -48,7 +48,7 @@ INSERT INTO `games` (`id`, `name`, `by`, `language`, `engine`, `updated`) VALUES
 	(3, 'Python Quiz', 'Gyurkovics Dominik', 'py', '', '2023-01-30'),
 	(4, 'Tank Trouble', 'Molnár-Horgos Kristóf, Vígh Noel, Horváth Péter Ákos', 'cs', 'unity', '2023-01-27'),
 	(5, 'Catan', 'Dávid Benedek', 'py', '', '2023-02-01'),
-	(6, 'Keeper Of The Hates - v1.6', 'Vajda Dániel', 'cs', 'unity', '2023-02-01'),
+	(6, 'Keeper Of The Gates - v1.6', 'Vajda Dániel', 'cs', 'unity', '2023-02-01'),
 	(7, 'Repülős Projektmunka', 'Bábolnai Bence', 'js', '', '2023-02-07'),
 	(8, 'Repülős Projektmunka', 'Suhajda Zsolt', 'cs', 'unity', '2023-02-07'),
 	(9, 'Flappy Bird', 'Bárczi Bence', 'cs', 'MonoGame', '2023-02-14'),
