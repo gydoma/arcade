@@ -86,6 +86,10 @@ function start() {
 
 function end() {
     cancelAnimationFrame(req);
+    removeEventListener("keydown");
+    started=false;
+    player.x = 0;
+    player.y = 300;
     enemys.splice(0);
     clouds.splice(0);
     ballons.splice(0);
