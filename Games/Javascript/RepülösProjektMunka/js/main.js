@@ -1,11 +1,11 @@
-import {player} from "./player.js";
-import {oilg , oilnumber} from "./oils.js";
-import {cloudg} from "./clouds.js";
-import {balong} from "./baloons.js";
-import {generate} from "./bird.js";
-import {bullet,supplybullet} from "./bullet.js";
-import {checkCookie,setCookie} from "./cookies.js";
-import {playmenu} from './menu.js';
+import { player } from "./player.js";
+import { oilg, oilnumber } from "./oils.js";
+import { cloudg } from "./clouds.js";
+import { balong } from "./baloons.js";
+import { generate } from "./bird.js";
+import { bullet, supplybullet } from "./bullet.js";
+import { checkCookie, setCookie } from "./cookies.js";
+import { playmenu } from './menu.js';
 import { airdropg } from "./airdrop.js";
 
 var canvas = document.getElementById('canvas');
@@ -17,7 +17,7 @@ var ballons = [];
 var bullets = [];
 var oils = [];
 var airdrops = [];
-var score=0;
+var score = 0;
 var req = null;
 ctx.strokeStyle = "transparent";
 var birdrandom = Math.floor(Math.random() * (2000 - 2500)) + 2000;
@@ -28,7 +28,7 @@ var oilrandom = Math.floor(Math.random() * (1000 - 1300)) + 1000;
 checkCookie();
 playmenu();
 
-function clear(){
+function clear() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
@@ -39,7 +39,7 @@ function text() {
     ctx.fillText("Lőszer :" + bullet + " db", 480, 30);
     ctx.fillText("Üzemanyag :" + Math.round(oilnumber) + " liter", 150, 30);
     score += 0.5;
-    if(score%3000==0){
+    if (score % 3000 == 0) {
         airdropg();
     }
 }
@@ -58,7 +58,7 @@ function start() {
     hitbox();
     text();
     enemys.forEach(Birds => {
-        Birds.slide();  
+        Birds.slide();
     })
     clouds.forEach(Clouds => {
         Clouds.slide();
@@ -73,9 +73,9 @@ function start() {
         Oils.draw();
     })
     airdrops.forEach(Airdrop => {
-        Airdrop.slide();
-    })
-    /*Benzin*/
+            Airdrop.slide();
+        })
+        /*Benzin*/
     if (oilnumber < 0) {
         cancelAnimationFrame(req);
         end();
@@ -86,6 +86,10 @@ function start() {
 
 function end() {
     cancelAnimationFrame(req);
+    removeEventListener("keydown");
+    started=false;
+    player.x = 0;
+    player.y = 300;
     enemys.splice(0);
     clouds.splice(0);
     ballons.splice(0);
@@ -97,25 +101,21 @@ function end() {
         setCookie("score", score, 28);
     }
     checkCookie();
-
     var path = new Path2D()
     ctx.fillStyle = "darkblue";
-    function startbtn() {
-        ctx.fillStyle = "white";
-        ctx.font = "60px serif";
-        ctx.fillText("Restart", 195, 365);
-        ctx.fillStyle = "black";
-    }
-    
-    ctx.font = "30px serif";
     path.rect(150, 300, 250, 100)
     path.closePath()
     ctx.fill(path)
     ctx.lineWidth = 1
     ctx.stroke(path)
-    ctx.fillText("Pontszám :" + score + " m", 150, 225);
-    ctx.fillText("Lőszer :" + bullet + " db", 150, 255);
-    ctx.fillText("Üzemanyag :" + Math.round(oilnumber) + " liter", 150, 285);
+
+
+    function startbtn() {
+        ctx.fillStyle = "white";
+        ctx.font = "50px serif";
+        ctx.fillText("Restart", 195, 365);
+        ctx.fillStyle = "black";
+    }
 
     function coord(canvas, event) {
         var rect = canvas.getBoundingClientRect()
@@ -123,29 +123,45 @@ function end() {
         var x = event.clientX - rect.left
         return { x: x, y: y }
     }
-        document.addEventListener("click", function(e) {
-            var XY = coord(canvas, e)
-            if (ctx.isPointInPath(path, XY.x, XY.y) && started == false) {
-                start()
-                generate();
-                cloudg();
-                balong();
-                oilg();
-                
-            }
-        })
-        startbtn();
-        score = 0;
+
+    document.addEventListener("click", function(e) {
+        var XY = coord(canvas, e)
+        if (ctx.isPointInPath(path, XY.x, XY.y) && started == false) {
+            start()
+            generate();
+            cloudg();
+            balong();
+            oilg();
+        }
+    })
+    startbtn();
 }
 
 /*export*/
-export{
-    canvas,ctx,req,end,clear, generate,start,
-    oils,oilnumber,oilg,oilrandom,
-    enemys,birdrandom,
-    bullets,bullet,
-    player,score,
-    cloudg,clouds,cloudrandom,
-    ballons,balong,baloonrandom,
-    started,airdrops
+export {
+    canvas,
+    ctx,
+    req,
+    end,
+    clear,
+    generate,
+    start,
+    oils,
+    oilnumber,
+    oilg,
+    oilrandom,
+    enemys,
+    birdrandom,
+    bullets,
+    bullet,
+    player,
+    score,
+    cloudg,
+    clouds,
+    cloudrandom,
+    ballons,
+    balong,
+    baloonrandom,
+    started,
+    airdrops
 };

@@ -11,8 +11,9 @@ export class Birds {
         this.Sp = speed;
     }
     draw() {
-        bird.src = "./src/bird.png";
+        bird.src = "./src/bird.gif";
         ctx.drawImage(bird, this.x, this.y, this.width, this.height);
+
     }
     slide() {
         this.draw();
@@ -24,7 +25,7 @@ export class Birds {
 }
 
 export function generate() {
-    enemys.push(new Birds(35, 30, 0.5))
+    enemys.push(new Birds(65, 50, 0.5))
     setTimeout(generate, birdrandom)
 }
 

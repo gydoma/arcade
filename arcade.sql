@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 4.9.10
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 15, 2023 at 01:45 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.1.12
+-- Host: localhost
+-- Generation Time: May 24, 2023 at 12:24 AM
+-- Server version: 10.5.18-MariaDB-0+deb11u1
+-- PHP Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `arcade`
+-- Database: `c1752_arcade`
 --
 
 -- --------------------------------------------------------
@@ -41,7 +42,12 @@ CREATE TABLE `active_sessions` (
 INSERT INTO `active_sessions` (`Id`, `UId`, `Time`, `Date`) VALUES
 (1, 2, 14, '2023-05-13'),
 (2, 2, 15, '2023-05-14'),
-(3, 2, 119, '2023-05-15');
+(3, 2, 122, '2023-05-15'),
+(111, 2, 86, '2023-05-16'),
+(112, 2, 29, '2023-05-17'),
+(113, 2, 1, '2023-05-17'),
+(114, 2, 94, '2023-05-18'),
+(115, 2, 14, '2023-05-24');
 
 -- --------------------------------------------------------
 
@@ -64,7 +70,9 @@ INSERT INTO `authsessions` (`AuthId`, `AuthKey`, `UId`, `expire_date`) VALUES
 (11, 'RsbOdYJp1WPewqO0RbX/NbBrLYAc8bVGIjtrhwbDZLE=', 2, '2023-05-21 21:32:19'),
 (12, 'RrxBDcdTS0MsrMD8ZldmDkFw7d5ZICTi3ALiUlaUZEA=', 2, '2023-05-21 21:53:09'),
 (13, 'ThqjhvxkHhYHxvLT0SDzLi+/XbNfuYcCFPizocAwO7s=', 3, '2023-05-21 22:57:59'),
-(14, '5zujPSssF9r2HmYrHlgf9JB4a6v0FtwMQuN27OBgxTU=', 3, '2023-05-22 00:41:36');
+(14, '5zujPSssF9r2HmYrHlgf9JB4a6v0FtwMQuN27OBgxTU=', 3, '2023-05-22 00:41:36'),
+(15, '5obgQeR93KRb3yBbSA31U3FP1eeeWFktV6s8MfPXEOo=', 2, '2023-05-22 20:04:01'),
+(16, 'l8E06i3Tzzl6LW9rCQMqhsfTCaGLA2vYsaJA3POl/Ls=', 2, '2023-05-30 23:42:26');
 
 -- --------------------------------------------------------
 
@@ -94,7 +102,7 @@ INSERT INTO `games` (`id`, `name`, `description`, `by`, `language`, `engine`, `u
 (3, 'Python Quiz', NULL, 'Gyurkovics Dominik', 'py', '', '2023-01-30', NULL, 1),
 (4, 'Tank Trouble', NULL, 'Molnár-Horgos Kristóf, Vígh Noel, Horváth Péter Ákos', 'cs', 'unity', '2023-01-27', NULL, 1),
 (5, 'Catan', NULL, 'Dávid Benedek', 'py', '', '2023-02-01', NULL, 1),
-(6, 'Keeper Of The Hates - v1.6', NULL, 'Vajda Dániel', 'cs', 'unity', '2023-02-01', NULL, 1),
+(6, 'Keeper Of The Gates - v1.6', NULL, 'Vajda Dániel', 'cs', 'unity', '2023-02-01', NULL, 1),
 (7, 'Repülős Projektmunka', NULL, 'Bábolnai Bence', 'js', '', '2023-02-07', NULL, 0),
 (8, 'Repülős Projektmunka', NULL, 'Suhajda Zsolt', 'cs', 'unity', '2023-02-07', NULL, 1),
 (9, 'Flappy Bird', NULL, 'Bárczi Bence', 'cs', 'MonoGame', '2023-02-14', NULL, 1),
@@ -111,17 +119,20 @@ INSERT INTO `games` (`id`, `name`, `description`, `by`, `language`, `engine`, `u
 CREATE TABLE `ratings` (
   `id` int(11) NOT NULL,
   `rating` int(11) DEFAULT NULL,
-  `gameid` int(11) DEFAULT NULL
+  `gameid` int(11) DEFAULT NULL,
+  `UId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `ratings`
 --
 
-INSERT INTO `ratings` (`id`, `rating`, `gameid`) VALUES
-(1, 5, 1),
-(2, 3, 1),
-(3, 1, 5);
+INSERT INTO `ratings` (`id`, `rating`, `gameid`, `UId`) VALUES
+(1, 5, 1, 0),
+(2, 3, 1, 0),
+(3, 1, 5, 0),
+(5, 5, 1, 2),
+(6, 5, 5, 2);
 
 -- --------------------------------------------------------
 
@@ -187,13 +198,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `active_sessions`
 --
 ALTER TABLE `active_sessions`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
 
 --
 -- AUTO_INCREMENT for table `authsessions`
 --
 ALTER TABLE `authsessions`
-  MODIFY `AuthId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `AuthId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `games`
@@ -205,13 +216,13 @@ ALTER TABLE `games`
 -- AUTO_INCREMENT for table `ratings`
 --
 ALTER TABLE `ratings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `UId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `UId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

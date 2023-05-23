@@ -1,4 +1,13 @@
 
+
+<?php 
+if(!isset($_COOKIE["AuthKey"])) {
+    header("location: login_page.php");
+    die();
+  }
+?>
+
+
 <?php 
 include "db.php";
 if(isset($_COOKIE["AuthKey"])) {
@@ -44,7 +53,6 @@ $minutes = $totaltime-($totalhours*60);
   }
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en" data-theme="light">

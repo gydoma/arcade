@@ -70,6 +70,7 @@ html[data-theme="light"]{
     --primary-color: #{$primary-color};
     --secondary-color: #{$secondary-color};
     --outline-color: #{$outline-color};
+    --secondary-outline: #{$secondary-outline};
     --accent-color: #{$accent-color};
     --primary-text: #{$primary-text};
     --secondary-text: #{$secondary-text};
@@ -84,6 +85,7 @@ html[data-theme="dark"]{
     --primary-color: #{$dark_primary-color};
     --secondary-color: #{$dark_secondary-color};
     --outline-color: #{$dark_outline-color};
+    --secondary-outline: #{$dark_secondary-outline};
     --accent-color: #{$dark_accent-color};
     --primary-text: #{$dark_primary-text};
     --secondary-text: #{$dark_secondary-text};
@@ -94,6 +96,7 @@ html[data-theme="dark"]{
     --blue100: #{$dark_blue100};
     #cat{filter: invert(30%);};
     #filterimg{filter: invert(100%);}
+    .menubutton{filter: invert(100%);}
 }
 
 // Debug-all mode

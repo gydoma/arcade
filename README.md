@@ -143,7 +143,7 @@ A projekt weboldalának a kinézeti tervét, PHP és SCSS részét készítette 
 | quiz | Python | - | 2023/01/30 | gydoma |
 | [TankTrouble](https://github.com/Trixep/TankTrouble-Multiplayer)| C# | Unity | 2023/01/27 | [készítette](https://github.com/Trixep/TankTrouble-Multiplayer#a-projekt-tagjai) |
 | Catan | Python | PyGame | 2023/02/01 | Benedek |
-| Keeper Of The Hates 1.6 | C# | Unity | 2023/02/01 | Vajda |
+| Keeper Of The Gates 1.6 | C# | Unity | 2023/02/01 | Vajda |
 | RepülösProjektMunka | Javascript | - | 2023/02/07 | Bencso |
 | [Pong](https://github.com/rewerze/Pong) | C# | Unity | 2023/02/07 | [rewerze](https://github.com/rewerze/) |
 | FlappyBird | C# | MonoGame | 2023/02/14 | Bárczi Bence |
