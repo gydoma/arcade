@@ -5,6 +5,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
 <script>
+  // console.log("<?php echo $dates; ?>")
 const ctx = document.getElementById('myChart').getContext('2d');
 
 const gradient = ctx.createLinearGradient(0, 0, 0, 400);
@@ -14,10 +15,10 @@ gradient.addColorStop(1, 'rgba(255, 255, 255, 1)');
 new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+    labels: <?php echo $dates; ?>,
     datasets: [{
       label: "",
-      data: [0, 0, 110, 133, 51, 69, 10],
+      data: <?php echo $datas; ?>,
       borderWidth: 3,
       borderColor: 'rgba(0, 0, 0, 1)',
       backgroundColor: gradient,

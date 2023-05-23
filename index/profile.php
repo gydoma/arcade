@@ -1,7 +1,57 @@
+
+
 <?php 
 if(!isset($_COOKIE["AuthKey"])) {
     header("location: login_page.php");
+    die();
   }
+?>
+
+
+<?php 
+include "db.php";
+if(isset($_COOKIE["AuthKey"])) {
+    $uid;
+    $authkey = $_COOKIE["AuthKey"];
+    $query    = "SELECT * FROM users INNER JOIN authsessions on users.UId = authsessions.UId WHERE AuthKey like \"$authkey\"";
+$result = mysqli_query($con, $query);
+$rows = mysqli_num_rows($result);
+if(mysqli_num_rows($result) > 0) {
+    while($user=mysqli_fetch_array($result)){
+        $username = $user['Username'];
+        $email = $user['Email'];
+        $uid = $user['UId'];
+    }
+}
+
+$firstdata = true;
+$dates = "";
+$datas = "";
+$totaltime = 0;
+$query    = "SELECT * FROM active_sessions WHERE UId = $uid";
+$result = mysqli_query($con, $query);
+$rows = mysqli_num_rows($result);
+if(mysqli_num_rows($result) > 0) {
+    while($sess=mysqli_fetch_array($result)){
+        if($firstdata == true){
+            $dates .= "["."\"".$sess['Date']."\"";
+            $datas .= "["."\"".$sess['Time']."\"";
+            $firstdata = false;
+        } else{
+            $dates .= ","."\"".$sess['Date']."\"";
+            $datas .= ","."\"".$sess['Time']."\"";
+        }
+        $totaltime += $sess['Time'];
+    }
+}
+$dates .= "]";
+$datas .= "]";
+
+$totalhours = floor($totaltime / 60);
+$minutes = $totaltime-($totalhours*60);
+
+  }
+
 ?>
 
 <!DOCTYPE html>

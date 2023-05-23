@@ -2,6 +2,21 @@
     if (isset($_GET['status'])) {
         $status = $_GET['status'];
     }
+
+    include "db.php";
+
+    if(isset($_COOKIE["AuthKey"])) {
+        $authkey = $_COOKIE["AuthKey"];
+        $query    = "SELECT * FROM `authsessions` WHERE AuthKey='$authkey'";
+$result = mysqli_query($con, $query);
+$rows = mysqli_num_rows($result);
+if ($rows == 1) {
+    header("Location: ../index.php");
+die();
+}
+      }
+
+
 ?>
 
 <!DOCTYPE html>

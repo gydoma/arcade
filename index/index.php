@@ -19,13 +19,15 @@ if(!isset($_COOKIE["AuthKey"])) {
     <div class="body-content">
         <?php include 'navbar.php'?>
         <?php include 'php/christmas.php'?>
-        <div class="games"></div>
+        <div class="games">
+            <?php include 'games.php'; ?>
+        </div>
         <?php include 'filter.php'; ?>
         <?php include 'search.php'; ?>
         <?php include 'footer.php'; ?>
         <div class="push"></div>
     </div>
-    <script src="javascript/games.js"></script>
+    <!-- <script src="javascript/games.js"></script> -->
     <script src="javascript/darkmode.js" onload="darkmodecheck()"></script>
 </body>
 </html>

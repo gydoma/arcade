@@ -5,8 +5,8 @@
 </div>
 
 <div id="personal">
-        <p>Username: gydoma</p>
-        <p>Email: g***@c***.com</p>
+        <p>Username: <?php echo $username?></p>
+        <p>Email: <?php echo $email?></p>
         <p>Password: ***</p>
 </div>
 
@@ -14,7 +14,7 @@
 
 <div id="summary">
         <p>Your time on our website (on the chart you can see your time in minutes):</p>
-        <p>11h 28m</p>
+        <p><?php echo $totalhours?>h <?php echo $minutes?>m</p>
 
 <div id="chart">
         <?php 
