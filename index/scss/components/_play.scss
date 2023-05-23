@@ -1,17 +1,131 @@
-.play-container {
+.game-container {
     display: flex;
-    justify-content: center;
     margin: 20px 0;
     flex-direction: column;
-    align-items: center;
-    height: 95vh !important;
-    width: 50%  ;
+    height: 100vh !important;
+    width: 75%  ;
     margin: auto;
     background-color: #fff;
     margin-bottom: 100px;
-}
 
-.play-header{
+    .game-content{
+
+        width: 100%;
+        height: 100%;
+
+        h1{
+            margin-left: 10%;
+        }
+
+        .play-container{
+            width: 80%;
+            height: 60%;
+            background-color: aqua;
+            margin: auto auto 25px auto ;
+        }
+    
+        .game-info{
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            margin: auto auto auto auto ;
+            justify-content: space-between !important;
+            div{
+                width: 60%;
+                margin-left: 10%;
+                hr{
+                    float: left;
+                    width: 100%;
+                    margin-bottom: 5%;
+                }
+            }
+                .game-details{
+
+                    margin-left: 0px;
+    
+                    p{
+                        margin-left: 5%;
+                    }
+                }
+
+                .game-rate{
+                    display: flex;
+                    flex-direction: column;
+
+                    .rate-title{
+                        margin-bottom: 0px;
+                    }
+
+                    .new_rate{
+                        width: 100%;
+
+                        display: flex;
+                        flex-direction: row;
+
+                        margin-left: 15px;
+
+                        $star-size: 30px;
+                        $color: black;
+                        $colork: "%23FFBD12";
+                        
+                        @mixin set-star($border: $color, $fill: transparent) {
+                          background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='#{$fill}' stroke='#{$border}' stroke-width='38' d='M259.216 29.942L330.27 173.92l158.89 23.087L374.185 309.08l27.145 158.23-142.114-74.698-142.112 74.698 27.146-158.23L29.274 197.007l158.89-23.088z' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                        }
+                        
+                        .stars{
+                            width: auto;
+                            margin-left: 5px;
+                        }
+
+                        .stars input {
+                          position: absolute;
+                          clip: rect(0,0,0,0);
+                        }
+                        
+                        .stars label {
+                          box-sizing: border-box;
+                          display: inline-block;
+                          margin-right: 6px;
+                          height: $star-size;
+                          width: $star-size;
+                          @include set-star;
+                          font-size: 0;
+                          cursor: pointer;
+                        }
+                        
+                        .stars input:nth-child(1):checked ~ label:nth-of-type(-n + 1),
+                        .stars input:nth-child(2):checked ~ label:nth-of-type(-n + 2),
+                        .stars input:nth-child(3):checked ~ label:nth-of-type(-n + 3),
+                        .stars input:nth-child(4):checked ~ label:nth-of-type(-n + 4),
+                        .stars input:nth-child(5):checked ~ label:nth-of-type(-n + 5) {
+                          @include set-star($color, $colork);
+                        }
+                        
+                        .submitbtn{
+                            width: 110px;
+                            height: 35px;
+                            margin: 10px 10px 0px 10px;
+                            background-color: var(--accent-color) ;
+                            color: var(--primary-text);
+                            font-size: 21px;
+                            border-radius: 15px;
+                            display: flex;
+                            justify-content: center;
+                            text-decoration: none;
+                            text-align: center;
+                        }
+
+                    }
+                }
+
+
+            }
+        }
+    }
+
+
+
+.game-header{
     .nav{
         position: relative;
     }

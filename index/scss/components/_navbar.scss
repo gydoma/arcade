@@ -105,3 +105,78 @@ width: 95%;
     height: 100vh;
     background-color: transparent;
   }
+
+
+
+  #mobilemenu{
+    display: none;
+    position: absolute;
+    top: 110px;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background-color: var(--primary-color);
+    border-top: var(--secondary-color) 6px solid;
+    border-bottom: var(--secondary-color) 6px solid;
+    border-radius: 0px 0px 25px 25px ;
+
+    #userdetails h1, #userdetails p{
+        color: var(--secondary-color);
+        margin-bottom: 5px;
+        margin-left: 20px;
+      }
+    
+    #userdetails p{
+        margin-top: 0px;
+    }
+
+    hr{
+        margin-top: 5%;
+        width: 75%;
+    }
+
+    .menubtns{
+        justify-content: space-between !important;
+        display: flex !important;
+    }
+    
+    
+    .menu-button {
+        font-weight:700;
+        border: 2px solid var(--secondary-color);
+        border-bottom: 4px solid var(--secondary-color);
+        border-radius: 10px;
+        height:38px;
+        width: 50%;
+        color: var(--secondary-color);
+        background-color: var(--primary-color);
+        box-shadow: 0px 2px 0px 0px var(--secondary-color);
+    }
+    
+    
+    #menu-signout{
+        border: 2px solid var(--red);
+        border-bottom: 4px solid var(--red);
+        color: var(--red);
+        width: 45%;
+    }
+
+    @media only screen and (max-width: 740px) {
+        .button{
+          display: block;
+          margin-right: auto;
+          margin-top: 25px;
+        }
+      }
+      
+
+}
+
+@media only screen and (max-width: 740px) { 
+    #menubutton{
+        display: block;
+    }
+}
+
+
+  

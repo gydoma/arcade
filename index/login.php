@@ -24,6 +24,6 @@
             setcookie("AuthKey", $authkeyhash, time() + (86400 * 7), "/"); 
             header("location: index.php");
         } else {
-            echo "Hibás Felhaszáló név vagy jelszó";
+            header("location: login_page.php?status=invalidcred");
         }
     }

@@ -1,3 +1,9 @@
+<?php 
+if(!isset($_COOKIE["AuthKey"])) {
+    header("location: login_page.php");
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
