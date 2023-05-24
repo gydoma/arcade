@@ -37,3 +37,10 @@ callout_bg.onclick = function(event) {
         menuvisible = false;
     }
 })
+
+window.addEventListener("resize", () => {
+    if(window.innerWidth > 768){
+        menu_m.style.display = "none"
+        menuvisible = false;
+    }
+})  

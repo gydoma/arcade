@@ -6,7 +6,7 @@
         <p>if you want to sign out, press "Sign Out" otherwise click "Cancel"</p>
         <div id="modal_buttons">
             <button class="roundedcorners">Cancel</button>
-            <button class="roundedcorners" id="modal_signoutbtn">Sign Out</button>
+            <button class="roundedcorners" id="modal_signoutbtn" onclick="window.location.href = 'signout.php'">Sign Out</button>
         </div>
     </div>
     </div>

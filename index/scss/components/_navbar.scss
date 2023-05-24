@@ -178,5 +178,11 @@ width: 95%;
     }
 }
 
+@media only screen and (min-width: 740px) { 
+    #mobilmenu{
+        display: none;
+    }
+}
+
 
   
