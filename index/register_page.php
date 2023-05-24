@@ -48,7 +48,7 @@
         <p class="switch-lr">Already have account? <a class="switch-lr-link" href="login_page.php">Login</a></p>
     </div>
 
-    <script src="javascript/registervalideting.js"></script>
-
+    <script src="javascript/registervalidating.js"></script>
+    <script src="javascript/cookieagreement.js"></script>
 </body>
 </html>

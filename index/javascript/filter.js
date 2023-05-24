@@ -2,6 +2,7 @@ const minstar = document.getElementById("min-star");
 const starimg = document.getElementById("starimg");
 const rating = document.getElementById("rating")
 
+
 minstar.addEventListener("mousemove", starcheck);
 minstar.addEventListener("touchmove", starcheck);
 

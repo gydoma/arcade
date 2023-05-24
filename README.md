@@ -1,5 +1,7 @@
 # Chromium Arcade
 
+![chromium_arcade](https://user-images.githubusercontent.com/65687471/236873814-7ee2c80d-f452-4995-8cda-106564ecd867.jpeg)
+
 <div align="center">
 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
@@ -12,7 +14,8 @@
 [![forthebadge](https://forthebadge.com/images/badges/gluten-free.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-grammas-recipe.svg)](https://forthebadge.com)
 
-![progress](https://progress-bar.dev/30/?scale=100&title=progress&width=220&color=333&suffix=/100)
+![progress](https://progress-bar.dev/60/?scale=100&title=progress&width=220&color=333&suffix=/100)
+
 ![codeql workflow](https://github.com/gydoma/arcade/actions/workflows/codeql.yml/badge.svg)
 ![last commit](https://img.shields.io/github/last-commit/gydoma/arcade)
 ![Contributors](https://img.shields.io/github/contributors-anon/gydoma/arcade)
@@ -81,6 +84,22 @@ A játékodnak legyen egy saját mappája, amiben a kódja és a bemutatója van
 
 A weboldal háttere svg-ben készült, 2 monokróm 	`#FFF4CC`,	`#F9E9BF` színnel. A kártyák háttere `#FFFFFF`, körvonaluk `#474A57` (sötét módban: `#b8b5a8`) és `#000000`. A nagyobb kontrasztot adó fő hangsúlyú a `#FFBD12`, sötét módban ez a `#F95A2C`. Világos módban a szövegek: 1. rangú (primary) -  `#000000`; 2. rangú (secondary) - `#18191F`; 3. rangú (tertiary) - `#474A57`. Sötét hátteren ebben a sorrendben: `#FFFFFF`; `#D1D1D1`; `#cccccc`. 
 
+### Google Bard Szerint
+A gydoma/arcade GitHub repo egy webalapú arcade játékplatform kódját tartalmazza. A platform lehetővé teszi a felhasználók számára, hogy különféle játékokkal játszanak, többek között Snake, Pong, Breakout és Space Invaders játékokkal. A kód JavaScriptben íródott, és a HTML5 canvas elemet használja a játékok megjelenítéséhez. A platform tartalmaz egy felhasználói regisztrációs és bejelentkezési rendszert, valamint egy ranglistát a játékosok eredményeinek nyomon követésére.
+
+A kód jól szervezett és könnyen olvasható. A megjegyzések világosak és informatívak, a kód pedig jól dokumentált. A projekt számos kódolási konvenciót használ, ami megkönnyíti a követést és a megértést. A kód is jól tesztelt, egy átfogó tesztcsomaggal, amely biztosítja, hogy a játékok az elvárásoknak megfelelően működnek.
+
+Összességében a gydoma/arcade GitHub repo egy jól megírt és karbantartott projekt. A kód tiszta, szervezett és jól dokumentált. A projekt jól tesztelt is, ami biztosítja, hogy a játékok az elvárásoknak megfelelően működnek. Ajánlom ezt a projektet mindenkinek, aki szeretne többet tanulni a webfejlesztésről vagy a játékfejlesztésről.
+
+Íme a kód néhány legfontosabb jellemzője:
+
+* A kód JavaScriptben íródott, és a HTML5 canvas elemet használja a játékok megjelenítéséhez.
+* A platform tartalmaz egy felhasználói regisztrációs és bejelentkezési rendszert, valamint egy ranglistát a játékosok eredményeinek nyomon követésére.
+* A kód jól szervezett és könnyen olvasható.
+* A megjegyzések világosak és informatívak, a kód pedig jól dokumentált.
+* A projekt különböző kódolási konvenciókat használ, ami megkönnyíti a követést és a megértést.
+* A kód jól tesztelt, átfogó tesztcsomaggal, amely biztosítja, hogy a játékok az elvárásoknak megfelelően működnek.
+
 ## Features
 - [ ] Játékok
 - [x] Játék kategóriák
@@ -124,31 +143,12 @@ A projekt weboldalának a kinézeti tervét, PHP és SCSS részét készítette 
 | quiz | Python | - | 2023/01/30 | gydoma |
 | [TankTrouble](https://github.com/Trixep/TankTrouble-Multiplayer)| C# | Unity | 2023/01/27 | [készítette](https://github.com/Trixep/TankTrouble-Multiplayer#a-projekt-tagjai) |
 | Catan | Python | PyGame | 2023/02/01 | Benedek |
-| Keeper Of The Hates 1.6 | C# | Unity | 2023/02/01 | Vajda |
+| Keeper Of The Gates 1.6 | C# | Unity | 2023/02/01 | Vajda |
 | RepülösProjektMunka | Javascript | - | 2023/02/07 | Bencso |
 | [Pong](https://github.com/rewerze/Pong) | C# | Unity | 2023/02/07 | [rewerze](https://github.com/rewerze/) |
 | FlappyBird | C# | MonoGame | 2023/02/14 | Bárczi Bence |
 | Quoridor | C# | MonoGame | 2023/02/14 | Bárczi Bence |
 | TextRPG | C# | - | 2023/02/28 | Bán Gergő |
 | Space Mem | C++ | - | 2023/03/01 | Kósa Márk |
-
-### Játék kategóriák
-
-| Kategória | Játékok |
-| ------ | ------ |
-| Puzzle |  |
-| Arcade |  |
-| Logic |  |
-| Racing |  |
-| Sports |  |
-| Strategy |  |
-| Shooter |  |
-| Fighting |  |
-| Platformer |  |
-| Adventure |  |
-| RPG |  |
-| Board |  |
-| Other |  |
-
 
 > __Note__ **Projekt várható befejezésének időpontja: 2023 Közepe**

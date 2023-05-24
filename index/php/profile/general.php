@@ -1,15 +1,20 @@
 <div class="content" id="general">
-<h1>General</h1>
+<div class="content_header">
+<h1 class="tab_title">General</h1>
 <hr>
+</div>
+
 <div id="personal">
-        <p>Username: gydoma</p>
-        <p>Email: g***@c***.com</p>
+        <p>Username: <?php echo $username?></p>
+        <p>Email: <?php echo $email?></p>
         <p>Password: ***</p>
 </div>
 
+<hr class="content_break">
+
 <div id="summary">
-        <p>Your time on our website:</p>
-        <p>11h 28m</p>
+        <p>Your time on our website (on the chart you can see your time in minutes):</p>
+        <p><?php echo $totalhours?>h <?php echo $minutes?>m</p>
 
 <div id="chart">
         <?php 
@@ -22,7 +27,6 @@
 
 
 </div>
-
 
 <hr>
 

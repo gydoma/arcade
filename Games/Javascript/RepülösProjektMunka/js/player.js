@@ -37,7 +37,7 @@ function skinchange() {
 export var player = new Plr(0, 300);
 
 export function movement(){
-    addEventListener("keydown", e => {
+    document.addEventListener("keydown", e => {
     switch (e.code) {
         case ('ArrowDown'):
             player.y += 30;

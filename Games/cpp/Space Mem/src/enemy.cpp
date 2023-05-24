@@ -117,6 +117,7 @@ void EndGame()
     lives = 3;
     btnState = 0; 
     btnAction = false; 
+    EndMenu = true;
     ShowCursor();
 }
 

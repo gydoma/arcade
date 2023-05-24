@@ -1,7 +1,9 @@
 <footer><div class="horizontal">
         <div>
             <h2>Thank You For Using Our Games & Services</h2>
-            <p>By Visiting This Site You Agree Our Terms Of Services.</p>
+            <p>By Visiting This Site You Agree Our <a href="cookies.php">Cookie Policy</a> and <a href="privacypolicy.php">Privacy Policy</a>.</p>
+            <br>
+            <a href="https://wakatime.com/badge/github/gydoma/arcade"><img src="https://wakatime.com/badge/github/gydoma/arcade.svg?style=for-the-badge" alt="wakatime"></a>
             <br>
             <p>Copyright ©  <a style="" href="https://github.com/gydoma">GyDoma</a> - 2022 - <?php echo date("Y"); ?></p>
         </div>

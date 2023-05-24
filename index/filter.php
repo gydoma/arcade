@@ -1,3 +1,4 @@
+<div id="filter_bg">
 <div class="roundedcornes shadow filter" id="filtermenu">
 <form action="" method="get">
     <h2 class="filterh2">Filter menu</h2>
@@ -31,7 +32,7 @@
     <div id="ratingfilter">
         <div id="mrv">
             <h2 id="rating"></h2>
-            <div class="flex-filter"></div>
+            <div class="flex-filter"></div> 
             <img id="starimg">
         </div>
         <input type="range" min="10" max="50" value="1" class="min-star" id="min-star" name="min-rating">
@@ -39,4 +40,6 @@
     <input type="submit" id="searchbtn" value="Click To Search">
 </div>
 </form>
+</div>
+<!--<script src="javascript/minstar_range.js"></script>-->
 <script src="javascript/filter.js"></script>

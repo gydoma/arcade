@@ -1,4 +1,4 @@
-<?php 
+<?php
 
     include "db.php";
     if(isset($_GET["min-rating"])){
@@ -8,11 +8,12 @@
 
         if(isset($_GET['name'])){
             if(strlen($_GET['name'] > 0)){
+                $_GET['name'] = "%".$_GET['name']."%";
                 if($where == false){
-                    $cond.=" WHERE name = \"".$_GET['name'] ."\" ";
+                    $cond.=" WHERE name LIKE \"".$_GET['name'] ."\" ";
                     $where = true;
                 } else {
-                    $cond.=" AND name = \"".$_GET['name'] ."\" ";
+                    $cond.=" AND name LIKE \"".$_GET['name'] ."\" ";
                 }
             }
         };
@@ -60,6 +61,7 @@
     } else{
         $games = "SELECT * FROM games";
     }
+
     if($result = mysqli_query($con,$games)){
         if(mysqli_num_rows($result) > 0) {
             while($game=mysqli_fetch_array($result)){
@@ -69,15 +71,60 @@
                 WHERE gameid = '".$game['id']."'";
                 $ratingresult = mysqli_query($con,$ratings);
                 $rating = mysqli_fetch_array($ratingresult);
+
+                if ($rating['rating'] > 3.9) {
+                    $ratingImg = 'Resources/rating/Full.svg';
+                  } else if ($rating['rating'] > 2.9) {
+                    $ratingImg = 'Resources/rating/Half.svg';
+                  } else {
+                    $ratingImg = 'Resources/rating/Empty.svg';
+                  }
+
+                  $buttonname = '';
+                  if ($game['language'] == 'js') {
+                    $buttonname = 'Play';
+                  } else {
+                    $buttonname = 'Download';
+                  }
+                  
+                  $file_ext = '';
+                  if ($game['language'] == 'js') {
+                    $file_ext = 'web';
+                  } elseif ($game['language'] == 'py') {
+                    $file_ext = '.py';
+                  } elseif ($game['language'] == 'cs') {
+                    $file_ext = '.exe';
+                  } else {
+                    $file_ext = '404';
+                  }
+
+                  if($rating['rating'] == null){
+                    $rating['rating'] = "0.0";
+                  }
+
+                echo "<div class=\"card roundedcornes shadow game-card card-".$game['language']."\">";
+
+
+                echo"<div class=\"card-top\">";
+                echo"<div class=\"rating\">";
+                    echo"<img src=\"".$ratingImg."\">";
+                    echo"<h2>".$rating['rating']."</h2>";
+                echo"</div>";
+                echo"<div class=\"badge\">";
+                    echo"<div class=\"badge-dot badge-".$game['language']."\"></div>";
+                    echo $file_ext;
+                echo"</div>";
+            echo"</div>";
+            echo"<h2>".$game['name']."</h2>";
+            echo"<p>".$game['description']."</p>";
+            echo"<div class=\"card-filler\"></div>";
+            echo"<div class=\"card-footer\">";
+                echo"<p class=\"footer-madeby\">made by ".$game['by']."</p>";
+                echo"<button class=\"card-button\" onclick=\"window.location.href = '".$game['url']."';\">".$buttonname."</button>";
+            echo"</div>";
                 
-                echo "<div class=\"card roundedcornes shadow\">";
-                echo "<h2>" . $game['name']. "</h2>";
-                echo "<p>" . $game['by']. "</p>";
-                echo "<p>" . ($rating['rating'] ? $rating['rating'] : "Not rated yet") . "</p>";
-                echo "<p>" . $game['language']. "</p>";
-                echo "<p>" . $game['engine']. "</p>";
-                echo "<p>" . $game['updated']. "</p>";
                 echo "</div>";
+
             }
         } 
     }
