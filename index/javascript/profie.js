@@ -7,7 +7,7 @@ const sanitize = (tab) => {
 
 document.querySelectorAll(".tab").forEach(element => {
     element.addEventListener("click", () => {
-        changetab(sanitize(element.children[0].innerHTML))
+        tab_click(sanitize(element.children[0].innerHTML))
     })
 });
 
@@ -31,8 +31,8 @@ function changetab(new_tab) {
     if(current_tab != new_tab){
     console.log(new_tab)
     document.getElementById(new_tab).style.display = "block";
-    document.getElementById(current_tab).style.display = "none";
-    document.getElementById(`${current_tab}btn`).classList.remove("active")
+    if(current_tab){document.getElementById(current_tab).style.display = "none";
+    document.getElementById(`${current_tab}btn`).classList.remove("active");};
     current_tab = new_tab
     document.getElementById(`${current_tab}btn`).classList.add("active")
     console.log(new_tab)
@@ -51,9 +51,15 @@ function changetab(new_tab) {
 }
 }
 
-window.onload = () => {
-    current_tab = "general"
-    document.getElementById(current_tab).style.display = "block";
-    document.getElementById(`${current_tab}btn`).classList.add("active")
+function tab_click(new_tab){
+    if(new_tab != "sign_out"){
+        window.location.replace(`profile.php?page=${new_tab}`) 
+    }
 }
+
+// window.onload = () => {
+//     current_tab = "general"
+//     document.getElementById(current_tab).style.display = "block";
+//     document.getElementById(`${current_tab}btn`).classList.add("active")
+// }
 

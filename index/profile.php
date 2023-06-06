@@ -10,6 +10,7 @@ if(!isset($_COOKIE["AuthKey"])) {
 
 <?php 
 include "db.php";
+include('history.php');
 if(isset($_COOKIE["AuthKey"])) {
     $uid;
     $authkey = $_COOKIE["AuthKey"];
@@ -116,6 +117,16 @@ $minutes = $totaltime-($totalhours*60);
     
     <script src="javascript/darkmode.js" onload="darkmodecheck()"></script>
     <script src="javascript/profie.js"></script>
+    <script>
+        <?php
+            if(isset($_GET['page'])){
+                $page = $_GET['page'];
+                echo "changetab(\"$page\")";
+            } else{
+                echo "changetab(\"general\")";
+            }
+        ?>
+    </script>
 
 </body>
 </html>

@@ -9,6 +9,7 @@ if(mysqli_num_rows($result) > 0) {
     while($user=mysqli_fetch_array($result)){
         $username = $user['Username'];
         $email = $user['Email'];
+        $uid = $user['UId'];
     }
 }
   }

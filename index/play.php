@@ -1,7 +1,28 @@
 <?php 
+
+require("db.php");
+
 if(!isset($_COOKIE["AuthKey"])) {
-    // header("location: login_page.php");
+    header("location: login_page.php");
   }
+
+  if(!isset($_GET["gameid"])) {
+    header("location: index.php");
+  }
+
+$gameid = $_GET["gameid"];
+
+  $gamequery    = "SELECT * FROM games WHERE Id = $gameid;";
+  $result = mysqli_query($con, $gamequery);
+  $rows = mysqli_num_rows($result);
+  if(mysqli_num_rows($result) > 0) {
+      while($game=mysqli_fetch_array($result)){
+            $gamename = $game['name'];
+            $gamedesc = $game['description'];
+            $url = $game['url'];
+            $download = $game['download'];
+          }
+        }
 ?>
 
 <!DOCTYPE html>
@@ -23,16 +44,21 @@ if(!isset($_COOKIE["AuthKey"])) {
 
         <div class="game-container shadow roundedcorners">
             <div class="game-content">
-            <h1>Game Title</h1>
-            <div class="play-container"></div>
+            <h1><?php echo "$gamename"?></h1>
+            <div class="play-container">
+                <?php 
+                    echo "<iframe src=\"$url?\" width=\"100%\" height=\"100%\" scrolling=\"no\"></iframe>";
+                ?>
+            </div>
 
             <div class="game-info">
                 <div class="game-details">
                     <hr>
                     <h2>Details</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero rerum numquam qui illo aliquid eaque at consectetur molestiae facere quos libero</p>
+                    <p><?php echo "$gamedesc"?></p>
                 </div>
                 <div class="game-rate">
+                    <!-- <form action="rating.php" method="post"> -->
                     <hr>
                     <h2 class="rate-title">Rate this game</h2>
                     <div class="new_rate">
@@ -50,6 +76,7 @@ if(!isset($_COOKIE["AuthKey"])) {
                             <label for="star5">5 stars</label>
                         </div>
                         <input type="submit" class="submitbtn shadow" id="ratingsubmit" value="Submit">
+                    <!-- </form> -->
                     </div>
             </div>
             </div>

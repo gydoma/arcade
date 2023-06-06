@@ -15,6 +15,7 @@ ratingsubmit.addEventListener("click", () => {
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const gameid = urlParams.get('gameid')
+        console.log(gameid)
 
         current = Array.from(ratings).find(radio => radio.checked).value;
 

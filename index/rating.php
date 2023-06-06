@@ -1,5 +1,6 @@
 <?php
     require('db.php');
+    include('history.php');
     if (isset($_COOKIE["AuthKey"])) {
         $authkey = $_COOKIE["AuthKey"];
         $query    = "SELECT users.UId FROM users INNER JOIN authsessions on users.UId = authsessions.UId WHERE AuthKey like \"$authkey\";";
@@ -16,6 +17,15 @@
                 if(!mysqli_num_rows($ratingresult) > 0) {
                     $newquery = "INSERT INTO `ratings` (`id`, `rating`, `gameid`, `UId`) VALUES (NULL, '$rating', $gameid, $uid);";
                     $newresult = mysqli_query($con, $newquery);
+                    $gamequery    = "SELECT * FROM games WHERE games.id = $gameid";
+                    $gameresult = mysqli_query($con, $gamequery);
+                    // echo mysqli_num_rows($gameresult) . "  " . $gameid;
+                    echo $gamequery;
+                    while($game=mysqli_fetch_array($gameresult)){
+                        $gamename = $game['name'];
+                        ratinglog($uid,$rating,$gamename);
+                        // echo $gamename;
+                    }
                 }
             }
         }

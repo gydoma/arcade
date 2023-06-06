@@ -3,7 +3,8 @@
         $status = $_GET['status'];
     }
 
-    include "db.php";
+    include("db.php");
+    include('history.php');
 
     if(isset($_COOKIE["AuthKey"])) {
         $authkey = $_COOKIE["AuthKey"];

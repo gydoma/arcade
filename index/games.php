@@ -120,7 +120,7 @@
             echo"<div class=\"card-filler\"></div>";
             echo"<div class=\"card-footer\">";
                 echo"<p class=\"footer-madeby\">made by ".$game['by']."</p>";
-                echo"<button class=\"card-button\" onclick=\"window.location.href = '".$game['url']."';\">".$buttonname."</button>";
+                echo"<button class=\"card-button\" onclick=\"window.location.href = 'play.php?gameid=".$game['id']."';\">".$buttonname."</button>";
             echo"</div>";
                 
                 echo "</div>";

@@ -1,5 +1,6 @@
 <?php
   require("db.php");
+  include('history.php');
   if (isset($_REQUEST['username'])) {
     $username = stripslashes($_REQUEST['username']);
     $username = mysqli_real_escape_string($con, $username);

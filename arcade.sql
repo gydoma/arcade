@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 24, 2023 at 12:24 AM
+-- Generation Time: Jun 07, 2023 at 12:42 AM
 -- Server version: 10.5.18-MariaDB-0+deb11u1
 -- PHP Version: 7.4.33
 
@@ -72,7 +72,16 @@ INSERT INTO `authsessions` (`AuthId`, `AuthKey`, `UId`, `expire_date`) VALUES
 (13, 'ThqjhvxkHhYHxvLT0SDzLi+/XbNfuYcCFPizocAwO7s=', 3, '2023-05-21 22:57:59'),
 (14, '5zujPSssF9r2HmYrHlgf9JB4a6v0FtwMQuN27OBgxTU=', 3, '2023-05-22 00:41:36'),
 (15, '5obgQeR93KRb3yBbSA31U3FP1eeeWFktV6s8MfPXEOo=', 2, '2023-05-22 20:04:01'),
-(16, 'l8E06i3Tzzl6LW9rCQMqhsfTCaGLA2vYsaJA3POl/Ls=', 2, '2023-05-30 23:42:26');
+(16, 'l8E06i3Tzzl6LW9rCQMqhsfTCaGLA2vYsaJA3POl/Ls=', 2, '2023-05-30 23:42:26'),
+(17, 'qktFirdQUqCD2JktvFMONfFUG3KujCOGoXebkGM+P9I=', 2, '2023-05-31 00:28:02'),
+(18, 'BQvZWFBw48ITk40EibpWvBJxB1CecAyvXWuSZtGCwR0=', 2, '2023-05-31 05:58:13'),
+(19, 'daCgAbZVOIyDgolgrg0vR9c6l49nzQPcRN6432AVMaE=', 2, '2023-05-31 06:20:01'),
+(20, '4Imn15T4nktJg2OcGzLQShb3SnyafcvnBu2JUOXEpKU=', 2, '2023-05-31 06:20:02'),
+(21, 'owzSRwTRogX9licNlD09LU+jgpw+iMdQMWBzlxsxD2E=', 2, '2023-05-31 07:08:33'),
+(22, '+4+rZxXcI87LA1PV8eEPvuOksbdCYXiFbIBaP/Xidco=', 2, '2023-05-31 07:12:53'),
+(23, 'CvL2MqqdqfPVmbt5YtvIdqLYil0bltvsSnyd7S5SA+k=', 5, '2023-05-31 07:15:06'),
+(24, 'b9MpWB568TnrC23F8WaP7BrafvdMfNPivIpctNHeCd8=', 5, '2023-05-31 08:33:17'),
+(25, 'EMkhGe081ibP6nXXqbhFfdqTZNXQoIoPhy/nIH0YAv0=', 2, '2023-06-13 18:24:01');
 
 -- --------------------------------------------------------
 
@@ -113,6 +122,31 @@ INSERT INTO `games` (`id`, `name`, `description`, `by`, `language`, `engine`, `u
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `history`
+--
+
+CREATE TABLE `history` (
+  `HId` int(11) NOT NULL,
+  `UId` int(11) NOT NULL,
+  `Type` varchar(32) NOT NULL,
+  `Description` varchar(255) DEFAULT NULL,
+  `Value` int(11) DEFAULT NULL,
+  `Date` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `history`
+--
+
+INSERT INTO `history` (`HId`, `UId`, `Type`, `Description`, `Value`, `Date`) VALUES
+(3, 2, 'Password Change', NULL, NULL, '2023-06-06 22:23:26'),
+(4, 2, 'Rating', 'Repülős Projektmunka', 5, '2023-06-06 23:48:06'),
+(5, 2, 'Rating', 'Repülős Projektmunka', 5, '2023-06-07 00:05:25'),
+(6, 2, 'Rating', 'Flappy Bird', 3, '2023-06-07 00:05:54');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `ratings`
 --
 
@@ -132,7 +166,8 @@ INSERT INTO `ratings` (`id`, `rating`, `gameid`, `UId`) VALUES
 (2, 3, 1, 0),
 (3, 1, 5, 0),
 (5, 5, 1, 2),
-(6, 5, 5, 2);
+(6, 5, 5, 2),
+(7, 5, 2, 5);
 
 -- --------------------------------------------------------
 
@@ -153,8 +188,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`UId`, `Username`, `Email`, `Password`, `CreatedAt`) VALUES
-(2, 'teszt', 'teszt@gmail.com', '81de960c94c9174ed73e6ea967fcf16e', '2023-05-14 21:32:02'),
-(3, 'teszt2', 'teszt2@gmail.com', '83dc3c89e1abf7a58d35c87599f1b3bc', '2023-05-14 22:57:55');
+(2, 'teszt', 'teszt@chromium.com', '81de960c94c9174ed73e6ea967fcf16e', '2023-05-14 21:32:02'),
+(5, 'admin', 'email@domain.tld', '1dbdc0deaa0ae6a40b0ea3687ef39654', '2023-05-24 07:14:10'),
+(8, 'teszt3', 'asd@as.com', '81de960c94c9174ed73e6ea967fcf16e', '2023-06-06 21:09:14');
 
 --
 -- Indexes for dumped tables
@@ -177,6 +213,12 @@ ALTER TABLE `authsessions`
 --
 ALTER TABLE `games`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `history`
+--
+ALTER TABLE `history`
+  ADD PRIMARY KEY (`HId`);
 
 --
 -- Indexes for table `ratings`
@@ -204,7 +246,7 @@ ALTER TABLE `active_sessions`
 -- AUTO_INCREMENT for table `authsessions`
 --
 ALTER TABLE `authsessions`
-  MODIFY `AuthId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `AuthId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `games`
@@ -213,16 +255,22 @@ ALTER TABLE `games`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
+-- AUTO_INCREMENT for table `history`
+--
+ALTER TABLE `history`
+  MODIFY `HId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `ratings`
 --
 ALTER TABLE `ratings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `UId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `UId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

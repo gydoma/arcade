@@ -181,7 +181,7 @@ hr{
     input[type="submit"]{
         width: 30%;
         padding: 17px !important;
-        margin: -15px 0 30px 0;
+        margin: -15px 0 15px 0;
         font-weight: 800;
         font-size: 21px;
         background-color: var(--accent-color);
@@ -222,7 +222,6 @@ hr{
     .chg-input:-ms-placeholder { 
         text-indent: 10px;
     }
-
 
 
 #signout_modal{
@@ -277,7 +276,6 @@ hr{
             font-weight: 700;
         }
       }
-
 
       @media only screen and (max-width: 1100px) { 
         .chg-input{
