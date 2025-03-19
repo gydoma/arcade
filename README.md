@@ -124,7 +124,6 @@ A kód jól szervezett és könnyen olvasható. A megjegyzések világosak és i
 | Vajda Dániel | cs (1)|
 | Bán Gergő | cs (1) |
 | Suhajda Zsolt Péter | cs (1) |
-| Rostás András Péter | |
 | Bárczi Bence | cs (2) |
 | Kósa Márk | c++ (1) |
 | Molnár-Horgos Kristóf | [TankTrouble](https://github.com/Trixep/TankTrouble-Multiplayer) |
